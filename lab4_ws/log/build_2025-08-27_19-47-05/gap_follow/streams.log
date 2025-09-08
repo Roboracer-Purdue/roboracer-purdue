@@ -1,0 +1,23 @@
+[0.456s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/gap_follow': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/gap_follow build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/install.log --install-scripts $base/lib/gap_follow --single-version-externally-managed install_data
+[0.606s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.606s]   warnings.warn(
+[0.623s] running egg_info
+[0.626s] writing manifest file '../build/gap_follow/gap_follow.egg-info/SOURCES.txt'
+[0.627s] running build
+[0.627s] running build_py
+[0.627s] copying gap_follow/gap_follow.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/build/lib/gap_follow
+[0.627s] running install
+[0.628s] running install_lib
+[0.629s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow/gap_follow.py to gap_follow.cpython-38.pyc
+[0.629s]   File "/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow/gap_follow.py", line 59
+[0.629s]     else
+[0.629s]        ^
+[0.629s] SyntaxError: invalid syntax
+[0.629s] 
+[0.629s] running install_data
+[0.629s] running install_egg_info
+[0.630s] removing '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow-0.0.0-py3.8.egg-info' (and everything under it)
+[0.630s] Copying ../build/gap_follow/gap_follow.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow-0.0.0-py3.8.egg-info
+[0.631s] running install_scripts
+[0.643s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/install.log'
+[0.660s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/gap_follow' returned '0': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/gap_follow build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/install.log --install-scripts $base/lib/gap_follow --single-version-externally-managed install_data

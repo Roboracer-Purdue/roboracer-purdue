@@ -1,0 +1,14 @@
+running egg_info
+writing manifest file '../build/gap_follow/gap_follow.egg-info/SOURCES.txt'
+running build
+running build_py
+copying gap_follow/gap_follow.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/build/lib/gap_follow
+running install
+running install_lib
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow/gap_follow.py to gap_follow.cpython-38.pyc
+running install_data
+running install_egg_info
+removing '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../build/gap_follow/gap_follow.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/install.log'

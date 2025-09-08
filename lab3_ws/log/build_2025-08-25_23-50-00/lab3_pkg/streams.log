@@ -1,0 +1,18 @@
+[0.671s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/lab3_pkg': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/build/lab3_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/install/lab3_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/lab3_pkg build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/build/lab3_pkg/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/build/lab3_pkg/install.log --install-scripts $base/lib/lab3_pkg --single-version-externally-managed install_data
+[0.893s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.893s]   warnings.warn(
+[0.910s] running egg_info
+[0.919s] writing manifest file '../build/lab3_pkg/lab3_pkg.egg-info/SOURCES.txt'
+[0.919s] running build
+[0.920s] running build_py
+[0.920s] copying lab3_pkg/PID.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/build/lab3_pkg/build/lib/lab3_pkg
+[0.920s] running install
+[0.922s] running install_lib
+[0.923s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/install/lab3_pkg/lib/python3.8/site-packages/lab3_pkg/PID.py to PID.cpython-38.pyc
+[0.924s] running install_data
+[0.924s] running install_egg_info
+[0.925s] removing '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/install/lab3_pkg/lib/python3.8/site-packages/lab3_pkg-0.0.0-py3.8.egg-info' (and everything under it)
+[0.926s] Copying ../build/lab3_pkg/lab3_pkg.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/install/lab3_pkg/lib/python3.8/site-packages/lab3_pkg-0.0.0-py3.8.egg-info
+[0.927s] running install_scripts
+[0.940s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/build/lab3_pkg/install.log'
+[0.965s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/lab3_pkg' returned '0': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/build/lab3_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/install/lab3_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/lab3_pkg build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/build/lab3_pkg/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws/build/lab3_pkg/install.log --install-scripts $base/lib/lab3_pkg --single-version-externally-managed install_data

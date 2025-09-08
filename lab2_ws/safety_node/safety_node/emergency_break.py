@@ -8,9 +8,9 @@ import numpy as np
 num_beam = 1080
 
 # BREAKING
-#breaking_deceleration = 1.0 # m/s^2
+breaking_deceleration = 0.5 # m/s^2
 barrier_width = 0.3; # Car width 23.19 cm
-TTB = 0.4
+TTB = 0.6
 
 # Output Limiter
 TTC_inf_value = 1000
@@ -23,8 +23,8 @@ class EmergencyBreak(Node):
         super().__init__('emergency_break')  
         
         # Declare Paramters
-        self.declare_parameter('breaking_deceleration', 1.0)
-        self.declare_parameter('TTB', 0.4)
+        self.declare_parameter('breaking_deceleration', 10.0)
+        self.declare_parameter('TTB', 0.6)
         self.declare_parameter('barrier_width', 0.3)
 
         # Initialize Node Variables

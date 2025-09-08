@@ -22,6 +22,7 @@ class PID(Node):
 
         # Initialize Node Variables
         self.velocity_x = 1.0
+        self.max_vel = 1.0
 
         # Create subscribers, type: Acker, topic 'drive', function to run when receiving messages, and queue size
         self.scan_sub = self.create_subscription(LaserScan, "/scan", self.scan_callback, 1) 
@@ -77,10 +78,16 @@ class PID(Node):
         term3 = -(et1 - et) / t
 
         ut = term1 * K_p + term2 * K_i + term3 * K_d
-        self.get_logger().info(f'{ut:.3f} | {term1:.3f} {term2:.3f} {term3:.3f}')
+        self.max_vel = max(self.velocity_x, self.max_vel)
+        
+        self.get_logger().info(f'{self.max_vel:.3f}')
+        #self.get_logger().info(f'{ut:.3f} | {term1:.3f} {term2:.3f} {term3:.3f}')
+
 
         # Calculate driving speed
-        if abs(ut) < 3:
+        if msg.ranges[539] > 1 and msg.ranges[541] > 1 and msg.ranges[541] > 1 and abs(ut) < 0.1:
+            speed = 10.0
+        elif abs(ut) < 5:
             speed = 2.0
         elif abs(ut) < 10:
             speed = 1.5

@@ -1,0 +1,117 @@
+[0.529s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.529s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x78f1d4dbdb50>>, merge_install=False, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('build',), packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=22, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x78f1d4dbdb50>, verb_name='build', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x78f1d4ca0160>)
+[0.779s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.780s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.780s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.780s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.780s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.780s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.781s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extensions ['ignore', 'ignore_ament_install']
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extension 'ignore'
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extension 'ignore_ament_install'
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extensions ['colcon_pkg']
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extension 'colcon_pkg'
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extensions ['colcon_meta']
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extension 'colcon_meta'
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extensions ['ros']
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extension 'ros'
+[0.811s] DEBUG:colcon.colcon_core.package_identification:Package 'gap_follow' with type 'ros.ament_python' and name 'gap_follow'
+[0.811s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.811s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.811s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.811s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.812s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.812s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.812s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.812s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.812s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.812s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.812s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.861s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.861s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.862s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install
+[0.863s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/patchy/yahboomcar_ros2_ws/yahboomcar_ws/install
+[0.863s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/patchy/yahboomcar_ros2_ws/yahboomcar_ws/src/install
+[0.864s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 211 installed packages in /opt/ros/foxy
+[0.865s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.897s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_args' from command line to 'None'
+[0.897s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_target' from command line to 'None'
+[0.897s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.897s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_clean_cache' from command line to 'False'
+[0.897s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_clean_first' from command line to 'False'
+[0.897s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_force_configure' from command line to 'False'
+[0.897s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'ament_cmake_args' from command line to 'None'
+[0.897s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'catkin_cmake_args' from command line to 'None'
+[0.897s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.897s] DEBUG:colcon.colcon_core.verb:Building package 'gap_follow' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow', 'merge_install': False, 'path': '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/gap_follow', 'symlink_install': False, 'test_result_base': None}
+[0.897s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.898s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.899s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/gap_follow' with build type 'ament_python'
+[0.899s] Level 1:colcon.colcon_core.shell:create_environment_hook('gap_follow', 'ament_prefix_path')
+[0.923s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.923s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/share/gap_follow/hook/ament_prefix_path.ps1'
+[0.924s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/share/gap_follow/hook/ament_prefix_path.dsv'
+[0.924s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/share/gap_follow/hook/ament_prefix_path.sh'
+[0.925s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.925s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.330s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/gap_follow'
+[1.331s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.331s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.805s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/gap_follow': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/gap_follow build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/install.log --install-scripts $base/lib/gap_follow --single-version-externally-managed install_data
+[2.200s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/gap_follow' returned '0': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/gap_follow build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/build/gap_follow/install.log --install-scripts $base/lib/gap_follow --single-version-externally-managed install_data
+[2.206s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow' for CMake module files
+[2.206s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow' for CMake config files
+[2.207s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib'
+[2.207s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/bin'
+[2.207s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib/pkgconfig/gap_follow.pc'
+[2.208s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/lib/python3.8/site-packages'
+[2.208s] Level 1:colcon.colcon_core.shell:create_environment_hook('gap_follow', 'pythonpath')
+[2.208s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/share/gap_follow/hook/pythonpath.ps1'
+[2.209s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/share/gap_follow/hook/pythonpath.dsv'
+[2.209s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/share/gap_follow/hook/pythonpath.sh'
+[2.210s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/bin'
+[2.210s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gap_follow)
+[2.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/share/gap_follow/package.ps1'
+[2.211s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/share/gap_follow/package.dsv'
+[2.212s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/share/gap_follow/package.sh'
+[2.212s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/share/gap_follow/package.bash'
+[2.213s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/share/gap_follow/package.zsh'
+[2.213s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/gap_follow/share/colcon-core/packages/gap_follow)
+[2.214s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.214s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.217s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.217s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.377s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[2.377s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.377s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.377s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.378s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /run/user/1000/bus: No such file or directory
+[2.378s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.378s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/local_setup.ps1'
+[2.379s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/_local_setup_util_ps1.py'
+[2.380s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/setup.ps1'
+[2.382s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/local_setup.sh'
+[2.383s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/_local_setup_util_sh.py'
+[2.383s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/setup.sh'
+[2.385s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/local_setup.bash'
+[2.385s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/setup.bash'
+[2.386s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/local_setup.zsh'
+[2.387s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab4_ws/install/setup.zsh'
