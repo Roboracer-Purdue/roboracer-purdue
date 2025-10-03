@@ -1,0 +1,15 @@
+running egg_info
+writing manifest file '../build/safety_node/safety_node.egg-info/SOURCES.txt'
+running build
+running build_py
+copying safety_node/emergency_break.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/build/lib/safety_node
+running install
+running install_lib
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.8/site-packages/safety_node/emergency_break.py to emergency_break.cpython-38.pyc
+running install_data
+copying launch/lab2_launch.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/safety_node/launch
+running install_egg_info
+removing '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.8/site-packages/safety_node-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../build/safety_node/safety_node.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.8/site-packages/safety_node-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/install.log'

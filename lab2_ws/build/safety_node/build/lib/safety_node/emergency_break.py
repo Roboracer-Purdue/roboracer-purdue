@@ -4,13 +4,14 @@ from ackermann_msgs.msg import AckermannDriveStamped
 from sensor_msgs.msg import LaserScan
 from nav_msgs.msg import Odometry
 import numpy as np
+import time
 
 num_beam = 1080
 
-# BREAKING
-breaking_deceleration = 0.5 # m/s^2
-barrier_width = 0.3; # Car width 23.19 cm
-TTB = 0.6
+# BREAKING TIME
+# Quadratic Formula av + b
+a = 105.38
+b = 333.21
 
 # Output Limiter
 TTC_inf_value = 1000
@@ -23,14 +24,15 @@ class EmergencyBreak(Node):
         super().__init__('emergency_break')  
         
         # Declare Paramters
-        self.declare_parameter('breaking_deceleration', 0.5)
-        self.declare_parameter('TTB', 0.4)
-        self.declare_parameter('barrier_width', 0.3)
+        self.declare_parameter('barrier_width', 2.0)
 
         # Initialize Node Variables
         self.velocity_x = 0
         self.beam_velocity = [0.0] * num_beam
         self.TTC = [0.0] * num_beam
+
+        self.brake_state = 0
+        self.brake_start = time.time()
 
         # Create subscribers, type: Acker, topic 'drive', function to run when receiving messages, and queue size
         self.scan_sub = self.create_subscription(LaserScan, "/scan", self.scan_callback, 1) 
@@ -50,8 +52,6 @@ class EmergencyBreak(Node):
         
     def scan_callback(self, msg):
         # Retrieve Parameters
-        breaking_deceleration = self.get_parameter('breaking_deceleration').get_parameter_value().double_value
-        TTB = self.get_parameter('TTB').get_parameter_value().double_value
         barrier_width = self.get_parameter('barrier_width').get_parameter_value().double_value
 
         '''
@@ -87,7 +87,7 @@ class EmergencyBreak(Node):
             # Check if the TTC is in the break barrier
             if abs(msg.ranges[i] * np.sin(cur_angle)) < barrier_width / 2:
                 if self.beam_velocity[i] != 0:
-                    self.TTC[i] = min(msg.ranges[i] / max(self.beam_velocity[i], TTC_zero_value), TTC_inf_value)
+                    self.TTC[i] = min((msg.ranges[i]) / max(self.beam_velocity[i], TTC_zero_value), TTC_inf_value)
                 else:
                     self.TTC[i] = TTC_inf_value
             else:
@@ -101,14 +101,27 @@ class EmergencyBreak(Node):
 
         # Publish to drive if a TTC is too low
         # min(self.TTC) < self.velocity_x / breaking_deceleration
-        if min(self.TTC) < max(TTB, self.velocity_x / breaking_deceleration):
+
+        # CALCULATE TIME TO BRAKE
+        TTB = a*self.velocity_x + b
+        TTB /= 1000 # convert to second
+
+        #self.get_logger().info(f"STATUS: TTC {min(self.TTC):.5f} TTB {TTB:.5f} ")
+
+        if min(self.TTC) < TTB:
             # Initialize message
             msg = AckermannDriveStamped()
             msg.drive.speed = 0.0
+            self.brake_start = time.time()
+            self.brake_state = 1
 
             # Publish message to topic (which is initialized in the publisher itself)
             self.drive_pub.publish(msg)
-            self.get_logger().info(f"EMERGENCY BREAKING: TTC {min(self.TTC):.5f}")
+            self.get_logger().info(f"EMERGENCY BREAKING: TTC {min(self.TTC):.5f} TTB {TTB:.5f} ")
+        
+        if self.brake_state == 1 and self.velocity_x < 0.001:
+            self.brake_state = 0
+            self.get_logger().info(f"Actual Brake Time: TTB {time.time()-self.brake_start:.5f} ")
 
 def main():
     rclpy.init() 

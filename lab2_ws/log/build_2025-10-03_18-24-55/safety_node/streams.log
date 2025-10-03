@@ -1,0 +1,19 @@
+[1.242s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/safety_node': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/safety_node build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/install.log --install-scripts $base/lib/safety_node --single-version-externally-managed install_data
+[1.500s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.500s]   warnings.warn(
+[1.524s] running egg_info
+[1.532s] writing manifest file '../build/safety_node/safety_node.egg-info/SOURCES.txt'
+[1.533s] running build
+[1.534s] running build_py
+[1.534s] copying safety_node/emergency_break.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/build/lib/safety_node
+[1.534s] running install
+[1.535s] running install_lib
+[1.536s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.8/site-packages/safety_node/emergency_break.py to emergency_break.cpython-38.pyc
+[1.539s] running install_data
+[1.539s] copying launch/lab2_launch.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/safety_node/launch
+[1.542s] running install_egg_info
+[1.544s] removing '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.8/site-packages/safety_node-0.0.0-py3.8.egg-info' (and everything under it)
+[1.544s] Copying ../build/safety_node/safety_node.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.8/site-packages/safety_node-0.0.0-py3.8.egg-info
+[1.546s] running install_scripts
+[1.563s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/install.log'
+[1.621s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/safety_node' returned '0': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/safety_node build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/install.log --install-scripts $base/lib/safety_node --single-version-externally-managed install_data

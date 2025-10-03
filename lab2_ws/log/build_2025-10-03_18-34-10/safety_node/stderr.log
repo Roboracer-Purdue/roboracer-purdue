@@ -1,0 +1,7 @@
+/home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+  File "/home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.8/site-packages/safety_node/emergency_break.py", line 90
+    else:
+    ^
+SyntaxError: invalid syntax
+
