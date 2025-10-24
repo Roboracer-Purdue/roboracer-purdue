@@ -1,0 +1,3 @@
+[console_scripts]
+visualize_waypoints = visualize_waypoints.visualize_waypoints:main
+

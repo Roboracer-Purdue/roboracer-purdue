@@ -1,0 +1,28 @@
+running egg_info
+creating ../../build/gap_follow/gap_follow.egg-info
+writing manifest file '../../build/gap_follow/gap_follow.egg-info/SOURCES.txt'
+writing manifest file '../../build/gap_follow/gap_follow.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/gap_follow/build
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/gap_follow/build/lib
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/gap_follow/build/lib/gap_follow
+copying gap_follow/__init__.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/build/gap_follow/build/lib/gap_follow
+copying gap_follow/gap_follow.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/build/gap_follow/build/lib/gap_follow
+running install
+running install_lib
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/gap_follow/lib/python3.8/site-packages/gap_follow
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/install/gap_follow/lib/python3.8/site-packages/gap_follow/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/install/gap_follow/lib/python3.8/site-packages/gap_follow/gap_follow.py to gap_follow.cpython-38.pyc
+running install_data
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/gap_follow/share/ament_index
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/gap_follow/share/ament_index/resource_index
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/gap_follow/share/ament_index/resource_index/packages
+copying resource/gap_follow -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/gap_follow/share/ament_index/resource_index/packages
+copying package.xml -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/gap_follow/share/gap_follow
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/gap_follow/share/gap_follow/launch
+copying launch/lab4_launch.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/gap_follow/share/gap_follow/launch
+running install_egg_info
+Copying ../../build/gap_follow/gap_follow.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/install/gap_follow/lib/python3.8/site-packages/gap_follow-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/build/gap_follow/install.log'

@@ -1,0 +1,33 @@
+[1.361s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/visualize_waypoints': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/visualize_waypoints build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/install.log --install-scripts $base/lib/visualize_waypoints --single-version-externally-managed install_data
+[1.662s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.662s]   warnings.warn(
+[1.691s] running egg_info
+[1.692s] creating ../build/visualize_waypoints/visualize_waypoints.egg-info
+[1.696s] writing manifest file '../build/visualize_waypoints/visualize_waypoints.egg-info/SOURCES.txt'
+[1.698s] writing manifest file '../build/visualize_waypoints/visualize_waypoints.egg-info/SOURCES.txt'
+[1.698s] running build
+[1.698s] running build_py
+[1.699s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build
+[1.699s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build/lib
+[1.699s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build/lib/visualize_waypoints
+[1.699s] copying visualize_waypoints/__init__.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build/lib/visualize_waypoints
+[1.699s] copying visualize_waypoints/visualize_waypoints.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build/lib/visualize_waypoints
+[1.699s] running install
+[1.705s] running install_lib
+[1.705s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages/visualize_waypoints
+[1.706s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages/visualize_waypoints/__init__.py to __init__.cpython-38.pyc
+[1.706s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages/visualize_waypoints/visualize_waypoints.py to visualize_waypoints.cpython-38.pyc
+[1.707s] running install_data
+[1.707s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/ament_index
+[1.707s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/ament_index/resource_index
+[1.707s] Sorry: IndentationError: expected an indented block (visualize_waypoints.py, line 16)
+[1.708s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/ament_index/resource_index/packages
+[1.708s] copying resource/visualize_waypoints -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/ament_index/resource_index/packages
+[1.708s] copying package.xml -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/visualize_waypoints
+[1.708s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/visualize_waypoints/launch
+[1.708s] copying launch/launch_visualize_waypoints.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/visualize_waypoints/launch
+[1.709s] running install_egg_info
+[1.711s] Copying ../build/visualize_waypoints/visualize_waypoints.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages/visualize_waypoints-0.0.0-py3.8.egg-info
+[1.713s] running install_scripts
+[1.734s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/install.log'
+[1.779s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/visualize_waypoints' returned '0': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/visualize_waypoints build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/install.log --install-scripts $base/lib/visualize_waypoints --single-version-externally-managed install_data

@@ -1,0 +1,28 @@
+running egg_info
+creating ../../build/safety_node/safety_node.egg-info
+writing manifest file '../../build/safety_node/safety_node.egg-info/SOURCES.txt'
+writing manifest file '../../build/safety_node/safety_node.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/build
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/build/lib
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/build/lib/safety_node
+copying safety_node/emergency_break.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/build/lib/safety_node
+copying safety_node/__init__.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/build/lib/safety_node
+running install
+running install_lib
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/lib/python3.8/site-packages/safety_node
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/lib/python3.8/site-packages/safety_node/emergency_break.py to emergency_break.cpython-38.pyc
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/lib/python3.8/site-packages/safety_node/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/ament_index
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/ament_index/resource_index
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/ament_index/resource_index/packages
+copying resource/safety_node -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/ament_index/resource_index/packages
+copying package.xml -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/safety_node
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/safety_node/launch
+copying launch/lab2_launch.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/safety_node/launch
+running install_egg_info
+Copying ../../build/safety_node/safety_node.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/lib/python3.8/site-packages/safety_node-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/install.log'

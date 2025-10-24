@@ -1,0 +1,18 @@
+[0.596s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/waypoint_logger': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/lib/python3.8/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/waypoint_logger build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/install.log --install-scripts $base/lib/waypoint_logger --single-version-externally-managed install_data
+[0.764s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.764s]   warnings.warn(
+[0.779s] running egg_info
+[0.784s] writing manifest file '../build/waypoint_logger/waypoint_logger.egg-info/SOURCES.txt'
+[0.784s] running build
+[0.784s] running build_py
+[0.784s] copying waypoint_logger/waypoint_logger.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/build/lib/waypoint_logger
+[0.784s] running install
+[0.785s] running install_lib
+[0.786s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger/waypoint_logger.py to waypoint_logger.cpython-38.pyc
+[0.786s] running install_data
+[0.786s] running install_egg_info
+[0.788s] removing '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger-0.0.0-py3.8.egg-info' (and everything under it)
+[0.788s] Copying ../build/waypoint_logger/waypoint_logger.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger-0.0.0-py3.8.egg-info
+[0.788s] running install_scripts
+[0.801s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/install.log'
+[0.816s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/waypoint_logger' returned '0': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/lib/python3.8/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/waypoint_logger build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/install.log --install-scripts $base/lib/waypoint_logger --single-version-externally-managed install_data

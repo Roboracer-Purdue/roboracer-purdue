@@ -1,0 +1,6 @@
+source;share/break_tester/hook/pythonpath.ps1
+source;share/break_tester/hook/pythonpath.dsv
+source;share/break_tester/hook/pythonpath.sh
+source;share/break_tester/hook/ament_prefix_path.ps1
+source;share/break_tester/hook/ament_prefix_path.dsv
+source;share/break_tester/hook/ament_prefix_path.sh

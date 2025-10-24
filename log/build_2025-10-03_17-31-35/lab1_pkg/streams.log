@@ -1,0 +1,34 @@
+[2.199s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab1_ws/lab1_pkg': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/build/lab1_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/lib/python3.8/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab1_pkg build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/build/lab1_pkg/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/build/lab1_pkg/install.log --install-scripts $base/lib/lab1_pkg --single-version-externally-managed install_data
+[2.429s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[2.429s]   warnings.warn(
+[2.461s] running egg_info
+[2.461s] creating ../../build/lab1_pkg/lab1_pkg.egg-info
+[2.475s] writing manifest file '../../build/lab1_pkg/lab1_pkg.egg-info/SOURCES.txt'
+[2.477s] writing manifest file '../../build/lab1_pkg/lab1_pkg.egg-info/SOURCES.txt'
+[2.479s] running build
+[2.480s] running build_py
+[2.480s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/lab1_pkg/build
+[2.480s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/lab1_pkg/build/lib
+[2.480s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/lab1_pkg/build/lib/lab1_pkg
+[2.480s] copying lab1_pkg/relay.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/build/lab1_pkg/build/lib/lab1_pkg
+[2.480s] copying lab1_pkg/talker.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/build/lab1_pkg/build/lib/lab1_pkg
+[2.481s] copying lab1_pkg/__init__.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/build/lab1_pkg/build/lib/lab1_pkg
+[2.481s] running install
+[2.482s] running install_lib
+[2.484s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/lib/python3.8/site-packages/lab1_pkg
+[2.484s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/lib/python3.8/site-packages/lab1_pkg/relay.py to relay.cpython-38.pyc
+[2.484s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/lib/python3.8/site-packages/lab1_pkg/talker.py to talker.cpython-38.pyc
+[2.484s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/lib/python3.8/site-packages/lab1_pkg/__init__.py to __init__.cpython-38.pyc
+[2.484s] running install_data
+[2.485s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/share/ament_index
+[2.485s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/share/ament_index/resource_index
+[2.485s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/share/ament_index/resource_index/packages
+[2.487s] copying resource/lab1_pkg -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/share/ament_index/resource_index/packages
+[2.488s] copying package.xml -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/share/lab1_pkg
+[2.488s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/share/lab1_pkg/launch
+[2.488s] copying launch/lab1_launch.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/share/lab1_pkg/launch
+[2.488s] running install_egg_info
+[2.488s] Copying ../../build/lab1_pkg/lab1_pkg.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/lib/python3.8/site-packages/lab1_pkg-0.0.0-py3.8.egg-info
+[2.488s] running install_scripts
+[2.512s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/build/lab1_pkg/install.log'
+[2.548s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab1_ws/lab1_pkg' returned '0': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/build/lab1_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/install/lab1_pkg/lib/python3.8/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab1_pkg build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/build/lab1_pkg/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/build/lab1_pkg/install.log --install-scripts $base/lib/lab1_pkg --single-version-externally-managed install_data

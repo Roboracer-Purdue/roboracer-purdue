@@ -1,0 +1,32 @@
+[2.172s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/safety_node': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/lib/python3.8/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/safety_node build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/install.log --install-scripts $base/lib/safety_node --single-version-externally-managed install_data
+[2.417s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[2.417s]   warnings.warn(
+[2.449s] running egg_info
+[2.451s] creating ../../build/safety_node/safety_node.egg-info
+[2.458s] writing manifest file '../../build/safety_node/safety_node.egg-info/SOURCES.txt'
+[2.460s] writing manifest file '../../build/safety_node/safety_node.egg-info/SOURCES.txt'
+[2.460s] running build
+[2.462s] running build_py
+[2.462s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/build
+[2.462s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/build/lib
+[2.464s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/build/lib/safety_node
+[2.464s] copying safety_node/emergency_break.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/build/lib/safety_node
+[2.465s] copying safety_node/__init__.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/build/lib/safety_node
+[2.465s] running install
+[2.468s] running install_lib
+[2.471s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/lib/python3.8/site-packages/safety_node
+[2.471s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/lib/python3.8/site-packages/safety_node/emergency_break.py to emergency_break.cpython-38.pyc
+[2.471s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/lib/python3.8/site-packages/safety_node/__init__.py to __init__.cpython-38.pyc
+[2.472s] running install_data
+[2.472s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/ament_index
+[2.478s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/ament_index/resource_index
+[2.478s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/ament_index/resource_index/packages
+[2.478s] copying resource/safety_node -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/ament_index/resource_index/packages
+[2.478s] copying package.xml -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/safety_node
+[2.478s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/safety_node/launch
+[2.478s] copying launch/lab2_launch.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/share/safety_node/launch
+[2.478s] running install_egg_info
+[2.478s] Copying ../../build/safety_node/safety_node.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/lib/python3.8/site-packages/safety_node-0.0.0-py3.8.egg-info
+[2.479s] running install_scripts
+[2.496s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/install.log'
+[2.530s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab2_ws/safety_node' returned '0': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/install/safety_node/lib/python3.8/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/safety_node build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/build/safety_node/install.log --install-scripts $base/lib/safety_node --single-version-externally-managed install_data

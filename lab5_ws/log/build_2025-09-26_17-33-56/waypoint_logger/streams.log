@@ -1,0 +1,35 @@
+[0.689s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/waypoint_logger': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/lib/python3.8/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/waypoint_logger build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/install.log --install-scripts $base/lib/waypoint_logger --single-version-externally-managed install_data
+[0.862s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.862s]   warnings.warn(
+[0.877s] running egg_info
+[0.877s] creating ../build/waypoint_logger/waypoint_logger.egg-info
+[0.885s] writing manifest file '../build/waypoint_logger/waypoint_logger.egg-info/SOURCES.txt'
+[0.887s] writing manifest file '../build/waypoint_logger/waypoint_logger.egg-info/SOURCES.txt'
+[0.887s] running build
+[0.887s] running build_py
+[0.887s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/build
+[0.888s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/build/lib
+[0.888s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/build/lib/waypoint_logger
+[0.888s] copying waypoint_logger/waypoint_logger.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/build/lib/waypoint_logger
+[0.888s] copying waypoint_logger/__init__.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/build/lib/waypoint_logger
+[0.888s] running install
+[0.889s] running install_lib
+[0.889s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger
+[0.890s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger/waypoint_logger.py to waypoint_logger.cpython-38.pyc
+[0.890s]   File "/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger/waypoint_logger.py", line 24
+[0.890s]     print data.twist.twist.linear.x
+[0.890s]           ^
+[0.890s] SyntaxError: Missing parentheses in call to 'print'. Did you mean print(data.twist.twist.linear.x)?
+[0.890s] 
+[0.890s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger/__init__.py to __init__.cpython-38.pyc
+[0.890s] running install_data
+[0.890s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/share/ament_index
+[0.891s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/share/ament_index/resource_index
+[0.891s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/share/ament_index/resource_index/packages
+[0.891s] copying resource/waypoint_logger -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/share/ament_index/resource_index/packages
+[0.891s] copying package.xml -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/share/waypoint_logger
+[0.891s] running install_egg_info
+[0.892s] Copying ../build/waypoint_logger/waypoint_logger.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger-0.0.0-py3.8.egg-info
+[0.893s] running install_scripts
+[0.908s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/install.log'
+[0.925s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/waypoint_logger' returned '0': PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/lib/python3.8/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/waypoint_logger build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/waypoint_logger/install.log --install-scripts $base/lib/waypoint_logger --single-version-externally-managed install_data

@@ -1,0 +1,7 @@
+/home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+  File "/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger/waypoint_logger.py", line 24
+    print data.twist.twist.linear.x
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(data.twist.twist.linear.x)?
+

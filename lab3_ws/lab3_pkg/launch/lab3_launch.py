@@ -12,9 +12,9 @@ def generate_launch_description():
                 'look_ahead': 1.0,
                 'beam_a_id': 400.0, # Original = 340.0
                 'beam_b_id': 179.0,
-                'K_p': 0.5, # Original 0.5 0.2 1.0
-                'K_i': 0.2,
-                'K_d': 1.0,
+                'K_p': 1.5, # Original 0.5 0.2 1.0
+                'K_i': 0.0,
+                'K_d': 3.6,
             }]
         ),
     ])

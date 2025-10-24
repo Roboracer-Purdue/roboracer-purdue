@@ -1,0 +1,28 @@
+running egg_info
+creating ../../build/break_tester/break_tester.egg-info
+writing manifest file '../../build/break_tester/break_tester.egg-info/SOURCES.txt'
+writing manifest file '../../build/break_tester/break_tester.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/break_tester/build
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/break_tester/build/lib
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/build/break_tester/build/lib/break_tester
+copying break_tester/break_test.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/build/break_tester/build/lib/break_tester
+copying break_tester/__init__.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/build/break_tester/build/lib/break_tester
+running install
+running install_lib
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/break_tester/lib/python3.8/site-packages/break_tester
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/install/break_tester/lib/python3.8/site-packages/break_tester/break_test.py to break_test.cpython-38.pyc
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/install/break_tester/lib/python3.8/site-packages/break_tester/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/break_tester/share/ament_index
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/break_tester/share/ament_index/resource_index
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/break_tester/share/ament_index/resource_index/packages
+copying resource/break_tester -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/break_tester/share/ament_index/resource_index/packages
+copying package.xml -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/break_tester/share/break_tester
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/install/break_tester/share/break_tester/launch
+copying launch/break_test.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/install/break_tester/share/break_tester/launch
+running install_egg_info
+Copying ../../build/break_tester/break_tester.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/install/break_tester/lib/python3.8/site-packages/break_tester-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/build/break_tester/install.log'

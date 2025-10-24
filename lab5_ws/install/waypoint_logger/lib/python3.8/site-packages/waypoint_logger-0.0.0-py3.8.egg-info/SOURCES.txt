@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+../build/waypoint_logger/waypoint_logger.egg-info/PKG-INFO
+../build/waypoint_logger/waypoint_logger.egg-info/SOURCES.txt
+../build/waypoint_logger/waypoint_logger.egg-info/dependency_links.txt
+../build/waypoint_logger/waypoint_logger.egg-info/entry_points.txt
+../build/waypoint_logger/waypoint_logger.egg-info/requires.txt
+../build/waypoint_logger/waypoint_logger.egg-info/top_level.txt
+../build/waypoint_logger/waypoint_logger.egg-info/zip-safe
+launch/launch_waypoint_logger.py
+resource/waypoint_logger
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+waypoint_logger/__init__.py
+waypoint_logger/waypoint_logger.py

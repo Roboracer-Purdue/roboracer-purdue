@@ -7,7 +7,7 @@ import numpy as np
 
 num_beam = 1080
 angle_increment = 0.004351851996034384 
-car_width = 0.3
+car_width = 0.4
 safe_turn = 1.0
 gap_circle = 3.0
 
@@ -249,12 +249,10 @@ class gapFollow(Node):
         #    ut/= 10
 
         # Calculate driving speed
-        if abs(ut) < 0.01 and ranges[num_beam//2] > 20:
-            speed = 30.0
-        elif abs(ut) < 0.05 and ranges[num_beam//2] > 15:
-            speed = 10.0
-        elif abs(ut) < 0.1 and ranges[num_beam//2] > 8:
-            speed = 7.0
+        if abs(ut) < 0.5 and scanRanges[num_beam//2] > 15:
+            speed = 4.0 # 10.0
+        elif abs(ut) < 0.5 and scanRanges[num_beam//2] > 8:
+            speed = 4.0 # 7.0
         elif abs(ut) < 1:
             speed = 4.0
         else:

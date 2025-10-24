@@ -1,0 +1,31 @@
+/home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running egg_info
+creating ../build/visualize_waypoints/visualize_waypoints.egg-info
+writing manifest file '../build/visualize_waypoints/visualize_waypoints.egg-info/SOURCES.txt'
+writing manifest file '../build/visualize_waypoints/visualize_waypoints.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build/lib
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build/lib/visualize_waypoints
+copying visualize_waypoints/__init__.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build/lib/visualize_waypoints
+copying visualize_waypoints/visualize_waypoints.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build/lib/visualize_waypoints
+running install
+running install_lib
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages/visualize_waypoints
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages/visualize_waypoints/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages/visualize_waypoints/visualize_waypoints.py to visualize_waypoints.cpython-38.pyc
+running install_data
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/ament_index
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/ament_index/resource_index
+Sorry: IndentationError: expected an indented block (visualize_waypoints.py, line 16)
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/ament_index/resource_index/packages
+copying resource/visualize_waypoints -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/ament_index/resource_index/packages
+copying package.xml -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/visualize_waypoints
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/visualize_waypoints/launch
+copying launch/launch_visualize_waypoints.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/share/visualize_waypoints/launch
+running install_egg_info
+Copying ../build/visualize_waypoints/visualize_waypoints.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages/visualize_waypoints-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/install.log'
