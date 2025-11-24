@@ -1,0 +1,166 @@
+[0.215s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.215s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=22, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x709a90867220>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x709a909ac1f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x709a909ac1f0>>, mixin_verb=('build',))
+[0.509s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.509s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.509s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.509s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.509s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.509s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.509s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(break_tester) by extensions ['ignore', 'ignore_ament_install']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(break_tester) by extension 'ignore'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(break_tester) by extension 'ignore_ament_install'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(break_tester) by extensions ['colcon_pkg']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(break_tester) by extension 'colcon_pkg'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(break_tester) by extensions ['colcon_meta']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(break_tester) by extension 'colcon_meta'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(break_tester) by extensions ['ros']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(break_tester) by extension 'ros'
+[0.522s] DEBUG:colcon.colcon_core.package_identification:Package 'break_tester' with type 'ros.ament_python' and name 'break_tester'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extensions ['ignore', 'ignore_ament_install']
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extension 'ignore'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extension 'ignore_ament_install'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extensions ['colcon_pkg']
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extension 'colcon_pkg'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extensions ['colcon_meta']
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extension 'colcon_meta'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extensions ['ros']
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extension 'ros'
+[0.524s] DEBUG:colcon.colcon_core.package_identification:Package 'safety_node' with type 'ros.ament_python' and name 'safety_node'
+[0.524s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.524s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.524s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.524s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.524s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.544s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.544s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.547s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/patchychan/ros2_ws/install
+[0.548s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 299 installed packages in /opt/ros/humble
+[0.550s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 281 installed packages in /opt/ros/iron
+[0.555s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'break_tester' build argument 'cmake_args' from command line to 'None'
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'break_tester' build argument 'cmake_target' from command line to 'None'
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'break_tester' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'break_tester' build argument 'cmake_clean_cache' from command line to 'False'
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'break_tester' build argument 'cmake_clean_first' from command line to 'False'
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'break_tester' build argument 'cmake_force_configure' from command line to 'False'
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'break_tester' build argument 'ament_cmake_args' from command line to 'None'
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'break_tester' build argument 'catkin_cmake_args' from command line to 'None'
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'break_tester' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.640s] DEBUG:colcon.colcon_core.verb:Building package 'break_tester' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/break_tester', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester', 'merge_install': False, 'path': '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/break_tester', 'symlink_install': False, 'test_result_base': None}
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'cmake_args' from command line to 'None'
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'cmake_target' from command line to 'None'
+[0.641s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.641s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'cmake_clean_cache' from command line to 'False'
+[0.641s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'cmake_clean_first' from command line to 'False'
+[0.641s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'cmake_force_configure' from command line to 'False'
+[0.641s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'ament_cmake_args' from command line to 'None'
+[0.641s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'catkin_cmake_args' from command line to 'None'
+[0.641s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.641s] DEBUG:colcon.colcon_core.verb:Building package 'safety_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node', 'merge_install': False, 'path': '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/safety_node', 'symlink_install': False, 'test_result_base': None}
+[0.641s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.642s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.642s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/break_tester' with build type 'ament_python'
+[0.642s] Level 1:colcon.colcon_core.shell:create_environment_hook('break_tester', 'ament_prefix_path')
+[0.646s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.646s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/share/break_tester/hook/ament_prefix_path.ps1'
+[0.647s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/share/break_tester/hook/ament_prefix_path.dsv'
+[0.647s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/share/break_tester/hook/ament_prefix_path.sh'
+[0.648s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.648s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.651s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/safety_node' with build type 'ament_python'
+[0.651s] Level 1:colcon.colcon_core.shell:create_environment_hook('safety_node', 'ament_prefix_path')
+[0.651s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/safety_node/hook/ament_prefix_path.ps1'
+[0.652s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/safety_node/hook/ament_prefix_path.dsv'
+[0.652s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/safety_node/hook/ament_prefix_path.sh'
+[0.652s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.652s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.828s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/break_tester'
+[0.828s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.828s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.987s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/safety_node'
+[0.987s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.987s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.326s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/safety_node': PYTHONPATH=/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/safety_node build --build-base /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/build install --record /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/install.log --install-scripts $base/lib/safety_node --single-version-externally-managed install_data
+[1.328s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/break_tester': PYTHONPATH=/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/break_tester/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/break_tester build --build-base /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/break_tester/build install --record /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/break_tester/install.log --install-scripts $base/lib/break_tester --single-version-externally-managed install_data
+[1.503s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/break_tester' returned '0': PYTHONPATH=/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/break_tester/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/break_tester build --build-base /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/break_tester/build install --record /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/break_tester/install.log --install-scripts $base/lib/break_tester --single-version-externally-managed install_data
+[1.508s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester' for CMake module files
+[1.508s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester' for CMake config files
+[1.508s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/lib'
+[1.509s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/bin'
+[1.509s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/lib/pkgconfig/break_tester.pc'
+[1.509s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/lib/python3.10/site-packages'
+[1.509s] Level 1:colcon.colcon_core.shell:create_environment_hook('break_tester', 'pythonpath')
+[1.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/share/break_tester/hook/pythonpath.ps1'
+[1.509s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/share/break_tester/hook/pythonpath.dsv'
+[1.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/share/break_tester/hook/pythonpath.sh'
+[1.510s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/bin'
+[1.510s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(break_tester)
+[1.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/share/break_tester/package.ps1'
+[1.511s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/share/break_tester/package.dsv'
+[1.511s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/share/break_tester/package.sh'
+[1.512s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/share/break_tester/package.bash'
+[1.512s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/share/break_tester/package.zsh'
+[1.513s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/break_tester/share/colcon-core/packages/break_tester)
+[1.515s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node' for CMake module files
+[1.515s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/safety_node' returned '0': PYTHONPATH=/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/safety_node build --build-base /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/build install --record /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/install.log --install-scripts $base/lib/safety_node --single-version-externally-managed install_data
+[1.515s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node' for CMake config files
+[1.516s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib'
+[1.516s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/bin'
+[1.516s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/pkgconfig/safety_node.pc'
+[1.516s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages'
+[1.516s] Level 1:colcon.colcon_core.shell:create_environment_hook('safety_node', 'pythonpath')
+[1.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/safety_node/hook/pythonpath.ps1'
+[1.516s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/safety_node/hook/pythonpath.dsv'
+[1.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/safety_node/hook/pythonpath.sh'
+[1.517s] Level 1:colcon.colcon_core.environment:checking '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/bin'
+[1.517s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(safety_node)
+[1.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/safety_node/package.ps1'
+[1.517s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/safety_node/package.dsv'
+[1.518s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/safety_node/package.sh'
+[1.518s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/safety_node/package.bash'
+[1.518s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/safety_node/package.zsh'
+[1.518s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/share/colcon-core/packages/safety_node)
+[1.519s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.519s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.519s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.520s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.587s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.587s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.587s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.587s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.589s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[1.589s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.589s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/local_setup.ps1'
+[1.590s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/_local_setup_util_ps1.py'
+[1.591s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/setup.ps1'
+[1.592s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/local_setup.sh'
+[1.593s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/_local_setup_util_sh.py'
+[1.593s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/setup.sh'
+[1.594s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/local_setup.bash'
+[1.594s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/setup.bash'
+[1.595s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/local_setup.zsh'
+[1.596s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/setup.zsh'

@@ -1,0 +1,23 @@
+running egg_info
+writing ../build/safety_node/safety_node.egg-info/PKG-INFO
+writing dependency_links to ../build/safety_node/safety_node.egg-info/dependency_links.txt
+writing entry points to ../build/safety_node/safety_node.egg-info/entry_points.txt
+writing requirements to ../build/safety_node/safety_node.egg-info/requires.txt
+writing top-level names to ../build/safety_node/safety_node.egg-info/top_level.txt
+reading manifest file '../build/safety_node/safety_node.egg-info/SOURCES.txt'
+writing manifest file '../build/safety_node/safety_node.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+creating /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages/safety_node
+copying /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/build/lib/safety_node/emergency_break.py -> /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages/safety_node
+copying /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/build/lib/safety_node/__init__.py -> /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages/safety_node
+byte-compiling /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages/safety_node/emergency_break.py to emergency_break.cpython-310.pyc
+byte-compiling /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages/safety_node/__init__.py to __init__.cpython-310.pyc
+running install_data
+running install_egg_info
+Copying ../build/safety_node/safety_node.egg-info to /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages/safety_node-0.0.0-py3.10.egg-info
+running install_scripts
+Installing emergency_break script to /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/safety_node
+writing list of installed files to '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/install.log'

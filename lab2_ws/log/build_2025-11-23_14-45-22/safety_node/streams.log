@@ -1,0 +1,27 @@
+[0.674s] Invoking command in '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/safety_node': PYTHONPATH=/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/safety_node build --build-base /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/build install --record /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/install.log --install-scripts $base/lib/safety_node --single-version-externally-managed install_data
+[0.826s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.826s]   warnings.warn(
+[0.831s] running egg_info
+[0.831s] writing ../build/safety_node/safety_node.egg-info/PKG-INFO
+[0.832s] writing dependency_links to ../build/safety_node/safety_node.egg-info/dependency_links.txt
+[0.832s] writing entry points to ../build/safety_node/safety_node.egg-info/entry_points.txt
+[0.832s] writing requirements to ../build/safety_node/safety_node.egg-info/requires.txt
+[0.832s] writing top-level names to ../build/safety_node/safety_node.egg-info/top_level.txt
+[0.833s] reading manifest file '../build/safety_node/safety_node.egg-info/SOURCES.txt'
+[0.833s] writing manifest file '../build/safety_node/safety_node.egg-info/SOURCES.txt'
+[0.833s] running build
+[0.834s] running build_py
+[0.834s] running install
+[0.834s] running install_lib
+[0.834s] creating /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages/safety_node
+[0.834s] copying /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/build/lib/safety_node/emergency_break.py -> /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages/safety_node
+[0.834s] copying /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/build/lib/safety_node/__init__.py -> /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages/safety_node
+[0.835s] byte-compiling /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages/safety_node/emergency_break.py to emergency_break.cpython-310.pyc
+[0.835s] byte-compiling /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages/safety_node/__init__.py to __init__.cpython-310.pyc
+[0.836s] running install_data
+[0.836s] running install_egg_info
+[0.837s] Copying ../build/safety_node/safety_node.egg-info to /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages/safety_node-0.0.0-py3.10.egg-info
+[0.837s] running install_scripts
+[0.850s] Installing emergency_break script to /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/safety_node
+[0.851s] writing list of installed files to '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/install.log'
+[0.864s] Invoked command in '/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/safety_node' returned '0': PYTHONPATH=/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/install/safety_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/safety_node build --build-base /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/build install --record /home/patchychan/arc_ws/ARC-PI-ROSCODE/lab2_ws/build/safety_node/install.log --install-scripts $base/lib/safety_node --single-version-externally-managed install_data

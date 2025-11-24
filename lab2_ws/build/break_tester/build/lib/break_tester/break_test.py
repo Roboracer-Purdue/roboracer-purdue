@@ -39,7 +39,8 @@ class TestBreak(Node):
         self.odom_sub = self.create_subscription(Odometry, "/ego_racecar/odom", self.odom_callback, 5) 
 
         # Create a new publisher to 'drive_relay'
-        self.drive_pub = self.create_publisher(AckermannDriveStamped, '/drive', 5)
+        # self.drive_pub = self.create_publisher(AckermannDriveStamped, '/drive', 5)
+        self.drive_pub = self.create_publisher(AckermannDriveStamped, '/cmd_vel', 1)
 
         # Initialize by driving backward
         msg = AckermannDriveStamped()
@@ -49,7 +50,6 @@ class TestBreak(Node):
         self.drive_pub.publish(msg)
         self.get_logger().info(f"Resetting")
 
-        
     def odom_callback(self, msg):
         # RETRIEVE forward/backward velocity from odom message
         velocity_x = msg.twist.twist.linear.x
@@ -92,7 +92,7 @@ class TestBreak(Node):
 
     def scan_callback(self, msg):
         # Retrieve Parameters
-        self.gap = msg.ranges[540]
+        self.gap = msg.ranges[len(msg.ranges)]
 
         # Break when the distance is reached
         if self.state == 1 and self.gap < breaking_distance:

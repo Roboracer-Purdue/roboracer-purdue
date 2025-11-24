@@ -6,8 +6,6 @@ from nav_msgs.msg import Odometry
 import numpy as np
 import time
 
-num_beam = 1080
-
 # BREAKING TIME
 # Quadratic Formula av + b
 a = 105.38
@@ -16,8 +14,6 @@ b = 333.21
 # Output Limiter
 TTC_inf_value = 1000
 TTC_zero_value = 0.00001
-start_beam_index = 0
-end_beam_index = 1079
 
 class EmergencyBreak(Node):
     def __init__(self):
@@ -28,8 +24,8 @@ class EmergencyBreak(Node):
 
         # Initialize Node Variables
         self.velocity_x = 0
-        self.beam_velocity = [0.0] * num_beam
-        self.TTC = [0.0] * num_beam
+        self.beam_velocity = [0.0] * 1080
+        self.TTC = [0.0] * 1080
 
         self.brake_state = 0
         self.brake_start = time.time()
@@ -38,7 +34,7 @@ class EmergencyBreak(Node):
         self.scan_sub = self.create_subscription(LaserScan, "/scan", self.scan_callback, 1) 
 
         # Subscribe to odom to update car velocity
-        self.odom_sub = self.create_subscription(Odometry, "/ego_racecar/odom", self.odom_callback, 5) 
+        self.odom_sub = self.create_subscription(Odometry, "/roboworks/odom", self.odom_callback, 5) 
 
         # Create a new publisher to 'drive_relay'
         self.drive_pub = self.create_publisher(AckermannDriveStamped, '/drive', 5)
@@ -94,10 +90,10 @@ class EmergencyBreak(Node):
                 self.TTC[i] = TTC_inf_value
             cur_angle += msg.angle_increment
         # Log Beam reading, Velocity, and TTC to terminals
-        '''
-        for i in range(start_beam_index, end_beam_index + 1):
+        
+        for i in range(len(msg.ranges)):
             self.get_logger().info(f'Beam No. {i:4d}: {msg.ranges[i]:8.2f} {self.beam_velocity[i]:8.2f} {self.TTC[i]:8.2f}')
-        '''
+        
 
         # Publish to drive if a TTC is too low
         # min(self.TTC) < self.velocity_x / breaking_deceleration
