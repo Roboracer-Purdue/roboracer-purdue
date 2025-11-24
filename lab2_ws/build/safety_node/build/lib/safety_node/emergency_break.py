@@ -34,7 +34,7 @@ class EmergencyBreak(Node):
         self.scan_sub = self.create_subscription(LaserScan, "/scan", self.scan_callback, 1) 
 
         # Subscribe to odom to update car velocity
-        self.odom_sub = self.create_subscription(Odometry, "/roboworks/odom", self.odom_callback, 5) 
+        self.odom_sub = self.create_subscription(Odometry, "/odom", self.odom_callback, 5) 
 
         # Create a new publisher to 'drive_relay'
         self.drive_pub = self.create_publisher(AckermannDriveStamped, '/drive', 5)
