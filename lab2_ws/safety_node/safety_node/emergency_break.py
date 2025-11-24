@@ -9,7 +9,7 @@ import time
 # BREAKING TIME
 # Quadratic Formula av + b
 a = 105.38
-b = 333.21
+b = 733.21
 
 # Output Limiter
 TTC_inf_value = 1000
@@ -24,8 +24,7 @@ class EmergencyBreak(Node):
 
         # Initialize Node Variables
         self.velocity_x = 0
-        self.beam_velocity = [0.0] * 1080
-        self.TTC = [0.0] * 1080
+
 
         self.brake_state = 0
         self.brake_start = time.time()
@@ -44,7 +43,7 @@ class EmergencyBreak(Node):
     def odom_callback(self, msg):
         # RETRIEVE forward/backward velocity from odom message
         self.velocity_x = msg.twist.twist.linear.x
-        # self.get_logger().info(f'Updated X-Velocity to {velocity_x:.3f} (m/s)')
+        #self.get_logger().info(f'Updated X-Velocity to {self.velocity_x:.3f} (m/s)')
         
     def scan_callback(self, msg):
         # Retrieve Parameters
@@ -70,7 +69,9 @@ class EmergencyBreak(Node):
             self.get_logger().info(f'First range: {msg.ranges[0]}')
             self.get_logger().info(f'Last range: {msg.ranges[-1]}')
         '''
- 
+        self.beam_velocity = [0.0] * len(msg.ranges)
+        self.TTC = [0.0] * len(msg.ranges)
+
         # Calculate the velocity along each of the scan beam
         cur_angle = msg.angle_min
         for i in range(len(msg.ranges)):
@@ -81,7 +82,8 @@ class EmergencyBreak(Node):
         cur_angle = msg.angle_min
         for i in range(len(msg.ranges)):
             # Check if the TTC is in the break barrier
-            if abs(msg.ranges[i] * np.sin(cur_angle)) < barrier_width / 2:
+            
+            if (msg.ranges[i] * np.sin(cur_angle))**2 < (0.6)**2:
                 if self.beam_velocity[i] != 0:
                     self.TTC[i] = min((msg.ranges[i]) / max(self.beam_velocity[i], TTC_zero_value), TTC_inf_value)
                 else:
@@ -89,10 +91,11 @@ class EmergencyBreak(Node):
             else:
                 self.TTC[i] = TTC_inf_value
             cur_angle += msg.angle_increment
+
         # Log Beam reading, Velocity, and TTC to terminals
         
-        for i in range(len(msg.ranges)):
-            self.get_logger().info(f'Beam No. {i:4d}: {msg.ranges[i]:8.2f} {self.beam_velocity[i]:8.2f} {self.TTC[i]:8.2f}')
+        # for i in range(len(msg.ranges)):
+        #    self.get_logger().info(f'Beam No. {i:4d}: {msg.ranges[i]:8.2f} {self.beam_velocity[i]:8.2f} {self.TTC[i]:8.2f}')
         
 
         # Publish to drive if a TTC is too low
@@ -102,7 +105,7 @@ class EmergencyBreak(Node):
         TTB = a*self.velocity_x + b
         TTB /= 1000 # convert to second
 
-        #self.get_logger().info(f"STATUS: TTC {min(self.TTC):.5f} TTB {TTB:.5f} ")
+        self.get_logger().info(f"STATUS: TTC {min(self.TTC):.5f} TTB {TTB:.5f} ")
 
         if min(self.TTC) < TTB:
             # Initialize message
