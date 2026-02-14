@@ -1,0 +1,3 @@
+[console_scripts]
+wall_follow = wall_follow_2.wall_follow:main
+

@@ -1,0 +1,297 @@
+#!/usr/bin/env python3
+"""
+Reactive F1TENTH autonomy (ROS 2 Humble, Python)
+
+- Follow-The-Gap steering (reactive obstacle avoidance)
+- TTC-based safety override (will slow down if collision is near)
+- Adaptive speed: faster when open space, slower when turning
+- "Jump" detector: if something suddenly appears in front, force slow for a short time
+
+Sub:  /scan (sensor_msgs/LaserScan)
+Pub:  /ackermann_cmd (ackermann_msgs/AckermannDriveStamped)
+"""
+
+import math
+from typing import List, Tuple, Optional
+
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import LaserScan
+from ackermann_msgs.msg import AckermannDriveStamped
+
+
+def clamp(x: float, lo: float, hi: float) -> float:
+    return max(lo, min(hi, x))
+
+
+class ReactiveAutonomy(Node):
+    def __init__(self):
+        super().__init__("reactive_autonomy")
+
+        # --- Params ---
+        self.declare_parameter("scan_topic", "/scan")
+        self.declare_parameter("drive_topic", "/ackermann_cmd")
+
+        self.declare_parameter("front_fov_deg", 180.0)
+        self.declare_parameter("range_clip_max", 8.0)
+        self.declare_parameter("range_clip_min", 0.05)
+        self.declare_parameter("bubble_radius_m", 0.40)
+        self.declare_parameter("gap_min_width_deg", 8.0)
+
+        self.declare_parameter("steer_limit_rad", 0.40)
+        self.declare_parameter("steer_smooth_alpha", 0.35)
+
+        self.declare_parameter("speed_min", 1.0)
+        self.declare_parameter("speed_max", 2.0)
+        self.declare_parameter("speed_turn_scale", 0.5)
+        self.declare_parameter("speed_dist_gain", 1.1)
+
+        self.declare_parameter("ttc_emergency", 0.45)
+        self.declare_parameter("ttc_slow", 0.90)
+
+        self.declare_parameter("jump_drop_m", 0.9)
+        self.declare_parameter("jump_hold_sec", 0.6)
+
+        # --- State ---
+        self.prev_steer = 0.0
+        self.prev_forward_dist: Optional[float] = None
+        self.jump_slow_until = 0.0
+
+        scan_topic = self.get_parameter("scan_topic").value
+        drive_topic = self.get_parameter("drive_topic").value
+
+        self.scan_sub = self.create_subscription(LaserScan, scan_topic, self.on_scan, 10)
+        self.drive_pub = self.create_publisher(AckermannDriveStamped, drive_topic, 3)
+
+        self.get_logger().info(f"ReactiveAutonomy: sub={scan_topic} pub={drive_topic}")
+
+    def on_scan(self, msg: LaserScan):
+        ranges, angles = self.get_front_sector(msg)
+        if not ranges:
+            return
+
+        cleaned = self.clean_ranges(ranges, msg.range_min, msg.range_max)
+
+        now = self.get_clock().now().nanoseconds * 1e-9
+
+        # Forward distance (small cone)
+        forward_dist = self.forward_distance(cleaned, angles, half_angle_deg=7.0)
+
+        # Sudden obstacle detection
+        jump_drop_m = float(self.get_parameter("jump_drop_m").value)
+        jump_hold_sec = float(self.get_parameter("jump_hold_sec").value)
+        if self.prev_forward_dist is not None and forward_dist is not None:
+            if (self.prev_forward_dist - forward_dist) >= jump_drop_m:
+                self.jump_slow_until = now + jump_hold_sec
+        self.prev_forward_dist = forward_dist
+
+        # Steering (Follow-The-Gap)
+        steer = self.follow_the_gap(cleaned, angles)
+
+        # Speed planning
+        speed = self.plan_speed(cleaned, angles, steer)
+
+        # TTC safety override
+        ttc = self.estimate_ttc(cleaned, angles, speed)
+        vmin = float(self.get_parameter("speed_min").value)
+        ttc_emergency = float(self.get_parameter("ttc_emergency").value)
+        ttc_slow = float(self.get_parameter("ttc_slow").value)
+
+        if ttc is not None:
+            if ttc <= ttc_emergency:
+                speed = 0.0
+            # elif ttc <= ttc_slow:
+            #    speed = vmin
+
+        # Jump slow hold
+        '''
+        if now < self.jump_slow_until:
+            speed = vmin
+        '''
+
+        # Smooth steering
+        alpha = float(self.get_parameter("steer_smooth_alpha").value)
+        steer = alpha * steer + (1.0 - alpha) * self.prev_steer
+        self.prev_steer = steer
+
+        self.publish_drive(speed, steer)
+
+    # ---------- LiDAR helpers ----------
+    def get_front_sector(self, msg: LaserScan) -> Tuple[List[float], List[float]]:
+        fov_deg = float(self.get_parameter("front_fov_deg").value)
+        fov = math.radians(fov_deg)
+
+        out_ranges: List[float] = []
+        out_angles: List[float] = []
+
+        for i, r in enumerate(msg.ranges):
+            ang = msg.angle_min + i * msg.angle_increment
+            # map to [-pi, pi] so "front" is near 0
+            ang = math.atan2(math.sin(ang), math.cos(ang))
+            if abs(ang) <= (fov * 0.5):
+                out_ranges.append(r)
+                out_angles.append(ang)
+
+        return out_ranges, out_angles
+
+    def clean_ranges(self, ranges: List[float], rmin: float, rmax: float) -> List[float]:
+        clip_max = float(self.get_parameter("range_clip_max").value)
+        clip_min = float(self.get_parameter("range_clip_min").value)
+
+        cleaned: List[float] = []
+        for r in ranges:
+            if r is None or not math.isfinite(r):
+                cleaned.append(float("inf"))
+                continue
+            if r < max(rmin, clip_min) or r > min(rmax, clip_max):
+                cleaned.append(float("inf"))
+            else:
+                cleaned.append(r)
+        return cleaned
+
+    def forward_distance(self, ranges: List[float], angles: List[float], half_angle_deg: float) -> Optional[float]:
+        half = math.radians(half_angle_deg)
+        vals = [r for r, a in zip(ranges, angles) if abs(a) <= half and math.isfinite(r)]
+        if not vals:
+            return None
+        return min(vals)
+
+    # ---------- Control ----------
+    def follow_the_gap(self, ranges: List[float], angles: List[float]) -> float:
+        steer_limit = float(self.get_parameter("steer_limit_rad").value)
+        bubble_radius = float(self.get_parameter("bubble_radius_m").value)
+        gap_min_width = math.radians(float(self.get_parameter("gap_min_width_deg").value))
+
+        # Closest obstacle
+        min_r = float("inf")
+        min_i = -1
+        for i, r in enumerate(ranges):
+            if math.isfinite(r) and r < min_r:
+                min_r = r
+                min_i = i
+
+        if min_i < 0:
+            return 0.0
+
+        bubbled = list(ranges)
+
+        # bubble angle computed from closest range
+        if math.isfinite(min_r) and min_r > 1e-3:
+            bubble_ang = math.asin(clamp(bubble_radius / min_r, 0.0, 1.0))
+        else:
+            bubble_ang = math.radians(10.0)
+
+        for i in range(len(bubbled)):
+            if abs(angles[i] - angles[min_i]) <= bubble_ang:
+                bubbled[i] = 0.0
+
+        # find gaps (contiguous free indices)
+        gaps = []
+        start = None
+        for i, r in enumerate(bubbled):
+            free = (r > 0.0) and (not math.isfinite(r) or r > 0.5)
+            if free and start is None:
+                start = i
+            if (not free) and start is not None:
+                gaps.append((start, i - 1))
+                start = None
+        if start is not None:
+            gaps.append((start, len(bubbled) - 1))
+
+        if not gaps:
+            return 0.0
+
+        # pick widest gap by angular width
+        best_gap = None
+        best_width = -1.0
+        for s, e in gaps:
+            width = abs(angles[e] - angles[s])
+            if width > best_width:
+                best_width = width
+                best_gap = (s, e)
+
+        if best_gap is None or best_width < gap_min_width:
+            return 0.0
+
+        s, e = best_gap
+
+        # pick farthest point inside gap
+        best_i = s
+        best_val = -1.0
+        for i in range(s, e + 1):
+            r = bubbled[i]
+            rr = r if math.isfinite(r) else 999.0
+            if rr > best_val:
+                best_val = rr
+                best_i = i
+
+        target_angle = angles[best_i]
+        return clamp(target_angle, -steer_limit, steer_limit)
+
+    def plan_speed(self, ranges: List[float], angles: List[float], steer: float) -> float:
+        vmin = float(self.get_parameter("speed_min").value)
+        vmax = float(self.get_parameter("speed_max").value)
+        turn_scale = float(self.get_parameter("speed_turn_scale").value)
+        dist_gain = float(self.get_parameter("speed_dist_gain").value)
+
+        fwd = self.forward_distance(ranges, angles, half_angle_deg=10.0)
+        if fwd is None:
+            fwd = 0.8
+
+        # v_dist = vmin + dist_gain * math.log(1.0 + max(0.0, fwd))
+        # v_turn = vmax / (1.0 + turn_scale * abs(steer))
+
+        # v = min(v_dist, v_turn)
+        # return clamp(v, vmin, vmax)
+
+        # CONDITIONAL SPEED DECISION
+        if abs(steer) > 0.5:
+            v = 0.5
+        elif abs(steer) > 0.2:
+            v = 1.0
+        else:
+            v = 2.0
+
+        return v
+
+    def estimate_ttc(self, ranges: List[float], angles: List[float], speed: float) -> Optional[float]:
+        if speed <= 0.05:
+            return None
+
+        half = math.radians(12.0)
+        best = None
+        for r, a in zip(ranges, angles):
+            if not math.isfinite(r):
+                continue
+            if abs(a) > half:
+                continue
+            closing = speed * max(0.0, math.cos(a))
+            if closing < 0.05:
+                continue
+            ttc = r / closing
+            if best is None or ttc < best:
+                best = ttc
+        return best
+
+    def publish_drive(self, speed: float, steer: float):
+        msg = AckermannDriveStamped()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = "base_link"
+        msg.drive.speed = float(speed)
+        msg.drive.steering_angle = float(steer)
+        self.drive_pub.publish(msg)
+
+
+def main():
+    rclpy.init()
+    node = ReactiveAutonomy()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    node.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == "__main__":
+    main()

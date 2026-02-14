@@ -1,0 +1,18 @@
+[0.568s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/src/wall_follow_2': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/wall_follow_2 build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/install.log --install-scripts $base/lib/wall_follow_2 --single-version-externally-managed install_data
+[0.729s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.729s]   warnings.warn(
+[0.747s] running egg_info
+[0.751s] writing manifest file '../../build/wall_follow_2/wall_follow_2.egg-info/SOURCES.txt'
+[0.752s] running build
+[0.752s] running build_py
+[0.752s] copying wall_follow_2/wall_follow.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/build/lib/wall_follow_2
+[0.752s] running install
+[0.753s] running install_lib
+[0.754s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/lib/python3.8/site-packages/wall_follow_2/wall_follow.py to wall_follow.cpython-38.pyc
+[0.755s] running install_data
+[0.755s] running install_egg_info
+[0.756s] removing '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/lib/python3.8/site-packages/wall_follow_2-0.0.0-py3.8.egg-info' (and everything under it)
+[0.756s] Copying ../../build/wall_follow_2/wall_follow_2.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/lib/python3.8/site-packages/wall_follow_2-0.0.0-py3.8.egg-info
+[0.757s] running install_scripts
+[0.771s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/install.log'
+[0.790s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/src/wall_follow_2' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/wall_follow_2 build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/install.log --install-scripts $base/lib/wall_follow_2 --single-version-externally-managed install_data

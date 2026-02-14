@@ -1,0 +1,7 @@
+/home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+  File "/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/lib/python3.8/site-packages/wall_follow_2/wall_follow.py", line 181
+    self.get_logger().info(f'a_angle: {beam_a_angle} b_angle: {beam_b_angle})
+                                                                            ^
+SyntaxError: EOL while scanning string literal
+

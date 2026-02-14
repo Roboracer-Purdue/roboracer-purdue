@@ -1,0 +1,30 @@
+[0.638s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/src/wall_follow_2': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/wall_follow_2 build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/install.log --install-scripts $base/lib/wall_follow_2 --single-version-externally-managed install_data
+[0.810s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.810s]   warnings.warn(
+[0.829s] running egg_info
+[0.829s] creating ../../build/wall_follow_2/wall_follow_2.egg-info
+[0.835s] writing manifest file '../../build/wall_follow_2/wall_follow_2.egg-info/SOURCES.txt'
+[0.837s] writing manifest file '../../build/wall_follow_2/wall_follow_2.egg-info/SOURCES.txt'
+[0.837s] running build
+[0.837s] running build_py
+[0.837s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/build
+[0.837s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/build/lib
+[0.837s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/build/lib/wall_follow_2
+[0.837s] copying wall_follow_2/__init__.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/build/lib/wall_follow_2
+[0.837s] copying wall_follow_2/wall_follow.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/build/lib/wall_follow_2
+[0.838s] running install
+[0.839s] running install_lib
+[0.839s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/lib/python3.8/site-packages/wall_follow_2
+[0.840s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/lib/python3.8/site-packages/wall_follow_2/__init__.py to __init__.cpython-38.pyc
+[0.840s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/lib/python3.8/site-packages/wall_follow_2/wall_follow.py to wall_follow.cpython-38.pyc
+[0.841s] running install_data
+[0.841s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/share
+[0.842s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/share/ament_index
+[0.842s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/share/ament_index/resource_index
+[0.842s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/share/ament_index/resource_index/packages
+[0.842s] copying resource/wall_follow_2 -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/share/ament_index/resource_index/packages
+[0.842s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/share/wall_follow_2
+[0.842s] copying package.xml -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/share/wall_follow_2
+[0.842s] creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/share/wall_follow_2/launch
+[0.843s] error: can't copy 'launch/wall_follow.launch.py': doesn't exist or not a regular file
+[0.864s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/src/wall_follow_2' returned '1': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/install/wall_follow_2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/wall_follow_2 build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab3_ws_john/build/wall_follow_2/install.log --install-scripts $base/lib/wall_follow_2 --single-version-externally-managed install_data
