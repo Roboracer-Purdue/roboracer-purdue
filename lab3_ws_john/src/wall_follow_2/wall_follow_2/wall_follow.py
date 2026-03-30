@@ -33,19 +33,19 @@ class WallFollow(Node):
         self.declare_parameter("range_clip_min", 0.05)
 
         # Steerings
-        self.declare_parameter("steer_limit_rad", 0.40)
-        self.declare_parameter("steer_smooth_alpha", 0.35)
+        self.declare_parameter("steer_limit_rad", 0.0)
+        self.declare_parameter("steer_smooth_alpha", 0.0)
 
         # Speed control
-        self.declare_parameter("speed_min", 0.5) # For turning
-        self.declare_parameter("speed_max", 2.0) # For gassin'
+        self.declare_parameter("speed_min", 0.0) # For turning
+        self.declare_parameter("speed_max", 0.0) # For gassin'
 
         # Wallfollowing Parameters
-        self.declare_parameter("target_distance", 0.3)
-        self.declare_parameter("look_ahead", 1.0)
-        self.declare_parameter("beam_a_angle", -60.0)
-        self.declare_parameter("beam_b_angle", -90.0)
-        self.declare_parameter("K_p", 2.0)
+        self.declare_parameter("target_distance", 0.0)
+        self.declare_parameter("look_ahead", 0.0)
+        self.declare_parameter("beam_a_angle", 0.0)
+        self.declare_parameter("beam_b_angle", 0.0)
+        self.declare_parameter("K_p", 0.0)
         self.declare_parameter("K_i", 0.0)
         self.declare_parameter("K_d", 0.0)
 
@@ -61,7 +61,7 @@ class WallFollow(Node):
         drive_topic = self.get_parameter("drive_topic").value
         odom_topic = self.get_parameter("odom_topic").value
 
-        self.scan_sub = self.create_subscription(LaserScan, scan_topic, self.scan_callback, 10)
+        self.scan_sub = self.create_subscription(LaserScan, scan_topic, self.scan_callback, 1)
         self.odom_sub = self.create_subscription(Odometry, scan_topic, self.odom_callback, 7)
         self.drive_pub = self.create_publisher(AckermannDriveStamped, drive_topic, 5)
 
@@ -71,7 +71,7 @@ class WallFollow(Node):
         if not msg:
             return
         
-        self. velocity_x = msg.twist.twist.linear.x
+        self.velocity_x = msg.twist.twist.linear.x
 
     def scan_callback(self, msg: LaserScan):
         ranges, angles = self.get_front_sector(msg)
@@ -109,8 +109,8 @@ class WallFollow(Node):
         # Smooth steering
         alpha = float(self.get_parameter("steer_smooth_alpha").value)
         steer_limit = float(self.get_parameter("steer_limit_rad").value)
-        steer = clamp(steer, -steer_limit, steer_limit)
-        steer = alpha * steer + (1.0 - alpha) * self.prev_steer
+        # steer = clamp(steer, -steer_limit, steer_limit)
+        # steer = alpha * steer + (1.0 - alpha) * self.prev_steer
         self.prev_steer = steer
 
         #self.get_logger().info(f'DRIVE steer: {steer} speed: {speed}')
@@ -172,16 +172,17 @@ class WallFollow(Node):
         K_d = self.get_parameter('K_d').get_parameter_value().double_value
 
         # Retrive a and b laser scan
+        
         a_id = bisect.bisect_left(angles, math.radians(beam_a_angle))
         b_id = bisect.bisect_left(angles, math.radians(beam_b_angle))
         a = ranges[a_id]
         b = ranges[b_id]
 
-        theta = beam_b_angle - beam_a_angle
+        theta = abs(beam_b_angle - beam_a_angle)
 
         #self.get_logger().info(f'len angle {len(angles)} ranges {len(ranges)}')
         self.get_logger().info(f'a_id: {a_id} b_id: {b_id} a: {a:.3f}')
-        #self.get_logger().info(f'a_angle: {beam_a_angle} b_angle: {beam_b_angle}')
+        self.get_logger().info(f'a_angle: {angles[a_id]} b_angle: {angles[b_id]}')
         #self.get_logger().info(f'a: {a} b: {b}')
         #self.get_logger().info(f'min: {min(angles)} max: {max(angles)}')
 
@@ -198,6 +199,11 @@ class WallFollow(Node):
         # Compute PID steering angles
         et = target_distance - Dt
         et1 = target_distance - Dt1
+
+        # Replace velocity from odom if none
+        odom_topic = self.get_parameter("odom_topic").value
+        if odom_topic == "":
+            self.velocity_x = speed
 
         t = look_ahead / max(self.velocity_x, 0.00001)
 
@@ -227,11 +233,26 @@ class WallFollow(Node):
         return clamp(v, vmin, vmax)
         '''
         # CONDITIONAL SPEED DECISION
+
+        '''
         if abs(steer) > 0.5:
             v = vmin
         else:
             v = vmax
+        '''
 
+        ut = steer
+        if abs(ut) < 0.1:
+            speed = vmax
+        elif abs(ut) < 5:
+            speed = 0.75 * vmax
+        elif abs(ut) < 10:
+            speed = 0.75 * vmax
+        elif abs(ut) < 20:
+            speed = 0.5 * vmax
+        else:
+            speed = vmin
+        v = speed
         return v
 
     def forward_distance(self, ranges: List[float], angles: List[float], half_angle_deg: float) -> Optional[float]:

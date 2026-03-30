@@ -22,17 +22,21 @@ def generate_launch_description():
 
                 # Steering
                 'steer_limit_rad': 0.40,
-                'steer_smooth_alpha': 0.35,
+                'steer_smooth_alpha': 0.65,
 
                 # Speed
                 'speed_min': 0.5,
                 'speed_max': 2.0,
 
                 # Wall following
-                'target_distance': 0.3,
+                'target_distance': 1.1,
                 'look_ahead': 1.0,
-                'beam_a_angle': -60.0,
-                'beam_b_angle': -90.0,
+                'beam_a_angle': -15.0, #340
+                'beam_b_angle': -90.0, #179
+
+                'K_p': 1.5, 
+                'K_i': 0.0,
+                'K_d': 3.6,
 
                 # Safety
                 'ttc_emergency': 0.5,

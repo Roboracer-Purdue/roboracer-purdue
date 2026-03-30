@@ -1,0 +1,26 @@
+running egg_info
+creating ../build/rrt_planner/rrt_planner.egg-info
+writing manifest file '../build/rrt_planner/rrt_planner.egg-info/SOURCES.txt'
+writing manifest file '../build/rrt_planner/rrt_planner.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/build
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/build/lib
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/build/lib/rrt_planner
+copying rrt_planner/__init__.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/build/lib/rrt_planner
+copying rrt_planner/rrt.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/build/lib/rrt_planner
+running install
+running install_lib
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib/python3.8/site-packages/rrt_planner
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib/python3.8/site-packages/rrt_planner/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib/python3.8/site-packages/rrt_planner/rrt.py to rrt.cpython-38.pyc
+running install_data
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/ament_index
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/ament_index/resource_index
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/ament_index/resource_index/packages
+copying resource/rrt_planner -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/ament_index/resource_index/packages
+copying package.xml -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/rrt_planner
+running install_egg_info
+Copying ../build/rrt_planner/rrt_planner.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib/python3.8/site-packages/rrt_planner-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/install.log'

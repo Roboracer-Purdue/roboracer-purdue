@@ -66,7 +66,7 @@ class PID(Node):
         b = msg.ranges[beam_b_id]
         a_angle = msg.angle_min + msg.angle_increment * beam_a_id
         b_angle = msg.angle_min + msg.angle_increment * beam_b_id
-        theta = b_angle - a_angle
+        theta = abs(b_angle - a_angle)
         #self.get_logger().info(f'a_angle: {a_angle:.3f} b_angle: {b_angle:.3f} theta: {theta:.3f}')
 
         # Calculate alpha

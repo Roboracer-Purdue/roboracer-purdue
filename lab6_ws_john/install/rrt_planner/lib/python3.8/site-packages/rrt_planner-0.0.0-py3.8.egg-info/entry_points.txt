@@ -1,0 +1,3 @@
+[console_scripts]
+rrt = rrt_planner.rrt:main
+
