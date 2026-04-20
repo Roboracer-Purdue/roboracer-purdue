@@ -1,3 +1,0 @@
-[console_scripts]
-break_test = break_tester.break_test:main
-

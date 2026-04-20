@@ -1,3 +1,0 @@
-[console_scripts]
-PID = lab3_pkg.PID:main
-

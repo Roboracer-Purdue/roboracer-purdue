@@ -1,3 +1,0 @@
-[console_scripts]
-emergency_break = safety_node.emergency_break:main
-

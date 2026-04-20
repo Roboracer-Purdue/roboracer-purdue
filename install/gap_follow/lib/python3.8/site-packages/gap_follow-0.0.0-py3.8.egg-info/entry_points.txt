@@ -1,3 +1,0 @@
-[console_scripts]
-gap_follow = gap_follow.gap_follow:main
-

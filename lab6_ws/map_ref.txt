@@ -1,0 +1,31 @@
+ros2 topic echo /map --qos-durability transient_local
+header:
+  stamp:
+    sec: 0
+    nanosec: 0
+  frame_id: map
+info:
+  map_load_time:
+    sec: 0
+    nanosec: 0
+  resolution: 0.05000000074505806
+  width: 2048
+  height: 2048
+  origin:
+    position:
+      x: -51.224998
+      y: -51.224998
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+
+ACTUAL levine.yaml
+image: levine.pgm
+resolution: 0.050000
+origin: [-51.224998, -51.224998, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196

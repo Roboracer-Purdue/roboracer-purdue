@@ -1,0 +1,1 @@
+ros2 pkg create --build-type ament_python {package_name} --dependencies rclpy rclcpp ackermann_msgs --node-name {node_name} 

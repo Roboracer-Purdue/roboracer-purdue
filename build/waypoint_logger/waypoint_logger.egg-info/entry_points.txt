@@ -1,3 +1,0 @@
-[console_scripts]
-waypoint_logger = waypoint_logger.waypoint_logger:main
-
