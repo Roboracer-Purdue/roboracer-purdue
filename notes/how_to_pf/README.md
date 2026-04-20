@@ -6,9 +6,8 @@ Check out installation guide on course excel
 Initialize a map server as specified in the config/localize.yaml
 Read the scan and odom message and use complex AF math to compute 
 the most probable position of the car and announce it to topic
-"/pf/viz/inferred_pose" as PoseStamped
-
-Example:
+"/pf/viz/inferred_pose"
+#### Message Example
 ````
 header:
   stamp:
@@ -27,7 +26,6 @@ pose:
     w: 0.002928513048587313
 ---
 ````
-
 Note that PF does initialize its map server, to use it in conjunction
 with the sim, you must disable the sim's map server and nav2.
 
@@ -35,12 +33,10 @@ with the sim, you must disable the sim's map server and nav2.
 ````
 ros2 launch particle_filter localize_launch.py
 ````
-
-### Running PF with f1_tenth_gym
+### Running PF with Sim
 I have included gym_noserver.py, this can be placed directly in 
-f1_tenth_gym launch folder, 
-1. Make sure to colcon before use
-2. Make sure to update /odom in localize.yaml to match sim (default: /ego_racecar/odom)
+f1_tenth_gym launch folder, make sure to colcon before use
+
 ````
 ros2 launch f1tenth_gym_ros gym_noserver.py
 ros2 launch particle_filter localize_launch.py
