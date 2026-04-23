@@ -1,0 +1,18 @@
+[1.071s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/pure_pursuit': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/pure_pursuit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/pure_pursuit/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/pure_pursuit build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/pure_pursuit/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/pure_pursuit/install.log --install-scripts $base/lib/pure_pursuit --single-version-externally-managed install_data
+[1.248s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.248s]   warnings.warn(
+[1.265s] running egg_info
+[1.270s] writing manifest file '../build/pure_pursuit/pure_pursuit.egg-info/SOURCES.txt'
+[1.270s] running build
+[1.271s] running build_py
+[1.271s] copying pure_pursuit/pure_pursuit.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/pure_pursuit/build/lib/pure_pursuit
+[1.271s] running install
+[1.274s] running install_lib
+[1.276s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit/pure_pursuit.py to pure_pursuit.cpython-38.pyc
+[1.279s] running install_data
+[1.279s] running install_egg_info
+[1.280s] removing '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit-0.0.0-py3.8.egg-info' (and everything under it)
+[1.281s] Copying ../build/pure_pursuit/pure_pursuit.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit-0.0.0-py3.8.egg-info
+[1.281s] running install_scripts
+[1.295s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/pure_pursuit/install.log'
+[1.329s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/pure_pursuit' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/pure_pursuit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/pure_pursuit/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/pure_pursuit build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/pure_pursuit/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/pure_pursuit/install.log --install-scripts $base/lib/pure_pursuit --single-version-externally-managed install_data

@@ -1,0 +1,3 @@
+[console_scripts]
+pure_pursuit = pure_pursuit.pure_pursuit:main
+

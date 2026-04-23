@@ -1,0 +1,115 @@
+[0.286s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.286s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x74deaeb1a9a0>>, merge_install=False, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('build',), packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=22, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x74deaeb1a9a0>, verb_name='build', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x74deaea71f70>)
+[0.416s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.416s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.416s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.416s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.416s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.416s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.416s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(rrt_planner) by extensions ['ignore', 'ignore_ament_install']
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(rrt_planner) by extension 'ignore'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(rrt_planner) by extension 'ignore_ament_install'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(rrt_planner) by extensions ['colcon_pkg']
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(rrt_planner) by extension 'colcon_pkg'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(rrt_planner) by extensions ['colcon_meta']
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(rrt_planner) by extension 'colcon_meta'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(rrt_planner) by extensions ['ros']
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(rrt_planner) by extension 'ros'
+[0.434s] DEBUG:colcon.colcon_core.package_identification:Package 'rrt_planner' with type 'ros.ament_python' and name 'rrt_planner'
+[0.435s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.435s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.435s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.435s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.435s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.454s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.454s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.455s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install
+[0.456s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 224 installed packages in /opt/ros/foxy
+[0.456s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'rrt_planner' build argument 'cmake_args' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'rrt_planner' build argument 'cmake_target' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'rrt_planner' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'rrt_planner' build argument 'cmake_clean_cache' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'rrt_planner' build argument 'cmake_clean_first' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'rrt_planner' build argument 'cmake_force_configure' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'rrt_planner' build argument 'ament_cmake_args' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'rrt_planner' build argument 'catkin_cmake_args' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'rrt_planner' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.487s] DEBUG:colcon.colcon_core.verb:Building package 'rrt_planner' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner', 'merge_install': False, 'path': '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/rrt_planner', 'symlink_install': False, 'test_result_base': None}
+[0.488s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.488s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.489s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/rrt_planner' with build type 'ament_python'
+[0.489s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrt_planner', 'ament_prefix_path')
+[0.494s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/rrt_planner/hook/ament_prefix_path.ps1'
+[0.495s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/rrt_planner/hook/ament_prefix_path.dsv'
+[0.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/rrt_planner/hook/ament_prefix_path.sh'
+[0.496s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.496s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.722s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/rrt_planner'
+[0.722s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.722s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.055s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/rrt_planner': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/rrt_planner build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/install.log --install-scripts $base/lib/rrt_planner --single-version-externally-managed install_data
+[1.290s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/rrt_planner' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/rrt_planner build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/install.log --install-scripts $base/lib/rrt_planner --single-version-externally-managed install_data
+[1.295s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner' for CMake module files
+[1.295s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner' for CMake config files
+[1.296s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib'
+[1.296s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/bin'
+[1.296s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib/pkgconfig/rrt_planner.pc'
+[1.296s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib/python3.8/site-packages'
+[1.296s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrt_planner', 'pythonpath')
+[1.297s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/rrt_planner/hook/pythonpath.ps1'
+[1.297s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/rrt_planner/hook/pythonpath.dsv'
+[1.297s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/rrt_planner/hook/pythonpath.sh'
+[1.298s] Level 1:colcon.colcon_core.environment:checking '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/bin'
+[1.298s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rrt_planner)
+[1.298s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/rrt_planner/package.ps1'
+[1.299s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/rrt_planner/package.dsv'
+[1.299s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/rrt_planner/package.sh'
+[1.299s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/rrt_planner/package.bash'
+[1.300s] INFO:colcon.colcon_core.shell:Creating package script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/rrt_planner/package.zsh'
+[1.300s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/share/colcon-core/packages/rrt_planner)
+[1.301s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.301s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.301s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.301s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.373s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.373s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.373s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.373s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.374s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[1.374s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.375s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/local_setup.ps1'
+[1.375s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/_local_setup_util_ps1.py'
+[1.376s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/setup.ps1'
+[1.377s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/local_setup.sh'
+[1.377s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/_local_setup_util_sh.py'
+[1.378s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/setup.sh'
+[1.378s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/local_setup.bash'
+[1.379s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/setup.bash'
+[1.379s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/local_setup.zsh'
+[1.380s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/setup.zsh'

@@ -1,0 +1,16 @@
+[1.004s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/visualize_waypoints': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/visualize_waypoints build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/install.log --install-scripts $base/lib/visualize_waypoints --single-version-externally-managed install_data
+[1.190s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.190s]   warnings.warn(
+[1.208s] running egg_info
+[1.215s] writing manifest file '../build/visualize_waypoints/visualize_waypoints.egg-info/SOURCES.txt'
+[1.215s] running build
+[1.215s] running build_py
+[1.215s] running install
+[1.216s] running install_lib
+[1.217s] running install_data
+[1.217s] running install_egg_info
+[1.218s] removing '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages/visualize_waypoints-0.0.0-py3.8.egg-info' (and everything under it)
+[1.218s] Copying ../build/visualize_waypoints/visualize_waypoints.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages/visualize_waypoints-0.0.0-py3.8.egg-info
+[1.219s] running install_scripts
+[1.232s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/install.log'
+[1.257s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/visualize_waypoints' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/visualize_waypoints/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/visualize_waypoints build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/build/visualize_waypoints/install.log --install-scripts $base/lib/visualize_waypoints --single-version-externally-managed install_data

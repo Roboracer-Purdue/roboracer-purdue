@@ -32,17 +32,19 @@ class purePursuit(Node):
         super().__init__('pure_pursuit')  
         
         # Declare Parameters
-        self.declare_parameter('look_ahead_min', 0.5)
-        self.declare_parameter('look_ahead_max', 2.5)
+        self.declare_parameter('look_ahead_min', 0.4)
+        self.declare_parameter('look_ahead_max', 2.0)
         self.declare_parameter('look_ahead_factor', 0.3)
 
         # Speed control
-        self.declare_parameter('max_velocity', 2.0)
-        self.declare_parameter('min_velocity', 1.0)
+        self.declare_parameter('max_velocity', 3.0)
+        self.declare_parameter('min_velocity', 2.0) # Speed to use when approaching wall too fast
+        self.declare_parameter('speed_alpha', 0.1) # How much of speed is retained, higher = faster change
 
         self.declare_parameter('steer_look_ahead', 2.0) # Look at curvature ahead
         self.declare_parameter('min_steer', 0.18)
-        self.declare_parameter('max_steer_factor', 0.05) # To help with corner clipping 
+        self.declare_parameter('max_steer_b', 0.04)
+        self.declare_parameter('max_steer_a', 0.9) # To help with corner clipping, exponential
                                                          # Expand car steering at higher speed   
         self.declare_parameter('filename', "waypoints_baris_reverse.csv") #
         
@@ -50,7 +52,13 @@ class purePursuit(Node):
         self.pos_x = 0.0
         self.pos_y = 0.0
         self.yaw = 0.0
+        self.steer = 0.0
+        self.velocity = 0.0
+        self.prev_velocity = 0.0
+        self.max_velocity = 2.0
+        self.max_safe_speed = 2.0
         self.waypoints = []
+        self.prev_steer = 0.0
 
         # Create subscribers, type: Acker, topic 'drive', function to run when receiving messages, and queue size
         self.scan_sub = self.create_subscription(LaserScan, "/scan", self.scan_callback, 3) 
@@ -75,7 +83,7 @@ class purePursuit(Node):
         filename = self.get_parameter("filename").value
         home = expanduser('~')
         filename = home + '/' + filename
-
+        self.get_logger().info(f"{filename}")
         with open(filename, "r") as file:
             data = csv.reader(file)
             marker_array = MarkerArray()
@@ -111,7 +119,7 @@ class purePursuit(Node):
 
             if visual:
                 self.wp_pub.publish(marker_array)
-
+        self.get_logger().info(f"{len(self.waypoints)} waypoints loaded.")
     def odom_callback(self, msg):
         # RETRIEVE sth from odom message
         self.pos_x = msg.pose.pose.position.x
@@ -128,7 +136,20 @@ class purePursuit(Node):
     '''
     def scan_callback(self, msg):
         # Retrieve Parameters
-        pass
+        mid_scan = len(msg.ranges) // 2 
+        max_velocity = self.get_parameter('max_velocity').get_parameter_value().double_value
+        min_velocity = self.get_parameter('min_velocity').get_parameter_value().double_value
+
+        forward_dist = min(msg.ranges[mid_scan - 5 : mid_scan + 5])
+
+        if forward_dist> 3.0:
+            self.max_velocity = max_velocity
+        if forward_dist < self.velocity * 0.6:
+            self.max_velocity = (min_velocity + self.velocity) / 2
+        if forward_dist < 0.2:
+            self.max_velocity = 0.0
+            self.publish_drive(0.0, 0.0)
+        
         # Update Scan Records
         # ---- 'Pure' Pure Pursuit Does not Relies on Scan ----
 
@@ -250,27 +271,33 @@ class purePursuit(Node):
 
     def timer_callback(self):
         # Update car navigation
-        max_velocity = self.get_parameter('max_velocity').get_parameter_value().double_value
-        max_steer_f = self.get_parameter('max_steer_factor').get_parameter_value().double_value
+        max_steer_a = self.get_parameter('max_steer_a').get_parameter_value().double_value
+        max_steer_b = self.get_parameter('max_steer_b').get_parameter_value().double_value
         min_steer = self.get_parameter('min_steer').get_parameter_value().double_value
-        max_steer = max(min_steer, max_steer_f * max_velocity)
 
-        steer = self.get_curve_path(self.get_goal_point(max_velocity))
-        steer = np.clip(steer, -max_steer, max_steer)
+        goal = self.get_goal_point(self.prev_velocity)
+        self.get_logger().info(f"Heading from {self.pos_x:.2f}, {self.pos_y:.2f} toward {goal[0]:.2f}, {goal[1]:.2f}")
 
-        velocity = self.speed_control(steer)
+        # Clip steer based on turning (prevent corner cut)
+        self.steer = self.get_curve_path(goal)
+        
+        max_steer = max(min_steer, max_steer_b * max(self.velocity, 0.01) ** max_steer_a)
+        self.steer = np.clip(self.steer, -max_steer, max_steer)
 
-        self.publish_drive(steer, velocity)
+        self.velocity = self.speed_control(self.steer)
+
+        self.publish_drive(self.steer, self.velocity)
 
     def speed_control(self, steer):
-        max_velocity = self.get_parameter('max_velocity').get_parameter_value().double_value
-        min_velocity = self.get_parameter('max_velocity').get_parameter_value().double_value
+        max_velocity = self.max_velocity
+        min_velocity = self.get_parameter('min_velocity').get_parameter_value().double_value
         steer_lh = self.get_parameter('steer_look_ahead').get_parameter_value().double_value
 
         closest_idx = closest_index((self.pos_x, self.pos_y), self.waypoints)
 
-        velocity = self.compute_max_speed(steer, min_velocity, max_velocity)
-        return velocity
+        max_velocity_steer = self.compute_max_speed_steer(steer, max_velocity)
+
+        return min(max_velocity, max_velocity_steer)
     
     def get_path_curvature_ahead(self, start_idx, lookahead_distance=3.0):
         """
@@ -329,7 +356,7 @@ class purePursuit(Node):
 
         return max_k
 
-    def compute_max_speed(self, curvature, min_speed=0.5, max_speed=3.0, a_lat_max=2.0):
+    def compute_max_speed_steer(self, curvature, max_speed=3.0, a_lat_max=2.0):
         """
         Compute speed based on curvature (pure pursuit output).
 
@@ -358,12 +385,21 @@ class purePursuit(Node):
 
         v = np.sqrt(a_lat_max / k)
 
-        return np.clip(v, min_speed, max_speed)
+        return min(v, max_speed)
 
     def publish_drive(self, steering, speed):
         msg = AckermannDriveStamped()
+        
+        alpha = self.get_parameter('speed_alpha').get_parameter_value().double_value
+        # Numb Speed
+        speed = float((speed * alpha + self.prev_velocity)/(alpha + 1))
+        msg.drive.speed = speed
+        self.prev_velocity = speed
+        # Numb Steer with Speed
+        #steering = float((steering * speed + self.prev_steer)/(speed + 1))
         msg.drive.steering_angle = float(steering)
-        msg.drive.speed = float(speed)
+        self.prev_steer = steering
+
         self.drive_pub.publish(msg)
         
 def main():

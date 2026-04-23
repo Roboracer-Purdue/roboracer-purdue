@@ -1,0 +1,7 @@
+/home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+  File "/home/patchy/arc_ws/ARC-PI-ROSCODE/lab5_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit/pure_pursuit.py", line 137
+    if msg.ranges[mid_scan] > 3.0
+                                ^
+SyntaxError: invalid syntax
+

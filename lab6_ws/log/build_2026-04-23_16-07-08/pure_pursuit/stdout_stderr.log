@@ -1,0 +1,30 @@
+/home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running egg_info
+creating ../build/pure_pursuit/pure_pursuit.egg-info
+writing manifest file '../build/pure_pursuit/pure_pursuit.egg-info/SOURCES.txt'
+writing manifest file '../build/pure_pursuit/pure_pursuit.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/build/pure_pursuit/build
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/build/pure_pursuit/build/lib
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/build/pure_pursuit/build/lib/pure_pursuit
+copying pure_pursuit/pure_pursuit.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/build/pure_pursuit/build/lib/pure_pursuit
+copying pure_pursuit/__init__.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/build/pure_pursuit/build/lib/pure_pursuit
+running install
+running install_lib
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit/pure_pursuit.py to pure_pursuit.cpython-38.pyc
+byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/share/ament_index
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/share/ament_index/resource_index
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/share/ament_index/resource_index/packages
+copying resource/pure_pursuit -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/share/ament_index/resource_index/packages
+copying package.xml -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/share/pure_pursuit
+creating /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/share/pure_pursuit/launch
+copying launch/launch_pure_pursuit.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/share/pure_pursuit/launch
+running install_egg_info
+Copying ../build/pure_pursuit/pure_pursuit.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/build/pure_pursuit/install.log'

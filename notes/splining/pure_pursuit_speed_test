@@ -4,11 +4,10 @@ Bezier 2.0
  max_velocity = 7.5
  max_look_ahead = 2.5
  look_ahead_factor = 0.5
- max_steer_factor = 20
+
 
 Reverse Baris
  steer_limit_factor = 0.04
  max_velocity = 8.5
  max_look_ahead = 3.5
  look_ahead_factor = 0.5
- max_steer_factor = 20

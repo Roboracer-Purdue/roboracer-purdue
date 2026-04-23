@@ -173,8 +173,8 @@ def generate_brachistochrone(start_xy, goal_xy, g_vec=(0.0, -1.0),
     points = P0 + np.outer(x_local, e_hat) + np.outer(y_local, g_hat)
     return points
 
-def plot_vector(v):
-    plt.quiver(v[0], v[1], np.sin(v[2]), np.cos(v[2]), color='green')
+def plot_vector(v, size = 1.0):
+    plt.quiver(v[0], v[1], np.sin(v[2]) * size, np.cos(v[2]) * size, color='green')
 
 def main():
     # Set start and stop vectors

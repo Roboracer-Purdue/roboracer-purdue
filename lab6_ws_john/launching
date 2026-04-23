@@ -1,0 +1,4 @@
+ros2 run your_package rrt_planner_waypoints \
+  --ros-args \
+  -p waypoint_file:=/absolute/path/to/waypoints.csv \
+  -p waypoint_lookahead_distance:=2.0
