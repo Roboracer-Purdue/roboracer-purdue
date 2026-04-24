@@ -25,7 +25,7 @@ ttc_brake_manager:
     soft_brake_max: 30.0 
 
     # TTC tuning
-    ttc_enabled: true
+    ttc_enabled: false
     ttc_threshold: 0.55 #collison in >0.55 sec (race =0.30-0.5), indoor = 0.6 -0.7
     ttc_release_threshold: 0.80 # hysteresis (relase brake when ttc > .80)
     ttc_min_speed: 0.40 #ttc is ignored below 0.4 m/s

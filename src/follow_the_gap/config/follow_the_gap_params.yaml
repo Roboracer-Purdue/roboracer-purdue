@@ -10,7 +10,7 @@ follow_the_gap:
     max_angle_deg: 90.0
 
     bubble_radius_indices: 10
-    min_gap_size: 5
+    min_gap_size: 9
 
     best_point_method: furthest
 

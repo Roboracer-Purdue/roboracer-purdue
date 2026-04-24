@@ -8,8 +8,10 @@ rrt_planner:
     map_frame: map
     plan_rate_hz: 3.0
 
+    waypoints_csv: /home/arc/f1tenth_ws/waypoints/raw/sl28_points.csv
     goal_distance: 2.0
     goal_tolerance: 0.35
+    loop_path: false
 
     sample_x_min: -0.5
     sample_x_max: 3.0
@@ -20,7 +22,7 @@ rrt_planner:
     step_size: 0.30
     goal_sample_rate: 0.25
 
-    robot_radius: 0.20
+    robot_radius: 0.25
     collision_check_resolution: 0.05
     scan_range_min_clip: 0.05
     scan_range_max_clip: 8.0

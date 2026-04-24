@@ -1,5 +1,9 @@
 throttle_mix:
   ros__parameters:
+    joy_topic: /joy
+    cmd_topic: /teleop
+    gear_topic: /current_gear
+
     gear_max_speeds_mps: [1.5, 3.0, 6.0, 6.30]
     gear_accel_rates:    [0.06, 0.10, 0.15, 0.20]
     max_reverse_mps: 1.0

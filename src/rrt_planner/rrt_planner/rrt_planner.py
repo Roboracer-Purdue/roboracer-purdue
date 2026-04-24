@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import csv
 import math
 import random
 from dataclasses import dataclass
@@ -24,18 +25,18 @@ class RRTPlanner(Node):
     """
     Local reactive RRT planner for F1TENTH.
 
-    Purpose:
-    - Use AMCL pose as start state
-    - Use LaserScan as local obstacle information
-    - Choose a local goal point ahead of the vehicle
-    - Build an RRT in a bounded local window
-    - Publish a nav_msgs/Path for a follower (e.g. pure pursuit)
+    Updated behavior:
+    - Uses AMCL pose as start state
+    - Uses LaserScan as local obstacle information
+    - Uses waypoint CSV as the reference path
+    - Chooses a local goal from the waypoint CSV ahead of the vehicle
+    - Builds an RRT in a bounded local window
+    - Publishes a nav_msgs/Path for a follower (e.g. pure pursuit)
 
-    Important assumptions in this first version:
+    Still assumes:
     - Planning is done in the map frame
     - Laser points are projected into map frame using current AMCL pose
     - Laser is assumed roughly centered at base_link
-      (if your lidar has a noticeable forward offset, add it later as params)
     """
 
     def __init__(self) -> None:
@@ -50,14 +51,15 @@ class RRTPlanner(Node):
         self.declare_parameter('goal_topic', '/rrt_goal')
 
         self.declare_parameter('map_frame', 'map')
-
         self.declare_parameter('plan_rate_hz', 3.0)
 
-        # Local goal settings
-        self.declare_parameter('goal_distance', 2.0)       # meters ahead of car
+        # Waypoint reference path
+        self.declare_parameter('waypoints_csv', '')
+        self.declare_parameter('goal_distance', 2.0)       # arc-length ahead along waypoint path
         self.declare_parameter('goal_tolerance', 0.35)     # how close tree must get to goal
+        self.declare_parameter('loop_path', False)
 
-        # Sampling window around vehicle in map frame
+        # Sampling window around vehicle in robot frame
         self.declare_parameter('sample_x_min', -0.5)
         self.declare_parameter('sample_x_max', 3.0)
         self.declare_parameter('sample_y_min', -1.8)
@@ -90,8 +92,10 @@ class RRTPlanner(Node):
 
         self.plan_rate_hz: float = float(self.get_parameter('plan_rate_hz').value)
 
+        self.waypoints_csv: str = self.get_parameter('waypoints_csv').value
         self.goal_distance: float = float(self.get_parameter('goal_distance').value)
         self.goal_tolerance: float = float(self.get_parameter('goal_tolerance').value)
+        self.loop_path: bool = bool(self.get_parameter('loop_path').value)
 
         self.sample_x_min: float = float(self.get_parameter('sample_x_min').value)
         self.sample_x_max: float = float(self.get_parameter('sample_x_max').value)
@@ -134,6 +138,14 @@ class RRTPlanner(Node):
         # Obstacles in map frame as list of (x, y)
         self.obstacle_points_map: List[Tuple[float, float]] = []
 
+        # Reference waypoint path
+        self.waypoints: List[Tuple[float, float]] = self.load_waypoints(self.waypoints_csv)
+        self.last_nearest_waypoint_index: int = 0
+
+        if len(self.waypoints) < 2:
+            self.get_logger().error('Need at least 2 waypoint CSV points.')
+            raise RuntimeError('Invalid waypoint CSV for rrt_planner.')
+
         # -----------------------------
         # ROS interfaces
         # -----------------------------
@@ -162,6 +174,38 @@ class RRTPlanner(Node):
         self.get_logger().info(f'Scan topic: {self.scan_topic}')
         self.get_logger().info(f'Path topic: {self.path_topic}')
         self.get_logger().info(f'Goal topic: {self.goal_topic}')
+        self.get_logger().info(f'Loaded {len(self.waypoints)} waypoint CSV points from: {self.waypoints_csv}')
+
+    # ---------------------------------------------------------
+    # CSV loading
+    # ---------------------------------------------------------
+    def load_waypoints(self, csv_path: str) -> List[Tuple[float, float]]:
+        points: List[Tuple[float, float]] = []
+
+        if not csv_path:
+            self.get_logger().error('Parameter "waypoints_csv" is empty.')
+            return points
+
+        try:
+            with open(csv_path, 'r') as f:
+                reader = csv.reader(f)
+                for row in reader:
+                    if len(row) < 2:
+                        continue
+
+                    try:
+                        x = float(row[0].strip())
+                        y = float(row[1].strip())
+                        points.append((x, y))
+                    except ValueError:
+                        continue
+
+        except FileNotFoundError:
+            self.get_logger().error(f'Waypoint CSV not found: {csv_path}')
+        except Exception as e:
+            self.get_logger().error(f'Failed to load waypoint CSV: {e}')
+
+        return points
 
     # ---------------------------------------------------------
     # Callbacks
@@ -180,7 +224,6 @@ class RRTPlanner(Node):
         self.latest_scan = msg
         self.scan_received = True
 
-        # Only update obstacle map points if pose is already known
         if self.pose_received:
             self.obstacle_points_map = self.project_scan_to_map(msg)
 
@@ -192,18 +235,22 @@ class RRTPlanner(Node):
             return
 
         start = (self.current_x, self.current_y)
-        goal = self.compute_local_goal()
+        goal = self.compute_local_goal_from_waypoints()
+
+        if goal is None:
+            if self.debug:
+                self.get_logger().warn('Could not compute waypoint-based goal this cycle.')
+            return
 
         self.publish_goal(goal[0], goal[1])
 
         if self.debug:
             self.get_logger().info(
                 f'Planning from ({start[0]:.2f}, {start[1]:.2f}) '
-                f'to local goal ({goal[0]:.2f}, {goal[1]:.2f}) '
+                f'to waypoint goal ({goal[0]:.2f}, {goal[1]:.2f}) '
                 f'with {len(self.obstacle_points_map)} obstacles'
             )
 
-        # Early check: if direct connection is free, just publish straight-line path
         if self.is_segment_collision_free(start[0], start[1], goal[0], goal[1]):
             path_points = [start, goal]
             self.publish_path(path_points)
@@ -222,30 +269,112 @@ class RRTPlanner(Node):
         self.publish_path(path_points)
 
     # ---------------------------------------------------------
-    # Goal selection
+    # Goal selection from waypoint CSV
     # ---------------------------------------------------------
-    def compute_local_goal(self) -> Tuple[float, float]:
-        """
-        Creates a simple local goal straight ahead of the car in the map frame.
-        This is enough for a first reactive RRT.
+    def compute_local_goal_from_waypoints(self) -> Optional[Tuple[float, float]]:
+        if len(self.waypoints) < 2:
+            return None
 
-        Later you can replace this with:
-        - point ahead on centerline
-        - point ahead on CSV reference path
-        - operator-provided goal
-        """
-        gx = self.current_x + self.goal_distance * math.cos(self.current_yaw)
-        gy = self.current_y + self.goal_distance * math.sin(self.current_yaw)
-        return gx, gy
+        nearest_index = self.find_nearest_waypoint_index()
+
+        if self.loop_path:
+            return self.find_looped_goal_from_waypoints(nearest_index, self.goal_distance)
+
+        return self.find_goal_from_waypoints(nearest_index, self.goal_distance)
+
+    def find_nearest_waypoint_index(self) -> int:
+        if not self.waypoints:
+            return 0
+
+        start = max(0, self.last_nearest_waypoint_index - 20)
+        end = min(len(self.waypoints), self.last_nearest_waypoint_index + 200)
+
+        nearest_index = start
+        nearest_dist = float('inf')
+
+        for i in range(start, end):
+            wx, wy = self.waypoints[i]
+            dist = self.distance(self.current_x, self.current_y, wx, wy)
+
+            if dist < nearest_dist:
+                nearest_dist = dist
+                nearest_index = i
+
+        if nearest_dist == float('inf'):
+            for i, (wx, wy) in enumerate(self.waypoints):
+                dist = self.distance(self.current_x, self.current_y, wx, wy)
+                if dist < nearest_dist:
+                    nearest_dist = dist
+                    nearest_index = i
+
+        self.last_nearest_waypoint_index = nearest_index
+        return nearest_index
+
+    def find_goal_from_waypoints(
+        self,
+        nearest_index: int,
+        goal_distance: float
+    ) -> Optional[Tuple[float, float]]:
+        accumulated = 0.0
+        prev_x, prev_y = self.waypoints[nearest_index]
+
+        # Walk forward along the waypoint path by arc length
+        for i in range(nearest_index + 1, len(self.waypoints)):
+            x, y = self.waypoints[i]
+            accumulated += self.distance(prev_x, prev_y, x, y)
+
+            local_x, _ = self.map_to_local(x, y)
+            if accumulated >= goal_distance and local_x > 0.0:
+                return (x, y)
+
+            prev_x, prev_y = x, y
+
+        # Fallback: first forward waypoint after nearest
+        for i in range(nearest_index, len(self.waypoints)):
+            x, y = self.waypoints[i]
+            local_x, _ = self.map_to_local(x, y)
+            if local_x > 0.0:
+                return (x, y)
+
+        return None
+
+    def find_looped_goal_from_waypoints(
+        self,
+        nearest_index: int,
+        goal_distance: float
+    ) -> Optional[Tuple[float, float]]:
+        n = len(self.waypoints)
+        if n == 0:
+            return None
+
+        accumulated = 0.0
+        prev_x, prev_y = self.waypoints[nearest_index]
+
+        for step in range(1, n + 1):
+            i = (nearest_index + step) % n
+            x, y = self.waypoints[i]
+            accumulated += self.distance(prev_x, prev_y, x, y)
+
+            local_x, _ = self.map_to_local(x, y)
+            if accumulated >= goal_distance and local_x > 0.0:
+                return (x, y)
+
+            prev_x, prev_y = x, y
+
+        # Fallback: any forward waypoint in one full wrap
+        for step in range(n):
+            i = (nearest_index + step) % n
+            x, y = self.waypoints[i]
+            local_x, _ = self.map_to_local(x, y)
+            if local_x > 0.0:
+                return (x, y)
+
+        return None
 
     # ---------------------------------------------------------
     # Scan projection
     # ---------------------------------------------------------
     def project_scan_to_map(self, scan: LaserScan) -> List[Tuple[float, float]]:
-        """
-        Project LaserScan points into map frame using current AMCL pose.
-        Assumes lidar origin approximately coincides with base_link for now.
-        """
         points: List[Tuple[float, float]] = []
 
         angle = scan.angle_min
@@ -262,11 +391,9 @@ class RRTPlanner(Node):
                 angle += scan.angle_increment
                 continue
 
-            # Point in robot frame
             px_robot = r * math.cos(angle)
             py_robot = r * math.sin(angle)
 
-            # Transform to map frame using current AMCL pose
             px_map = (
                 self.current_x
                 + math.cos(self.current_yaw) * px_robot
@@ -309,7 +436,6 @@ class RRTPlanner(Node):
             tree.append(TreeNode(new_point[0], new_point[1], nearest_idx))
             new_idx = len(tree) - 1
 
-            # Try to connect to goal if close enough
             if self.distance(new_point[0], new_point[1], goal[0], goal[1]) <= self.goal_tolerance:
                 if self.is_segment_collision_free(new_point[0], new_point[1], goal[0], goal[1]):
                     tree.append(TreeNode(goal[0], goal[1], new_idx))
@@ -319,15 +445,12 @@ class RRTPlanner(Node):
         return None
 
     def sample_point(self, goal: Tuple[float, float]) -> Tuple[float, float]:
-        # Goal bias
         if random.random() < self.goal_sample_rate:
             return goal
 
-        # Sample in local window around the vehicle, then transform to map frame
         rx = random.uniform(self.sample_x_min, self.sample_x_max)
         ry = random.uniform(self.sample_y_min, self.sample_y_max)
 
-        # Robot frame -> map frame
         sx = self.current_x + math.cos(self.current_yaw) * rx - math.sin(self.current_yaw) * ry
         sy = self.current_y + math.sin(self.current_yaw) * rx + math.cos(self.current_yaw) * ry
 
@@ -388,14 +511,9 @@ class RRTPlanner(Node):
     # Collision checking
     # ---------------------------------------------------------
     def is_in_sampling_window(self, x_map: float, y_map: float) -> bool:
-        """
-        Check if a point lies inside the local planning window centered on the car.
-        Window is defined in robot frame, so convert point from map -> robot frame.
-        """
         dx = x_map - self.current_x
         dy = y_map - self.current_y
 
-        # map frame -> robot frame
         x_robot = math.cos(self.current_yaw) * dx + math.sin(self.current_yaw) * dy
         y_robot = -math.sin(self.current_yaw) * dx + math.cos(self.current_yaw) * dy
 
@@ -411,10 +529,6 @@ class RRTPlanner(Node):
         x2: float,
         y2: float
     ) -> bool:
-        """
-        Check collision along a line segment by interpolating points and
-        ensuring each is farther than robot_radius from all obstacle points.
-        """
         segment_length = self.distance(x1, y1, x2, y2)
 
         if segment_length < 1e-9:
@@ -447,9 +561,6 @@ class RRTPlanner(Node):
     # Path shortening
     # ---------------------------------------------------------
     def shorten_path(self, path: List[Tuple[float, float]]) -> List[Tuple[float, float]]:
-        """
-        Simple random shortcutting. Good enough for first version.
-        """
         if len(path) < 3:
             return path
 
@@ -508,6 +619,17 @@ class RRTPlanner(Node):
     # ---------------------------------------------------------
     # Helpers
     # ---------------------------------------------------------
+    def map_to_local(self, x_map: float, y_map: float) -> Tuple[float, float]:
+        dx = x_map - self.current_x
+        dy = y_map - self.current_y
+
+        cos_yaw = math.cos(self.current_yaw)
+        sin_yaw = math.sin(self.current_yaw)
+
+        x_local = cos_yaw * dx + sin_yaw * dy
+        y_local = -sin_yaw * dx + cos_yaw * dy
+        return x_local, y_local
+
     @staticmethod
     def distance(x1: float, y1: float, x2: float, y2: float) -> float:
         return math.hypot(x2 - x1, y2 - y1)
