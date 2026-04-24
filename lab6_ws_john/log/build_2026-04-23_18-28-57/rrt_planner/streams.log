@@ -1,0 +1,18 @@
+[0.591s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/rrt_planner': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/rrt_planner build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/install.log --install-scripts $base/lib/rrt_planner --single-version-externally-managed install_data
+[0.767s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.767s]   warnings.warn(
+[0.784s] running egg_info
+[0.789s] writing manifest file '../build/rrt_planner/rrt_planner.egg-info/SOURCES.txt'
+[0.789s] running build
+[0.790s] running build_py
+[0.790s] copying rrt_planner/rrt.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/build/lib/rrt_planner
+[0.790s] running install
+[0.791s] running install_lib
+[0.792s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib/python3.8/site-packages/rrt_planner/rrt.py to rrt.cpython-38.pyc
+[0.795s] running install_data
+[0.795s] running install_egg_info
+[0.797s] removing '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib/python3.8/site-packages/rrt_planner-0.0.0-py3.8.egg-info' (and everything under it)
+[0.797s] Copying ../build/rrt_planner/rrt_planner.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib/python3.8/site-packages/rrt_planner-0.0.0-py3.8.egg-info
+[0.799s] running install_scripts
+[0.814s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/install.log'
+[0.834s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/rrt_planner' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/install/rrt_planner/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/rrt_planner build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws_john/build/rrt_planner/install.log --install-scripts $base/lib/rrt_planner --single-version-externally-managed install_data

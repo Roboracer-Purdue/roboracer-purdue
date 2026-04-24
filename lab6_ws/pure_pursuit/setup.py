@@ -11,6 +11,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', ['launch/launch_pure_pursuit.py']),
+        ('share/' + package_name + '/launch', ['launch/launch_pp_opp_car.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

@@ -302,7 +302,7 @@ def main():
     #----
     # Import Map Image
     map_img = Image.open(map_name + ".png")
-    global mp 
+    global mp, res, origin
     mp = np.array(map_img)
 
     #----
@@ -365,6 +365,7 @@ def main():
 
     pt_list = filter_waypoints_by_distance(pt_list, GAP)
 
+
     px_list = []
     py_list = []
     
@@ -385,12 +386,14 @@ def main():
     plt.plot(px_list, py_list,"b.")
     # plt.xlim(700, 1400) # levine
     # plt.ylim(700, 1200) # levine
-    plt.show()
+    # plt.show()
     plt.savefig("waypoints_preview", dpi=500)
+
+    #pt_list = [pixel_to_map(x, y) for x,y in pt_list]
 
     #----
     # Save to file
-    with open('spiel_waypoints_br.csv', 'w', newline='') as f:
+    with open(map_name + '_br_waypoints.csv', 'w', newline='') as f:
         writer = csv.writer(f)
         writer.writerows(pt_list)  # Use writerow(list) for a single row
 

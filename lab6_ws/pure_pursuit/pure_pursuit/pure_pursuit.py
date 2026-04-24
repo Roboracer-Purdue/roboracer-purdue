@@ -10,9 +10,6 @@ import csv
 import math
 from nav_msgs.msg import Path
 
-
-USERRT = True
-
 # Helpers
 def closest_index(current, points):
     cx, cy = current
@@ -35,24 +32,35 @@ class purePursuit(Node):
     def __init__(self):
         super().__init__('pure_pursuit')  
         
+        # Declare topics
+        self.declare_parameter('odom_topic', "/ego_racecar/odom")
+        self.declare_parameter('drive_topic', "/drive")
+        self.declare_parameter('scan_topic', "/scan")
+
+        self.drive_topic: str = self.get_parameter('drive_topic').value
+        self.odom_topic: str = self.get_parameter('odom_topic').value
+        self.scan_topic: str = self.get_parameter('scan_topic').value
+
         # Declare Parameters
+        self.declare_parameter('use_rrt', True)
         self.declare_parameter('look_ahead_min', 0.4)
         self.declare_parameter('look_ahead_max', 2.0)
         self.declare_parameter('look_ahead_factor', 0.3)
 
         # Speed control
-        self.declare_parameter('max_velocity', 3.0)
+        self.declare_parameter('max_velocity', 8.0)
         self.declare_parameter('min_velocity', 2.0) # Speed to use when approaching wall too fast
         self.declare_parameter('speed_alpha', 0.1) # How much of speed is retained, higher = faster change
 
-        self.declare_parameter('steer_look_ahead', 2.0) # Look at curvature ahead
-        self.declare_parameter('min_steer', 0.18)
+        self.declare_parameter('steer_lat_a', 1.7) # How much speed is retained during turning
+        self.declare_parameter('min_steer', 0.2)
         self.declare_parameter('max_steer_b', 0.04)
         self.declare_parameter('max_steer_a', 0.9) # To help with corner clipping, exponential
                                                          # Expand car steering at higher speed   
-        self.declare_parameter('filename', "waypoints_baris_reverse.csv") #
+        self.declare_parameter('filename', "Spielberg_map_br_waypoints.csv") #
         
         # Initialize Node Variables
+        self.USERRT = self.get_parameter("use_rrt").value
         self.pos_x = 0.0
         self.pos_y = 0.0
         self.yaw = 0.0
@@ -65,14 +73,14 @@ class purePursuit(Node):
         self.prev_steer = 0.0
 
         # Create subscribers, type: Acker, topic 'drive', function to run when receiving messages, and queue size
-        self.scan_sub = self.create_subscription(LaserScan, "/scan", self.scan_callback, 3) 
+        self.scan_sub = self.create_subscription(LaserScan, self.scan_topic, self.scan_callback, 3) 
 
         # Subscribers
-        self.odom_sub = self.create_subscription(Odometry, "/ego_racecar/odom", self.odom_callback, 3) 
+        self.odom_sub = self.create_subscription(Odometry, self.odom_topic, self.odom_callback, 3) 
         # self.pf_sub = self.create_subscription(PoseStamped, "/pf/viz/inferred_pose", self.pf_callback, 3)
 
         # RRT Subs 
-        if USERRT:
+        if self.USERRT:
             self.path_sub = self.create_subscription(
                 Path,
                 '/planned_path',
@@ -84,13 +92,13 @@ class purePursuit(Node):
         self.timer = self.create_timer(0.05, self.timer_callback) 
 
         # Create a new publisher to 'drive_relay'
-        self.drive_pub = self.create_publisher(AckermannDriveStamped, '/drive', 3)
+        self.drive_pub = self.create_publisher(AckermannDriveStamped, self.drive_topic, 3)
 
         # Publishers for visualization
         self.wp_pub = self.create_publisher(MarkerArray, '/waypoints', 10)
 
         # Load way point
-        if not USERRT:
+        if not self.USERRT:
             self.load_waypoints(visual = True)
 
     def load_waypoints(self, visual = False):
@@ -151,6 +159,7 @@ class purePursuit(Node):
         self.pos_y = msg.pose.position.y
     '''
     def scan_callback(self, msg):
+        # Brake Ahh module
         # Retrieve Parameters
         mid_scan = len(msg.ranges) // 2 
         max_velocity = self.get_parameter('max_velocity').get_parameter_value().double_value
@@ -160,9 +169,9 @@ class purePursuit(Node):
 
         if forward_dist> 3.0:
             self.max_velocity = max_velocity
-        if forward_dist < self.velocity * 0.6:
-            self.max_velocity = (min_velocity + self.velocity) / 2
-        if forward_dist < 0.2:
+        #if forward_dist < self.velocity * 0.6:
+        #    self.max_velocity = (min_velocity + self.velocity) / 2
+        if forward_dist < 0.24:
             self.max_velocity = 0.0
             self.publish_drive(0.0, 0.0)
         
@@ -293,6 +302,19 @@ class purePursuit(Node):
         min_steer = self.get_parameter('min_steer').get_parameter_value().double_value
 
         goal = self.get_goal_point(self.prev_velocity)
+
+        tx = goal[0] - self.pos_x
+        ty = goal[1] - self.pos_y
+
+        # rotate into car frame
+        tx_car =  math.cos(self.yaw) * tx + math.sin(self.yaw) * ty
+        ty_car = -math.sin(self.yaw) * tx + math.cos(self.yaw) * ty
+
+        # ---- NEW: if goal is behind, stop ----
+        if tx_car <= 0:
+            self.get_logger().warn("Goal is behind the car → stopping")
+            self.publish_drive(0.0, 0.0)
+            return
         self.get_logger().info(f"Heading from {self.pos_x:.2f}, {self.pos_y:.2f} toward {goal[0]:.2f}, {goal[1]:.2f}")
 
         # Clip steer based on turning (prevent corner cut)
@@ -308,11 +330,11 @@ class purePursuit(Node):
     def speed_control(self, steer):
         max_velocity = self.max_velocity
         min_velocity = self.get_parameter('min_velocity').get_parameter_value().double_value
-        steer_lh = self.get_parameter('steer_look_ahead').get_parameter_value().double_value
+        steer_lat_a = self.get_parameter('steer_lat_a').get_parameter_value().double_value
 
         closest_idx = closest_index((self.pos_x, self.pos_y), self.waypoints)
 
-        max_velocity_steer = self.compute_max_speed_steer(steer, max_velocity)
+        max_velocity_steer = self.compute_max_speed_steer(steer, max_velocity, steer_lat_a)
 
         return min(max_velocity, max_velocity_steer)
     

@@ -45,35 +45,37 @@ class RRTPlanner(Node):
         self.declare_parameter('goal_topic', '/rrt_goal')
 
         self.declare_parameter('map_frame', 'map')
-        self.declare_parameter('plan_rate_hz', 3.0)
+        self.declare_parameter('plan_rate_hz', 10.0)
 
         # Waypoint settings
         self.declare_parameter('waypoint_file', '')
         self.declare_parameter('waypoint_delimiter', ',')
         self.declare_parameter('waypoint_has_header', False)
-        self.declare_parameter('waypoint_lookahead_distance', 2.0)
+        self.declare_parameter('waypoint_lookahead_distance', 5.0)
         self.declare_parameter('waypoint_loop', True)
 
         # Goal settings
         self.declare_parameter('goal_distance', 2.0)       # fallback if no waypoint file
         self.declare_parameter('goal_tolerance', 0.35)     # how close tree must get to goal
+        self.declare_parameter('allow_near_goal', True)       # allow path to end near goal if exact goal is occupied
+        self.declare_parameter('near_goal_tolerance', 1.5)   # acceptable distance from final node to goal
 
         # Sampling window around vehicle in map frame
         self.declare_parameter('sample_x_min', -0.5)
-        self.declare_parameter('sample_x_max', 3.0)
-        self.declare_parameter('sample_y_min', -1.8)
-        self.declare_parameter('sample_y_max', 1.8)
+        self.declare_parameter('sample_x_max', 6.5)
+        self.declare_parameter('sample_y_min', -1.2)
+        self.declare_parameter('sample_y_max', 1.2)
 
         # RRT settings
-        self.declare_parameter('max_iterations', 500)
-        self.declare_parameter('step_size', 0.30)
-        self.declare_parameter('goal_sample_rate', 0.20)   # probability [0,1] of sampling goal directly
+        self.declare_parameter('max_iterations', 1000)
+        self.declare_parameter('step_size', 0.8)
+        self.declare_parameter('goal_sample_rate', 0.7)   # probability [0,1] of sampling goal directly
 
         # Collision settings
-        self.declare_parameter('robot_radius', 0.20)
-        self.declare_parameter('collision_check_resolution', 0.05)
+        self.declare_parameter('robot_radius', 0.28)
+        self.declare_parameter('collision_check_resolution', 0.04)
         self.declare_parameter('scan_range_min_clip', 0.05)
-        self.declare_parameter('scan_range_max_clip', 8.0)
+        self.declare_parameter('scan_range_max_clip', 12.0)
 
         # Optional path post-processing
         self.declare_parameter('enable_path_shortening', True)
@@ -101,6 +103,8 @@ class RRTPlanner(Node):
 
         self.goal_distance: float = float(self.get_parameter('goal_distance').value)
         self.goal_tolerance: float = float(self.get_parameter('goal_tolerance').value)
+        self.allow_near_goal: bool = bool(self.get_parameter('allow_near_goal').value)
+        self.near_goal_tolerance: float = float(self.get_parameter('near_goal_tolerance').value)
 
         self.sample_x_min: float = float(self.get_parameter('sample_x_min').value)
         self.sample_x_max: float = float(self.get_parameter('sample_x_max').value)
@@ -421,6 +425,12 @@ class RRTPlanner(Node):
     ) -> Optional[List[Tuple[float, float]]]:
         tree: List[TreeNode] = [TreeNode(start[0], start[1], -1)]
 
+        # Track the best SAFE node that gets reasonably close to the goal.
+        # This lets the planner return a useful path even when the exact
+        # waypoint goal is inside/too close to an obstacle.
+        best_near_goal_idx: Optional[int] = None
+        best_near_goal_dist = float('inf')
+
         for _ in range(self.max_iterations):
             sample = self.sample_point(goal)
             nearest_idx = self.find_nearest_node_index(tree, sample)
@@ -437,12 +447,38 @@ class RRTPlanner(Node):
             tree.append(TreeNode(new_point[0], new_point[1], nearest_idx))
             new_idx = len(tree) - 1
 
-            # Try to connect to goal if close enough
-            if self.distance(new_point[0], new_point[1], goal[0], goal[1]) <= self.goal_tolerance:
+            dist_to_goal = self.distance(new_point[0], new_point[1], goal[0], goal[1])
+
+            # Save the closest safe tree node within the relaxed near-goal radius.
+            if self.allow_near_goal and dist_to_goal <= self.near_goal_tolerance:
+                if dist_to_goal < best_near_goal_dist:
+                    best_near_goal_dist = dist_to_goal
+                    best_near_goal_idx = new_idx
+
+            # Ideal case: connect exactly to the goal if possible.
+            if dist_to_goal <= self.goal_tolerance:
                 if self.is_segment_collision_free(new_point[0], new_point[1], goal[0], goal[1]):
                     tree.append(TreeNode(goal[0], goal[1], new_idx))
                     goal_idx = len(tree) - 1
                     return self.extract_path(tree, goal_idx)
+
+                # If the exact goal is blocked, accept the safe node near it.
+                if self.allow_near_goal:
+                    if self.debug:
+                        self.get_logger().warn(
+                            'Exact goal is not collision-free; publishing path to nearby safe node.'
+                        )
+                    return self.extract_path(tree, new_idx)
+
+        # If RRT never reached the exact goal, still return the closest safe
+        # near-goal node if one was found. This is useful when the waypoint
+        # lies on a wall/obstacle boundary in simulation.
+        if self.allow_near_goal and best_near_goal_idx is not None:
+            if self.debug:
+                self.get_logger().warn(
+                    f'RRT ended near goal instead of exact goal; final distance={best_near_goal_dist:.2f} m.'
+                )
+            return self.extract_path(tree, best_near_goal_idx)
 
         return None
 

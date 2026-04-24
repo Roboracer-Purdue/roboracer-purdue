@@ -5,6 +5,7 @@
 /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/share/ament_index/resource_index/packages/pure_pursuit
 /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/share/pure_pursuit/package.xml
 /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/share/pure_pursuit/launch/launch_pure_pursuit.py
+/home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/share/pure_pursuit/launch/launch_pp_opp_car.py
 /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit-0.0.0-py3.8.egg-info/zip-safe
 /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit-0.0.0-py3.8.egg-info/dependency_links.txt
 /home/patchy/arc_ws/ARC-PI-ROSCODE/lab6_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit-0.0.0-py3.8.egg-info/SOURCES.txt

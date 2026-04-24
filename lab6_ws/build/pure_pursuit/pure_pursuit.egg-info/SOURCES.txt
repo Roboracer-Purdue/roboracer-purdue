@@ -8,6 +8,7 @@ setup.py
 ../build/pure_pursuit/pure_pursuit.egg-info/requires.txt
 ../build/pure_pursuit/pure_pursuit.egg-info/top_level.txt
 ../build/pure_pursuit/pure_pursuit.egg-info/zip-safe
+launch/launch_pp_opp_car.py
 launch/launch_pure_pursuit.py
 pure_pursuit/__init__.py
 pure_pursuit/pure_pursuit.py
