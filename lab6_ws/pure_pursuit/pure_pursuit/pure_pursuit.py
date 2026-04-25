@@ -33,10 +33,12 @@ class purePursuit(Node):
         super().__init__('pure_pursuit')  
         
         # Declare topics
+        self.declare_parameter('amcl_topic', '/amcl_pose')
         self.declare_parameter('odom_topic', "/ego_racecar/odom")
         self.declare_parameter('drive_topic', "/drive")
         self.declare_parameter('scan_topic', "/scan")
 
+        self.amcl_topic: str = self.get_parameter('amcl_topic').value
         self.drive_topic: str = self.get_parameter('drive_topic').value
         self.odom_topic: str = self.get_parameter('odom_topic').value
         self.scan_topic: str = self.get_parameter('scan_topic').value
@@ -61,6 +63,7 @@ class purePursuit(Node):
         
         # Initialize Node Variables
         self.USERRT = self.get_parameter("use_rrt").value
+        
         self.pos_x = 0.0
         self.pos_y = 0.0
         self.yaw = 0.0
@@ -76,8 +79,14 @@ class purePursuit(Node):
         self.scan_sub = self.create_subscription(LaserScan, self.scan_topic, self.scan_callback, 3) 
 
         # Subscribers
-        self.odom_sub = self.create_subscription(Odometry, self.odom_topic, self.odom_callback, 3) 
+        # self.odom_sub = self.create_subscription(Odometry, self.odom_topic, self.odom_callback, 3) 
         # self.pf_sub = self.create_subscription(PoseStamped, "/pf/viz/inferred_pose", self.pf_callback, 3)
+            self.amcl_sub = self.create_subscription(
+            PoseWithCovarianceStamped,
+            "self.amcl_topic",
+            self.amcl_callback,
+            10
+        )
 
         # RRT Subs 
         if self.USERRT:
@@ -144,6 +153,18 @@ class purePursuit(Node):
         self.get_logger().info(f"{len(self.waypoints)} waypoints loaded.")
     def path_callback(self, msg):
         self.waypoints = [(p.pose.position.x, p.pose.position.y) for p in msg.poses]
+    
+    def amcl_callback(self, msg: PoseWithCovarianceStamped) -> None:
+        pose = msg.pose.pose
+        self.pos_x = pose.position.x
+        self.pos_y = pose.position.y
+
+        z = pose.orientation.z
+        w = pose.orientation.w
+        self.yaw = yaw = 2 * math.atan2(z, w)
+
+        self.pose_received = True
+
     def odom_callback(self, msg):
         # RETRIEVE sth from odom message
         self.pos_x = msg.pose.pose.position.x

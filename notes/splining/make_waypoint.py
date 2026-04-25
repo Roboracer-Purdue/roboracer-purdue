@@ -21,7 +21,7 @@ import numpy as np
 from scipy import ndimage
 from skimage.morphology import medial_axis
 
-def generate_centerline_waypoints(map_array, threshold=254, spacing=10):
+def generate_centerline_waypoints(map_array, threshold=190, spacing=10):
     """
     Generate waypoints along the middle of the corridor between two closed wall loops.
 
@@ -301,7 +301,7 @@ def main():
     print(map_name)
     #----
     # Import Map Image
-    map_img = Image.open(map_name + ".png")
+    map_img = Image.open(map_name + ".pgm")
     global mp, res, origin
     mp = np.array(map_img)
 
@@ -316,16 +316,35 @@ def main():
 
     #----
     # Create waypoints from map
-    mpt = thicken_walls(mp)
+    mpt = thicken_walls(mp, iterations = 3)
+    '''
     wp_2d = generate_centerline_waypoints(mpt, threshold = 250, spacing = 50)
+    '''
+    wp_2d = [
+        (91.9, 16.5),
+        (71.0, 21.6),
+        (29.1, 63.6),
+        (16.3, 97.7),
+        (16.3, 129.1),
+        (26.7, 174.5),
+        (48.2, 189),
+        (73.4, 172),
+        (92.4, 154),
+        (132, 146),
+        (126.6, 121.3),
+        (114, 99.4),
+        (105, 62.5),
+        (110, 33),
+        (99, 17.6)
+    ]
     wp_list = [pixel_to_map(i[0], i[1]) for i in wp_2d]
     wp_list = add_heading_to_waypoints(wp_list)
 
 
     #---- 
     # Process waypoints
-    GAP = 1.0
-    CONT_DIST = 1.0
+    GAP = 0.2
+    CONT_DIST = 0.5
     STEP_BACK = 0.0
 
     '''
@@ -344,16 +363,16 @@ def main():
     pt_list = []
 
     # Bezier
-    '''
+    
     for i in range(len(wp_list) - 1):
         num_points=int(np.floor(math.dist(wp_list[i+1], wp_list[i]) / GAP))
         pt_list.extend(ptsp.generate_bezier_curve(wp_list[i], wp_list[i+1], num_points=num_points, control_dist=CONT_DIST))
 
     num_points=int(np.floor(math.dist(wp_list[-1], wp_list[0]) / GAP))
     pt_list.extend(ptsp.generate_bezier_curve(wp_list[-1], wp_list[0], num_points=num_points, control_dist=CONT_DIST))
-    '''
+    
     # Bachistochrone
-
+    '''
     for i in range(len(wp_list) - 1):
         heading = wp_list[i+1][2] + np.pi
         g_vec = (np.sin(heading), np.cos(heading))
@@ -362,8 +381,8 @@ def main():
     heading = wp_list[0][2] + np.pi
     g_vec = (np.sin(heading), np.cos(heading))
     pt_list.extend(ptsp.generate_brachistochrone(wp_list[0][:2], wp_list[-1][:2], g_vec=g_vec)[::-1])
-
-    pt_list = filter_waypoints_by_distance(pt_list, GAP)
+    '''
+    #pt_list = filter_waypoints_by_distance(pt_list, GAP)
 
 
     px_list = []
@@ -386,7 +405,7 @@ def main():
     plt.plot(px_list, py_list,"b.")
     # plt.xlim(700, 1400) # levine
     # plt.ylim(700, 1200) # levine
-    # plt.show()
+    plt.show()
     plt.savefig("waypoints_preview", dpi=500)
 
     #pt_list = [pixel_to_map(x, y) for x,y in pt_list]
