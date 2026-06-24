@@ -1,3 +1,2 @@
-# ROSCODE
-has code for ros and other coded projects for the autonomus car 
- WOOOOHOOOOO!!!
+#Purdue Roboracer 
+Purdue's roboracer team. 
