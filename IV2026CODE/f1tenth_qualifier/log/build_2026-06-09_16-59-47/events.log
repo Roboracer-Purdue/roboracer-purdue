@@ -1,0 +1,3 @@
+[0.000000] (-) TimerEvent: {}
+[0.000646] (-) JobUnselected: {'identifier': 'f1tenth_qualifier'}
+[0.001065] (-) EventReactorShutdown: {}

@@ -1,0 +1,58 @@
+qualifier_node:
+  ros__parameters:
+    scan_topic: "/scan"
+    odom_topic: "/odom"
+    pose_topic: "/amcl_pose"
+    use_amcl_pose: true
+
+    drive_topic: "/drive"
+
+    waypoint_file: "/home/arc/f1tenth_ws/waypoints/enriched_waypoints/ld_3rd_waypoints_enriched.csv"
+
+    wheelbase: 0.254
+
+    enable_obstacle_avoidance: True
+    enable_recovery: True
+
+    max_speed: 2.0 #2.0
+    min_speed: 1.0
+    recovery_speed: 1.0
+
+    lookahead_min: 0.75 #0.45
+    lookahead_max: 2.0 #1.0
+    lookahead_gain: 0.35 #0.20
+
+    steering_limit: 0.35 #0.42
+    steering_rate_limit: 1.2 #2.0
+    steering_smoothing_alpha: 0.30 #0.50
+
+    accel_limit: 0.8
+    decel_limit: 2.0
+
+    steering_slowdown_gain: 2.0
+    max_lateral_accel: 2.0
+
+    frenet_max_offset: 0.35
+    frenet_num_offsets: 5
+    frenet_horizon: 2.5
+    frenet_step: 0.25
+    path_corridor_width: 0.65
+    collision_radius: 0.10 #0.30
+
+    obstacle_detect_distance: 2.3
+    obstacle_slow_distance: 1.2
+    obstacle_stop_distance: 0.40
+
+    wall_min_distance: 0.28
+    wall_avoid_gain: 0.0
+
+    recovery_trigger_time: 0.5 #1.0
+    stuck_speed_threshold: 0.12
+    stuck_command_threshold: 0.6
+    max_heading_error_recovery: 0.9
+    max_raceline_distance_recovery: 0.8
+
+    reverse_speed: -0.9
+    max_reverse_time: 0.6
+
+    control_rate_hz: 40.0

@@ -1,0 +1,130 @@
+f1tenth_race_day:
+  ros__parameters:
+    scan_topic: "/scan"
+    odom_topic: "/odom"
+    pose_topic: "/amcl_pose"
+    use_amcl_pose: true
+
+    # Use whichever your stack actually listens to.
+    # For your car this has often been /drive.
+    drive_topic: "/drive"
+
+    # Change this to your actual enriched or raceline waypoint file.
+    waypoint_file: "/home/arc/f1tenth_ws/waypoints/enriched_waypoints/ld_3rd_waypoints_enriched.csv"
+
+    wheelbase: 0.254
+
+    # Master switches
+    enable_frenet_planner: true
+    enable_guardian: true
+    enable_recovery: false #true
+
+    # Keep false at first. If true, emergency stop stays latched until node restart.
+    enable_emergency_stop_latch: false
+
+    debug_prints: true
+
+    # -------------------------------------------------------------------------
+    # Speed
+    # -------------------------------------------------------------------------
+    # Start safe. Increase only after clean laps.
+    max_speed: 1.2
+    min_speed: 0.6
+    recovery_speed: 0.35
+    reverse_speed: -0.30
+
+    accel_limit: 0.8
+    decel_limit: 2.5
+
+    # -------------------------------------------------------------------------
+    # Pure pursuit
+    # -------------------------------------------------------------------------
+    lookahead_min: 0.55
+    lookahead_max: 1.20
+    lookahead_gain: 0.25
+
+    # -------------------------------------------------------------------------
+    # Steering
+    # -------------------------------------------------------------------------
+    steering_limit: 0.42
+    steering_rate_limit: 1.8
+    steering_smoothing_alpha: 0.50
+    steering_slowdown_gain: 2.0
+    max_lateral_accel: 2.0
+
+    # -------------------------------------------------------------------------
+    # Frenet local planner
+    # -------------------------------------------------------------------------
+    # First test:
+    #   3 offsets = left / center / right
+    # Later:
+    #   use 5 offsets
+    frenet_max_offset: 0.50 #0.35
+    frenet_num_offsets: 3
+    frenet_horizon: 2.5
+    frenet_step: 0.20
+    path_corridor_width: 0.30
+    offset_change_rate: 0.90 #0.55
+
+    # -------------------------------------------------------------------------
+    # Opponent / obstacle behavior
+    # -------------------------------------------------------------------------
+    opponent_detect_distance: 2.5
+    safe_follow_distance: 0.5 #1.0
+    obstacle_slow_distance: 1.8 #0.7 #1.4
+    obstacle_stop_distance: 0.3 #0.60
+    collision_radius: 0.40 #0.30
+
+    # -------------------------------------------------------------------------
+    # LiDAR guardian
+    # -------------------------------------------------------------------------
+    guardian_front_angle_deg: 25.0
+
+    front_left_min_deg: 15.0
+    front_left_max_deg: 60.0
+
+    front_right_min_deg: -60.0
+    front_right_max_deg: -15.0
+
+    side_wall_angle_min_deg: 60.0
+    side_wall_angle_max_deg: 110.0
+
+    wall_min_distance: 0.25
+
+    # -------------------------------------------------------------------------
+    # Passing behavior
+    # -------------------------------------------------------------------------
+    pass_commit_time: 0.90
+    switching_penalty: 3.0
+    pass_offset_threshold: 0.08
+    return_offset_tolerance: 0.05
+
+    # -------------------------------------------------------------------------
+    # Candidate path cost weights
+    # -------------------------------------------------------------------------
+    raceline_cost_weight: 0.25 #0.6
+    collision_cost_weight: 10.0
+    smoothness_cost_weight: 1.0
+    progress_reward_weight: 1.0
+    pass_reward_weight: 3.0 #1.5
+
+    # -------------------------------------------------------------------------
+    # Recovery
+    # -------------------------------------------------------------------------
+    allow_reverse: true
+    max_reverse_time: 0.8
+    stuck_speed_threshold: 0.08
+    stuck_time_threshold: 1.0
+    recovery_heading_tolerance_deg: 35.0
+    recovery_front_clear_distance: 1.0
+
+    # -------------------------------------------------------------------------
+    # Pose validation
+    # -------------------------------------------------------------------------
+    pose_jump_threshold: 0.75
+    yaw_jump_threshold_deg: 60.0
+
+    # -------------------------------------------------------------------------
+    # Control loop
+    # -------------------------------------------------------------------------
+    control_rate_hz: 30.0
