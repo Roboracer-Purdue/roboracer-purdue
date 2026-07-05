@@ -12,7 +12,7 @@ import points_test as ptsp
 import csv
 import sys
 
-map_name = "Spielberg_map"
+map_name = "IV_2026_SIM_clean"
 res = 1.0
 origin = (0.0, 0.0)
 mp = np.array([])
@@ -301,7 +301,7 @@ def main():
     print(map_name)
     #----
     # Import Map Image
-    map_img = Image.open(map_name + ".pgm")
+    map_img = Image.open(map_name + ".png")
     global mp, res, origin
     mp = np.array(map_img)
 

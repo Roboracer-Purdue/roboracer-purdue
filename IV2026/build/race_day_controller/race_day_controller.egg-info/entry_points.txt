@@ -1,0 +1,3 @@
+[console_scripts]
+f1tenth_race_day = race_day_controller.f1tenth_race_day:main
+

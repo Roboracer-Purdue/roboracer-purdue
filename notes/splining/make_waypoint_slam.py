@@ -11,9 +11,9 @@ from skimage.morphology import medial_axis
 import points_test as ptsp
 import csv
 
-map_name = "sl27_hallway_map"
+map_name = "IV_2026_SIM_clean"
 res = 1.0
-origin = (0.0, 0.0)
+origin = (4.5, 5.1)
 
 import numpy as np
 from scipy import ndimage
@@ -406,7 +406,7 @@ def filter_waypoints_by_distance(waypoints, min_dist=0.1):
 
 #----
 # Import Map Image
-map_img = Image.open(map_name + ".pgm")
+map_img = Image.open(map_name + ".png")
 mp = np.array(map_img)
 
 #----
