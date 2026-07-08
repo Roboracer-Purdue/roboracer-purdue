@@ -1,0 +1,18 @@
+[0.555s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/src/dual_ctrl': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/build/dual_ctrl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/install/dual_ctrl/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dual_ctrl build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/build/dual_ctrl/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/build/dual_ctrl/install.log --install-scripts $base/lib/dual_ctrl --single-version-externally-managed install_data
+[0.712s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.712s]   warnings.warn(
+[0.730s] running egg_info
+[0.735s] writing manifest file '../../build/dual_ctrl/dual_ctrl.egg-info/SOURCES.txt'
+[0.736s] running build
+[0.736s] running build_py
+[0.736s] copying dual_ctrl/cute_controller.py -> /home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/build/dual_ctrl/build/lib/dual_ctrl
+[0.736s] running install
+[0.737s] running install_lib
+[0.737s] byte-compiling /home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/install/dual_ctrl/lib/python3.8/site-packages/dual_ctrl/cute_controller.py to cute_controller.cpython-38.pyc
+[0.739s] running install_data
+[0.739s] running install_egg_info
+[0.740s] removing '/home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/install/dual_ctrl/lib/python3.8/site-packages/dual_ctrl-0.0.0-py3.8.egg-info' (and everything under it)
+[0.740s] Copying ../../build/dual_ctrl/dual_ctrl.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/install/dual_ctrl/lib/python3.8/site-packages/dual_ctrl-0.0.0-py3.8.egg-info
+[0.741s] running install_scripts
+[0.755s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/build/dual_ctrl/install.log'
+[0.773s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/src/dual_ctrl' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/build/dual_ctrl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/install/dual_ctrl/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dual_ctrl build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/build/dual_ctrl/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/DualController/build/dual_ctrl/install.log --install-scripts $base/lib/dual_ctrl --single-version-externally-managed install_data

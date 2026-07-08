@@ -18,7 +18,7 @@ LIST OF CHANGES
 * Changed default safe_follow_distance from 1.0 to 0.45
 * Changed default frenet_max_offset from 0.35 to 0.20
 * Changed default steering_smoothing_alpha from 0.50 to 0.10
-
+* Changed default accel_limit from 0.8 to 2.5
 
 1. To run this on sim, use the following command to subscribe to edom instead of amcl
 '''

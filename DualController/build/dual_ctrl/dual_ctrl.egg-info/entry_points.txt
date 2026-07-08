@@ -1,0 +1,3 @@
+[console_scripts]
+controller = dual_ctrl.cute_controller:main
+

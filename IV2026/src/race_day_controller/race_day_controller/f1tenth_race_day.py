@@ -22,7 +22,7 @@ package_path = get_package_share_directory("race_day_controller")
 default_waypoint = os.path.join(
     package_path,
     "waypoints",
-    "IV26_gen_rl2.csv"
+    "generated_waypoints.csv" # "IV26_gen_rl2.csv"
 )
 
 class RaceState(Enum):
@@ -142,7 +142,7 @@ class F1TenthRaceDayNode(Node):
             ("scan_topic", "/scan"),
             ("odom_topic", "/odom"),
             ("pose_topic", "/amcl_pose"),
-            ("use_amcl_pose", True),
+            ("use_amcl_pose", False),
             ("drive_topic", "/drive"),
             ("waypoint_file", default_waypoint),
 
@@ -159,16 +159,16 @@ class F1TenthRaceDayNode(Node):
             ("min_speed", 0.35),
             ("recovery_speed", 0.35),
             ("reverse_speed", -0.30),
-            ("accel_limit", 0.8),
+            ("accel_limit", 2.5),
             ("decel_limit", 2.5),
 
-            ("lookahead_min", 0.55),
-            ("lookahead_max", 1.20),
+            ("lookahead_min", 0.45), # 0.55
+            ("lookahead_max", 1.2), # 1.20
             ("lookahead_gain", 0.25),
 
             ("steering_limit", 0.42),
             ("steering_rate_limit", 1.8),
-            ("steering_smoothing_alpha", 0.10),
+            ("steering_smoothing_alpha", 0.01),
             ("steering_slowdown_gain", 2.0),
             ("max_lateral_accel", 2.0),
 
@@ -1157,8 +1157,8 @@ class F1TenthRaceDayNode(Node):
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = "base_link"
 
-        msg.drive.speed = float(speed) * 2.9
-        msg.drive.steering_angle = float(steering)*1.1
+        msg.drive.speed = float(speed)
+        msg.drive.steering_angle = float(steering)
 
         self.drive_pub.publish(msg)
 

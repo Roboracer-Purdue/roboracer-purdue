@@ -17,4 +17,5 @@ test/test_pep257.py
 waypoints/IV26_gen_rl.csv
 waypoints/IV26_gen_rl2.csv
 waypoints/IV26_gen_rl3.csv
+waypoints/generated_waypoints.csv
 waypoints/raceline.csv

@@ -1,0 +1,17 @@
+[0.610s] Invoking command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/src/race_day_controller': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/build/race_day_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/install/race_day_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/race_day_controller build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/build/race_day_controller/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/build/race_day_controller/install.log --install-scripts $base/lib/race_day_controller --single-version-externally-managed install_data
+[0.798s] /home/patchy/.local/lib/python3.8/site-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.798s]   warnings.warn(
+[0.818s] running egg_info
+[0.824s] writing manifest file '../../build/race_day_controller/race_day_controller.egg-info/SOURCES.txt'
+[0.824s] running build
+[0.824s] running build_py
+[0.825s] running install
+[0.827s] running install_lib
+[0.829s] running install_data
+[0.829s] copying waypoints/generated_waypoints.csv -> /home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/install/race_day_controller/share/race_day_controller/waypoints
+[0.829s] running install_egg_info
+[0.830s] removing '/home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/install/race_day_controller/lib/python3.8/site-packages/race_day_controller-0.0.0-py3.8.egg-info' (and everything under it)
+[0.831s] Copying ../../build/race_day_controller/race_day_controller.egg-info to /home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/install/race_day_controller/lib/python3.8/site-packages/race_day_controller-0.0.0-py3.8.egg-info
+[0.832s] running install_scripts
+[0.846s] writing list of installed files to '/home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/build/race_day_controller/install.log'
+[0.872s] Invoked command in '/home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/src/race_day_controller' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/build/race_day_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/install/race_day_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/race_day_controller build --build-base /home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/build/race_day_controller/build install --record /home/patchy/arc_ws/ARC-PI-ROSCODE/IV2026/build/race_day_controller/install.log --install-scripts $base/lib/race_day_controller --single-version-externally-managed install_data
