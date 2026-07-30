@@ -64,7 +64,7 @@ No experience required — just the willingness to learn fast. Whether you want 
 
 - 🔧 **Join the club:** [BoilerLink — Roboracer @ Purdue](https://boilerlink.purdue.edu/organization/arcindy)
 - 📸 **Follow along:** [@purdue_roboracer](https://www.instagram.com/purdue_roboracer/) on Instagram
-- 💻 **Our code:** [github.com/Roboracer-Purdue](https://github.com/Roboracer-Purdue)
+
 
 ## Acknowledgments
 
