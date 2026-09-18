@@ -1,0 +1,15 @@
+running egg_info
+writing ../build/f110_gym/f110_gym.egg-info/PKG-INFO
+writing dependency_links to ../build/f110_gym/f110_gym.egg-info/dependency_links.txt
+writing requirements to ../build/f110_gym/f110_gym.egg-info/requires.txt
+writing top-level names to ../build/f110_gym/f110_gym.egg-info/top_level.txt
+reading manifest file '../build/f110_gym/f110_gym.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../build/f110_gym/f110_gym.egg-info/SOURCES.txt'
+running build
+running install
+running install_egg_info
+removing '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages/f110_gym-0.2.1-py3.10.egg-info' (and everything under it)
+Copying ../build/f110_gym/f110_gym.egg-info to /workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages/f110_gym-0.2.1-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/install.log'

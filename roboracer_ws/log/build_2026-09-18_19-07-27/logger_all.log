@@ -1,0 +1,312 @@
+[0.105s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.105s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffff9c34d810>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff9c34c9a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff9c34c9a0>>, mixin_verb=('build',))
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.205s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspaces/roboracer-purdue/roboracer_ws'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extensions ['ignore', 'ignore_ament_install']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extension 'ignore'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extension 'ignore_ament_install'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extensions ['colcon_pkg']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extension 'colcon_pkg'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extensions ['colcon_meta']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extension 'colcon_meta'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extensions ['ros']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extension 'ros'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extensions ['cmake', 'python']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extension 'cmake'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extension 'python'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extensions ['python_setup_py']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(Notes) by extension 'python_setup_py'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extensions ['ignore', 'ignore_ament_install']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extension 'ignore'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extension 'ignore_ament_install'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extensions ['colcon_pkg']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extension 'colcon_pkg'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extensions ['colcon_meta']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extension 'colcon_meta'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extensions ['ros']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extension 'ros'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extensions ['cmake', 'python']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extension 'cmake'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extension 'python'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extensions ['python_setup_py']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym) by extension 'python_setup_py'
+[0.364s] DEBUG:colcon.colcon_core.package_identification:Package 'f1tenth_gym' with type 'python' and name 'f110_gym'
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extensions ['ignore', 'ignore_ament_install']
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extension 'ignore'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extension 'ignore_ament_install'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extensions ['colcon_pkg']
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extension 'colcon_pkg'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extensions ['colcon_meta']
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extension 'colcon_meta'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extensions ['ros']
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extension 'ros'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extensions ['cmake', 'python']
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extension 'cmake'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extension 'python'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extensions ['python_setup_py']
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_lab1_template) by extension 'python_setup_py'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.367s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.367s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.367s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.367s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.367s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore'
+[0.367s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore_ament_install'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_pkg']
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_pkg'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_meta']
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_meta'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ros']
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ros'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['cmake', 'python']
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'cmake'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['python_setup_py']
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python_setup_py'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extension 'ignore'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extension 'ignore_ament_install'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extensions ['colcon_pkg']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extension 'colcon_pkg'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extensions ['colcon_meta']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extension 'colcon_meta'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extensions ['ros']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extension 'ros'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extensions ['cmake', 'python']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extension 'cmake'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extension 'python'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extensions ['python_setup_py']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extension 'python_setup_py'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extensions ['ignore', 'ignore_ament_install']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extension 'ignore'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extension 'ignore_ament_install'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extensions ['colcon_pkg']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extension 'colcon_pkg'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extensions ['colcon_meta']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extension 'colcon_meta'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extensions ['ros']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extension 'ros'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extensions ['cmake', 'python']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extension 'cmake'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extension 'python'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extensions ['python_setup_py']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system) by extension 'python_setup_py'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/ackermann_mux) by extensions ['ignore', 'ignore_ament_install']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/ackermann_mux) by extension 'ignore'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/ackermann_mux) by extension 'ignore_ament_install'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/ackermann_mux) by extensions ['colcon_pkg']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/ackermann_mux) by extension 'colcon_pkg'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/ackermann_mux) by extensions ['colcon_meta']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/ackermann_mux) by extension 'colcon_meta'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/ackermann_mux) by extensions ['ros']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/ackermann_mux) by extension 'ros'
+[0.377s] DEBUG:colcon.colcon_core.package_identification:Package 'src/f1tenth_system/ackermann_mux' with type 'ros.ament_cmake' and name 'ackermann_mux'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/f1tenth_stack) by extensions ['ignore', 'ignore_ament_install']
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/f1tenth_stack) by extension 'ignore'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/f1tenth_stack) by extension 'ignore_ament_install'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/f1tenth_stack) by extensions ['colcon_pkg']
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/f1tenth_stack) by extension 'colcon_pkg'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/f1tenth_stack) by extensions ['colcon_meta']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/f1tenth_stack) by extension 'colcon_meta'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/f1tenth_stack) by extensions ['ros']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_system/f1tenth_stack) by extension 'ros'
+[0.378s] DEBUG:colcon.colcon_core.package_identification:Package 'src/f1tenth_system/f1tenth_stack' with type 'ros.ament_python' and name 'f1tenth_stack'
+[0.379s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.379s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.379s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.379s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.379s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.398s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.398s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.400s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 332 installed packages in /opt/ros/humble
+[0.401s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.433s] Level 5:colcon.colcon_core.verb:set package 'ackermann_mux' build argument 'cmake_args' from command line to 'None'
+[0.433s] Level 5:colcon.colcon_core.verb:set package 'ackermann_mux' build argument 'cmake_target' from command line to 'None'
+[0.433s] Level 5:colcon.colcon_core.verb:set package 'ackermann_mux' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.433s] Level 5:colcon.colcon_core.verb:set package 'ackermann_mux' build argument 'cmake_clean_cache' from command line to 'False'
+[0.433s] Level 5:colcon.colcon_core.verb:set package 'ackermann_mux' build argument 'cmake_clean_first' from command line to 'False'
+[0.433s] Level 5:colcon.colcon_core.verb:set package 'ackermann_mux' build argument 'cmake_force_configure' from command line to 'False'
+[0.433s] Level 5:colcon.colcon_core.verb:set package 'ackermann_mux' build argument 'ament_cmake_args' from command line to 'None'
+[0.433s] Level 5:colcon.colcon_core.verb:set package 'ackermann_mux' build argument 'catkin_cmake_args' from command line to 'None'
+[0.433s] Level 5:colcon.colcon_core.verb:set package 'ackermann_mux' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.434s] DEBUG:colcon.colcon_core.verb:Building package 'ackermann_mux' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux', 'merge_install': False, 'path': '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux', 'symlink_install': False, 'test_result_base': None}
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'cmake_target' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'cmake_clean_cache' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'cmake_clean_first' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'cmake_force_configure' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'ament_cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'catkin_cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.434s] DEBUG:colcon.colcon_core.verb:Building package 'f110_gym' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym', 'merge_install': False, 'path': '/workspaces/roboracer-purdue/roboracer_ws/f1tenth_gym', 'symlink_install': False, 'test_result_base': None}
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_stack' build argument 'cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_stack' build argument 'cmake_target' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_stack' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_stack' build argument 'cmake_clean_cache' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_stack' build argument 'cmake_clean_first' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_stack' build argument 'cmake_force_configure' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_stack' build argument 'ament_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_stack' build argument 'catkin_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_stack' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.435s] DEBUG:colcon.colcon_core.verb:Building package 'f1tenth_stack' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack', 'merge_install': False, 'path': '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/f1tenth_stack', 'symlink_install': False, 'test_result_base': None}
+[0.435s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.436s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.436s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux' with build type 'ament_cmake'
+[0.436s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux'
+[0.439s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.439s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.439s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.442s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspaces/roboracer-purdue/roboracer_ws/f1tenth_gym'
+[0.442s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.442s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.453s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux -DCMAKE_INSTALL_PREFIX=/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux
+[0.861s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: symlink_data, bdist_wheel, alias, install_headers, build_py, sdist, install_egg_info, setopt, egg_info, easy_install, check, build_clib, bdist_dumb, bdist_egg, upload_docs, dist_info, install, install_scripts, install_data, rotate, saveopts, upload, build_scripts, clean, test, build, bdist_rpm, develop, build_ext, bdist, register, install_lib
+[0.865s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/f1tenth_gym': PYTHONPATH=/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/f110_gym build --build-base /workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/build install --record /workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/install.log --single-version-externally-managed
+[1.077s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/f1tenth_gym' returned '0': PYTHONPATH=/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/f110_gym build --build-base /workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/build install --record /workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/install.log --single-version-externally-managed
+[1.079s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym' for CMake module files
+[1.080s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym' for CMake config files
+[1.081s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib'
+[1.081s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/bin'
+[1.081s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/pkgconfig/f110_gym.pc'
+[1.082s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages'
+[1.082s] Level 1:colcon.colcon_core.shell:create_environment_hook('f110_gym', 'pythonpath')
+[1.082s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/share/f110_gym/hook/pythonpath.ps1'
+[1.083s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/share/f110_gym/hook/pythonpath.dsv'
+[1.084s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/share/f110_gym/hook/pythonpath.sh'
+[1.085s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/bin'
+[1.086s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(f110_gym)
+[1.086s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/share/f110_gym/package.ps1'
+[1.087s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/share/f110_gym/package.dsv'
+[1.088s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/share/f110_gym/package.sh'
+[1.089s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/share/f110_gym/package.bash'
+[1.090s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/share/f110_gym/package.zsh'
+[1.090s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/share/colcon-core/packages/f110_gym)
+[1.835s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux -DCMAKE_INSTALL_PREFIX=/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux
+[1.836s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux -- -j4 -l4
+[8.953s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux -- -j4 -l4
+[8.959s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux
+[9.091s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ackermann_mux)
+[9.091s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux' for CMake module files
+[9.092s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux
+[9.093s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux' for CMake config files
+[9.095s] Level 1:colcon.colcon_core.shell:create_environment_hook('ackermann_mux', 'cmake_prefix_path')
+[9.095s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/hook/cmake_prefix_path.ps1'
+[9.096s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/hook/cmake_prefix_path.dsv'
+[9.097s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/hook/cmake_prefix_path.sh'
+[9.098s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/lib'
+[9.098s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/bin'
+[9.098s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/lib/pkgconfig/ackermann_mux.pc'
+[9.098s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/lib/python3.10/site-packages'
+[9.099s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/bin'
+[9.099s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.ps1'
+[9.100s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.dsv'
+[9.100s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.sh'
+[9.101s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.bash'
+[9.102s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.zsh'
+[9.102s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/colcon-core/packages/ackermann_mux)
+[9.104s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ackermann_mux)
+[9.104s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux' for CMake module files
+[9.106s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux' for CMake config files
+[9.107s] Level 1:colcon.colcon_core.shell:create_environment_hook('ackermann_mux', 'cmake_prefix_path')
+[9.108s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/hook/cmake_prefix_path.ps1'
+[9.108s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/hook/cmake_prefix_path.dsv'
+[9.109s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/hook/cmake_prefix_path.sh'
+[9.109s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/lib'
+[9.110s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/bin'
+[9.110s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/lib/pkgconfig/ackermann_mux.pc'
+[9.110s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/lib/python3.10/site-packages'
+[9.110s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/bin'
+[9.111s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.ps1'
+[9.111s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.dsv'
+[9.112s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.sh'
+[9.112s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.bash'
+[9.113s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.zsh'
+[9.113s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/colcon-core/packages/ackermann_mux)
+[9.114s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/f1tenth_stack' with build type 'ament_python'
+[9.114s] Level 1:colcon.colcon_core.shell:create_environment_hook('f1tenth_stack', 'ament_prefix_path')
+[9.114s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/hook/ament_prefix_path.ps1'
+[9.117s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/hook/ament_prefix_path.dsv'
+[9.117s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/hook/ament_prefix_path.sh'
+[9.118s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.118s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.262s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/f1tenth_stack'
+[9.262s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.262s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.446s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: symlink_data, bdist_wheel, alias, install_headers, build_py, sdist, install_egg_info, setopt, egg_info, easy_install, check, build_clib, bdist_dumb, bdist_egg, upload_docs, dist_info, install, install_scripts, install_data, rotate, saveopts, upload, build_scripts, clean, test, build, bdist_rpm, develop, build_ext, bdist, register, install_lib
+[9.450s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/f1tenth_stack': AMENT_PREFIX_PATH=/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux PYTHONPATH=/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/f1tenth_stack build --build-base /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build install --record /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/install.log --install-scripts $base/lib/f1tenth_stack --single-version-externally-managed install_data
+[9.665s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack' for CMake module files
+[9.666s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/f1tenth_stack' returned '0': AMENT_PREFIX_PATH=/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux PYTHONPATH=/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/f1tenth_stack build --build-base /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build install --record /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/install.log --install-scripts $base/lib/f1tenth_stack --single-version-externally-managed install_data
+[9.668s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack' for CMake config files
+[9.671s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib'
+[9.672s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/bin'
+[9.672s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/pkgconfig/f1tenth_stack.pc'
+[9.672s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages'
+[9.672s] Level 1:colcon.colcon_core.shell:create_environment_hook('f1tenth_stack', 'pythonpath')
+[9.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/hook/pythonpath.ps1'
+[9.673s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/hook/pythonpath.dsv'
+[9.674s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/hook/pythonpath.sh'
+[9.675s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/bin'
+[9.675s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(f1tenth_stack)
+[9.675s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/package.ps1'
+[9.676s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/package.dsv'
+[9.676s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/package.sh'
+[9.677s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/package.bash'
+[9.677s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/package.zsh'
+[9.678s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/colcon-core/packages/f1tenth_stack)
+[9.678s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.678s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.679s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.679s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.688s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.688s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.688s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[17.473s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[17.474s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/roboracer-purdue/roboracer_ws/install/local_setup.ps1'
+[17.475s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/roboracer-purdue/roboracer_ws/install/_local_setup_util_ps1.py'
+[17.478s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/roboracer-purdue/roboracer_ws/install/setup.ps1'
+[17.479s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/roboracer-purdue/roboracer_ws/install/local_setup.sh'
+[17.481s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/roboracer-purdue/roboracer_ws/install/_local_setup_util_sh.py'
+[17.482s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/roboracer-purdue/roboracer_ws/install/setup.sh'
+[17.484s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/roboracer-purdue/roboracer_ws/install/local_setup.bash'
+[17.484s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/roboracer-purdue/roboracer_ws/install/setup.bash'
+[17.485s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/roboracer-purdue/roboracer_ws/install/local_setup.zsh'
+[17.486s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/roboracer-purdue/roboracer_ws/install/setup.zsh'

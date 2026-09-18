@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux
+CMAKE_SOURCE_DIR = /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/orin/Desktop/roboracer_ws/build/ackermann_mux
+CMAKE_BINARY_DIR = /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ackermann_mux.dir/depend.make
@@ -70,46 +70,46 @@ include CMakeFiles/ackermann_mux.dir/progress.make
 include CMakeFiles/ackermann_mux.dir/flags.make
 
 CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o: CMakeFiles/ackermann_mux.dir/flags.make
-CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o: /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux.cpp
+CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o: /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux.cpp
 CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o: CMakeFiles/ackermann_mux.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orin/Desktop/roboracer_ws/build/ackermann_mux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o -MF CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o.d -o CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o -c /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o -MF CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o.d -o CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o -c /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux.cpp
 
 CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux.cpp > CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux.cpp > CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.i
 
 CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux.cpp -o CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux.cpp -o CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.s
 
 CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o: CMakeFiles/ackermann_mux.dir/flags.make
-CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o: /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_node.cpp
+CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o: /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_node.cpp
 CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o: CMakeFiles/ackermann_mux.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orin/Desktop/roboracer_ws/build/ackermann_mux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o -MF CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o.d -o CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o -c /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o -MF CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o.d -o CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o -c /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_node.cpp
 
 CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_node.cpp > CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_node.cpp > CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.i
 
 CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_node.cpp -o CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_node.cpp -o CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.s
 
 CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o: CMakeFiles/ackermann_mux.dir/flags.make
-CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o: /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_diagnostics.cpp
+CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o: /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_diagnostics.cpp
 CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o: CMakeFiles/ackermann_mux.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orin/Desktop/roboracer_ws/build/ackermann_mux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o -MF CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o.d -o CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o -c /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_diagnostics.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o -MF CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o.d -o CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o -c /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_diagnostics.cpp
 
 CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_diagnostics.cpp > CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_diagnostics.cpp > CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.i
 
 CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_diagnostics.cpp -o CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/src/ackermann_mux_diagnostics.cpp -o CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.s
 
 # Object files for target ackermann_mux
 ackermann_mux_OBJECTS = \
@@ -130,6 +130,7 @@ ackermann_mux: /opt/ros/humble/lib/libackermann_msgs__rosidl_typesupport_fastrtp
 ackermann_mux: /opt/ros/humble/lib/libackermann_msgs__rosidl_typesupport_introspection_cpp.so
 ackermann_mux: /opt/ros/humble/lib/libackermann_msgs__rosidl_typesupport_cpp.so
 ackermann_mux: /opt/ros/humble/lib/libackermann_msgs__rosidl_generator_py.so
+ackermann_mux: /opt/ros/humble/lib/libdiagnostic_updater.so
 ackermann_mux: /opt/ros/humble/lib/libackermann_msgs__rosidl_typesupport_c.so
 ackermann_mux: /opt/ros/humble/lib/libackermann_msgs__rosidl_generator_c.so
 ackermann_mux: /opt/ros/humble/lib/librclcpp.so
@@ -139,24 +140,24 @@ ackermann_mux: /opt/ros/humble/lib/librmw_implementation.so
 ackermann_mux: /opt/ros/humble/lib/libament_index_cpp.so
 ackermann_mux: /opt/ros/humble/lib/librcl_logging_spdlog.so
 ackermann_mux: /opt/ros/humble/lib/librcl_logging_interface.so
-ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
-ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
-ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so
-ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
-ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so
-ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_py.so
-ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so
-ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so
 ackermann_mux: /opt/ros/humble/lib/librcl_yaml_param_parser.so
 ackermann_mux: /opt/ros/humble/lib/libyaml.so
 ackermann_mux: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so
+ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
 ackermann_mux: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so
+ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so
 ackermann_mux: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so
+ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
 ackermann_mux: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so
+ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
 ackermann_mux: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
+ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so
 ackermann_mux: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_py.so
+ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_py.so
 ackermann_mux: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_c.so
+ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so
 ackermann_mux: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so
+ackermann_mux: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so
 ackermann_mux: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_c.so
 ackermann_mux: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so
 ackermann_mux: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
@@ -203,7 +204,7 @@ ackermann_mux: /opt/ros/humble/lib/librcpputils.so
 ackermann_mux: /opt/ros/humble/lib/librosidl_runtime_c.so
 ackermann_mux: /opt/ros/humble/lib/librcutils.so
 ackermann_mux: CMakeFiles/ackermann_mux.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/orin/Desktop/roboracer_ws/build/ackermann_mux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ackermann_mux"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ackermann_mux"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ackermann_mux.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -215,6 +216,6 @@ CMakeFiles/ackermann_mux.dir/clean:
 .PHONY : CMakeFiles/ackermann_mux.dir/clean
 
 CMakeFiles/ackermann_mux.dir/depend:
-	cd /home/orin/Desktop/roboracer_ws/build/ackermann_mux && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux /home/orin/Desktop/roboracer_ws/build/ackermann_mux /home/orin/Desktop/roboracer_ws/build/ackermann_mux /home/orin/Desktop/roboracer_ws/build/ackermann_mux/CMakeFiles/ackermann_mux.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux/CMakeFiles/ackermann_mux.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ackermann_mux.dir/depend
 

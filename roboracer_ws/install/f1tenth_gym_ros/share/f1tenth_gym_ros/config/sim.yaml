@@ -1,10 +1,24 @@
 # MIT License
+
 # Copyright (c) 2020 Hongrui Zheng
-#
-# Template version: map_path is just the map NAME (no path, no extension).
-# The launch file resolves it to an absolute path under the package's installed
-# maps/ folder, so this file needs no edits when cloned to another machine.
-# To switch maps: drop <name>.png + <name>.yaml in maps/, set map_path: '<name>', rebuild.
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
 bridge:
   ros__parameters:
@@ -22,13 +36,13 @@ bridge:
 
     # transform related
     scan_distance_to_base_link: 0.275
-
+    
     # laserscan parameters
     scan_fov: 4.7
     scan_beams: 1080
 
-    # map parameters  (NAME ONLY — launch resolves the full path)
-    map_path: 'levine'
+    # map parameters
+    map_path: '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_gym_ros/maps/levine'
     map_img_ext: '.png'
 
     # opponent parameters

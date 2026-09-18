@@ -1,0 +1,39 @@
+[0.041s] Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/opt/ros/humble /usr/bin/cmake --build /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux -- -j4 -l4
+[0.218s] [35m[1mConsolidate compiler generated dependencies of target ackermann_mux[0m
+[0.392s] [100%] Built target ackermann_mux
+[0.420s] Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/opt/ros/humble /usr/bin/cmake --build /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux -- -j4 -l4
+[0.427s] Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/opt/ros/humble /usr/bin/cmake --install /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux
+[0.432s] -- Install configuration: ""
+[0.433s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/lib/ackermann_mux/ackermann_mux
+[0.433s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/launch
+[0.434s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/launch/ackermann_mux_launch.py
+[0.435s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config
+[0.435s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config/ackermann_mux_topics.yaml
+[0.436s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config/ackermann_mux_locks.yaml
+[0.436s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config/joystick.yaml
+[0.436s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include
+[0.437s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux
+[0.437s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/ackermann_mux_diagnostics_status.hpp
+[0.438s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/ackermann_mux.hpp
+[0.438s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/ackermann_mux_diagnostics.hpp
+[0.439s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/topic_handle.hpp
+[0.439s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/params_helpers.hpp
+[0.440s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/utils.hpp
+[0.440s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ament_index/resource_index/package_run_dependencies/ackermann_mux
+[0.441s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ament_index/resource_index/parent_prefix_path/ackermann_mux
+[0.442s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/ament_prefix_path.sh
+[0.442s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/ament_prefix_path.dsv
+[0.443s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/path.sh
+[0.443s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/path.dsv
+[0.444s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.bash
+[0.444s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.sh
+[0.445s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.zsh
+[0.445s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.dsv
+[0.446s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.dsv
+[0.447s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ament_index/resource_index/packages/ackermann_mux
+[0.447s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.448s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.448s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ackermann_muxConfig.cmake
+[0.449s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ackermann_muxConfig-version.cmake
+[0.449s] -- Up-to-date: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.xml
+[0.450s] Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/opt/ros/humble /usr/bin/cmake --install /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux

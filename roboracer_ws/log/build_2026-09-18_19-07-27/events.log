@@ -1,0 +1,283 @@
+[0.000000] (-) TimerEvent: {}
+[0.000198] (ackermann_mux) JobQueued: {'identifier': 'ackermann_mux', 'dependencies': OrderedDict()}
+[0.000303] (f110_gym) JobQueued: {'identifier': 'f110_gym', 'dependencies': OrderedDict()}
+[0.000507] (f1tenth_stack) JobQueued: {'identifier': 'f1tenth_stack', 'dependencies': OrderedDict([('ackermann_mux', '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux')])}
+[0.000574] (ackermann_mux) JobStarted: {'identifier': 'ackermann_mux'}
+[0.005515] (f110_gym) JobStarted: {'identifier': 'f110_gym'}
+[0.009360] (ackermann_mux) JobProgress: {'identifier': 'ackermann_mux', 'progress': 'cmake'}
+[0.012270] (ackermann_mux) Command: {'cmd': ['/usr/bin/cmake', '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux', '-DCMAKE_INSTALL_PREFIX=/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux'], 'cwd': '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'a14322274ff3'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/bin/helpers/browser.sh'), ('HOME', '/home/vscode'), ('OLDPWD', '/workspaces/roboracer-purdue/roboracer_ws'), ('TERM_PROGRAM_VERSION', '1.127.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-6acf3c74-8e66-4d2c-bcc9-ad13f9d82627.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/vscode/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/vscode/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock","/tmp/.X11-unix/X1"]'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/vscode/.vscode-server/data/User/workspaceStorage/234a783bde8bc5e393f42b96263ddacb/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-0ac8bf21f2.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('DEBIAN_FRONTEND', 'dialog'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X1'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux'), ('COPILOT_DEBUG_NONCE', 'df2c519210349266c15945055af61d19'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099827] (-) TimerEvent: {}
+[0.113332] (ackermann_mux) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.197642] (ackermann_mux) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.200730] (-) TimerEvent: {}
+[0.214327] (ackermann_mux) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.300866] (-) TimerEvent: {}
+[0.312499] (ackermann_mux) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.331120] (ackermann_mux) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.332827] (ackermann_mux) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.333485] (ackermann_mux) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.339998] (ackermann_mux) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.401747] (-) TimerEvent: {}
+[0.426901] (f110_gym) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/f110_gym', 'build', '--build-base', '/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/build', 'install', '--record', '/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/install.log', '--single-version-externally-managed'], 'cwd': '/workspaces/roboracer-purdue/roboracer_ws/f1tenth_gym', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'a14322274ff3'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/bin/helpers/browser.sh'), ('HOME', '/home/vscode'), ('OLDPWD', '/workspaces/roboracer-purdue/roboracer_ws'), ('TERM_PROGRAM_VERSION', '1.127.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-6acf3c74-8e66-4d2c-bcc9-ad13f9d82627.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/vscode/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/vscode/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock","/tmp/.X11-unix/X1"]'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/vscode/.vscode-server/data/User/workspaceStorage/234a783bde8bc5e393f42b96263ddacb/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-0ac8bf21f2.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('DEBIAN_FRONTEND', 'dialog'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X1'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym'), ('COPILOT_DEBUG_NONCE', 'df2c519210349266c15945055af61d19'), ('PYTHONPATH', '/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.433322] (ackermann_mux) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.440433] (ackermann_mux) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.441129] (ackermann_mux) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.441938] (ackermann_mux) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.456689] (ackermann_mux) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.502721] (-) TimerEvent: {}
+[0.569010] (ackermann_mux) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.591785] (f110_gym) StdoutLine: {'line': b'running egg_info\n'}
+[0.592429] (f110_gym) StdoutLine: {'line': b'creating ../build/f110_gym/f110_gym.egg-info\n'}
+[0.593163] (f110_gym) StdoutLine: {'line': b'writing ../build/f110_gym/f110_gym.egg-info/PKG-INFO\n'}
+[0.593769] (f110_gym) StdoutLine: {'line': b'writing dependency_links to ../build/f110_gym/f110_gym.egg-info/dependency_links.txt\n'}
+[0.594546] (f110_gym) StdoutLine: {'line': b'writing requirements to ../build/f110_gym/f110_gym.egg-info/requires.txt\n'}
+[0.595010] (f110_gym) StdoutLine: {'line': b'writing top-level names to ../build/f110_gym/f110_gym.egg-info/top_level.txt\n'}
+[0.595785] (f110_gym) StdoutLine: {'line': b"writing manifest file '../build/f110_gym/f110_gym.egg-info/SOURCES.txt'\n"}
+[0.598005] (f110_gym) StdoutLine: {'line': b"reading manifest file '../build/f110_gym/f110_gym.egg-info/SOURCES.txt'\n"}
+[0.599763] (f110_gym) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[0.600083] (f110_gym) StdoutLine: {'line': b"writing manifest file '../build/f110_gym/f110_gym.egg-info/SOURCES.txt'\n"}
+[0.600428] (f110_gym) StdoutLine: {'line': b'running build\n'}
+[0.600785] (f110_gym) StdoutLine: {'line': b'running install\n'}
+[0.601035] (f110_gym) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.601280] (f110_gym) StdoutLine: {'line': b'Copying ../build/f110_gym/f110_gym.egg-info to /workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages/f110_gym-0.2.1-py3.10.egg-info\n'}
+[0.603710] (-) TimerEvent: {}
+[0.605550] (f110_gym) StdoutLine: {'line': b'running install_scripts\n'}
+[0.619193] (f110_gym) StdoutLine: {'line': b"writing list of installed files to '/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/install.log'\n"}
+[0.639409] (f110_gym) CommandEnded: {'returncode': 0}
+[0.655517] (f110_gym) JobEnded: {'identifier': 'f110_gym', 'rc': 0}
+[0.663436] (ackermann_mux) StdoutLine: {'line': b'-- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.704743] (-) TimerEvent: {}
+[0.705749] (ackermann_mux) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.710806] (ackermann_mux) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.719089] (ackermann_mux) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.731400] (ackermann_mux) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.744769] (ackermann_mux) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.783119] (ackermann_mux) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.785715] (ackermann_mux) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.805717] (-) TimerEvent: {}
+[0.845991] (ackermann_mux) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.868513] (ackermann_mux) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.897881] (ackermann_mux) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.906691] (-) TimerEvent: {}
+[0.908242] (ackermann_mux) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.983860] (ackermann_mux) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.985374] (ackermann_mux) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.007721] (-) TimerEvent: {}
+[1.052838] (ackermann_mux) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.054231] (ackermann_mux) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.108286] (ackermann_mux) StdoutLine: {'line': b'-- Found ackermann_msgs: 2.0.2 (/opt/ros/humble/share/ackermann_msgs/cmake)\n'}
+[1.108914] (-) TimerEvent: {}
+[1.123099] (ackermann_mux) StdoutLine: {'line': b'-- Found diagnostic_updater: 4.0.7 (/opt/ros/humble/share/diagnostic_updater/cmake)\n'}
+[1.146012] (ackermann_mux) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.209737] (-) TimerEvent: {}
+[1.220271] (ackermann_mux) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.234022] (ackermann_mux) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.238863] (ackermann_mux) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[1.239286] (ackermann_mux) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.239486] (ackermann_mux) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.239665] (ackermann_mux) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[1.251598] (ackermann_mux) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.277723] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.278647] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.288561] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.289058] (ackermann_mux) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/include\n'}
+[1.289880] (ackermann_mux) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.303132] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.303455] (ackermann_mux) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.305731] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.309554] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.309852] (-) TimerEvent: {}
+[1.311989] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.328206] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.328612] (ackermann_mux) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.345328] (ackermann_mux) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.376809] (ackermann_mux) StdoutLine: {'line': b'-- Generating done\n'}
+[1.391793] (ackermann_mux) StdoutLine: {'line': b'-- Build files have been written to: /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux\n'}
+[1.397760] (ackermann_mux) CommandEnded: {'returncode': 0}
+[1.398297] (ackermann_mux) JobProgress: {'identifier': 'ackermann_mux', 'progress': 'build'}
+[1.399363] (ackermann_mux) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux', '--', '-j4', '-l4'], 'cwd': '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'a14322274ff3'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/bin/helpers/browser.sh'), ('HOME', '/home/vscode'), ('OLDPWD', '/workspaces/roboracer-purdue/roboracer_ws'), ('TERM_PROGRAM_VERSION', '1.127.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-6acf3c74-8e66-4d2c-bcc9-ad13f9d82627.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/vscode/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/vscode/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock","/tmp/.X11-unix/X1"]'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/vscode/.vscode-server/data/User/workspaceStorage/234a783bde8bc5e393f42b96263ddacb/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-0ac8bf21f2.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('DEBIAN_FRONTEND', 'dialog'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X1'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux'), ('COPILOT_DEBUG_NONCE', 'df2c519210349266c15945055af61d19'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.410747] (-) TimerEvent: {}
+[1.429339] (ackermann_mux) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o\x1b[0m\n'}
+[1.430138] (ackermann_mux) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o\x1b[0m\n'}
+[1.430341] (ackermann_mux) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o\x1b[0m\n'}
+[1.511753] (-) TimerEvent: {}
+[1.612743] (-) TimerEvent: {}
+[1.713726] (-) TimerEvent: {}
+[1.815419] (-) TimerEvent: {}
+[1.917772] (-) TimerEvent: {}
+[2.019721] (-) TimerEvent: {}
+[2.120726] (-) TimerEvent: {}
+[2.221731] (-) TimerEvent: {}
+[2.324738] (-) TimerEvent: {}
+[2.425728] (-) TimerEvent: {}
+[2.526720] (-) TimerEvent: {}
+[2.627738] (-) TimerEvent: {}
+[2.728763] (-) TimerEvent: {}
+[2.830830] (-) TimerEvent: {}
+[2.934958] (-) TimerEvent: {}
+[3.039790] (-) TimerEvent: {}
+[3.140917] (-) TimerEvent: {}
+[3.243646] (-) TimerEvent: {}
+[3.346376] (-) TimerEvent: {}
+[3.450722] (-) TimerEvent: {}
+[3.551718] (-) TimerEvent: {}
+[3.652729] (-) TimerEvent: {}
+[3.753728] (-) TimerEvent: {}
+[3.854719] (-) TimerEvent: {}
+[3.955721] (-) TimerEvent: {}
+[4.056751] (-) TimerEvent: {}
+[4.157721] (-) TimerEvent: {}
+[4.258727] (-) TimerEvent: {}
+[4.359788] (-) TimerEvent: {}
+[4.462723] (-) TimerEvent: {}
+[4.563713] (-) TimerEvent: {}
+[4.664725] (-) TimerEvent: {}
+[4.765763] (-) TimerEvent: {}
+[4.871767] (-) TimerEvent: {}
+[4.975717] (-) TimerEvent: {}
+[5.080419] (-) TimerEvent: {}
+[5.186737] (-) TimerEvent: {}
+[5.292234] (-) TimerEvent: {}
+[5.397462] (-) TimerEvent: {}
+[5.503750] (-) TimerEvent: {}
+[5.605209] (-) TimerEvent: {}
+[5.706475] (-) TimerEvent: {}
+[5.807960] (-) TimerEvent: {}
+[5.909814] (-) TimerEvent: {}
+[6.011459] (-) TimerEvent: {}
+[6.114717] (-) TimerEvent: {}
+[6.216709] (-) TimerEvent: {}
+[6.319741] (-) TimerEvent: {}
+[6.420973] (-) TimerEvent: {}
+[6.521727] (-) TimerEvent: {}
+[6.623458] (-) TimerEvent: {}
+[6.725211] (-) TimerEvent: {}
+[6.826229] (-) TimerEvent: {}
+[6.926905] (-) TimerEvent: {}
+[7.027953] (-) TimerEvent: {}
+[7.128960] (-) TimerEvent: {}
+[7.233737] (-) TimerEvent: {}
+[7.335692] (-) TimerEvent: {}
+[7.437211] (-) TimerEvent: {}
+[7.537960] (-) TimerEvent: {}
+[7.639490] (-) TimerEvent: {}
+[7.740749] (-) TimerEvent: {}
+[7.841756] (-) TimerEvent: {}
+[7.933205] (ackermann_mux) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable ackermann_mux\x1b[0m\n'}
+[7.942743] (-) TimerEvent: {}
+[8.044283] (-) TimerEvent: {}
+[8.144760] (-) TimerEvent: {}
+[8.251720] (-) TimerEvent: {}
+[8.352715] (-) TimerEvent: {}
+[8.453726] (-) TimerEvent: {}
+[8.505518] (ackermann_mux) StdoutLine: {'line': b'[100%] Built target ackermann_mux\n'}
+[8.515095] (ackermann_mux) CommandEnded: {'returncode': 0}
+[8.516868] (ackermann_mux) JobProgress: {'identifier': 'ackermann_mux', 'progress': 'install'}
+[8.521790] (ackermann_mux) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux'], 'cwd': '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'a14322274ff3'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/bin/helpers/browser.sh'), ('HOME', '/home/vscode'), ('OLDPWD', '/workspaces/roboracer-purdue/roboracer_ws'), ('TERM_PROGRAM_VERSION', '1.127.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-6acf3c74-8e66-4d2c-bcc9-ad13f9d82627.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/vscode/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/vscode/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock","/tmp/.X11-unix/X1"]'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/vscode/.vscode-server/data/User/workspaceStorage/234a783bde8bc5e393f42b96263ddacb/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-0ac8bf21f2.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('DEBIAN_FRONTEND', 'dialog'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X1'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux'), ('COPILOT_DEBUG_NONCE', 'df2c519210349266c15945055af61d19'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[8.525229] (ackermann_mux) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.526475] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/lib/ackermann_mux/ackermann_mux\n'}
+[8.554712] (-) TimerEvent: {}
+[8.594607] (ackermann_mux) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/lib/ackermann_mux/ackermann_mux" to ""\n'}
+[8.595690] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/launch\n'}
+[8.597305] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/launch/ackermann_mux_launch.py\n'}
+[8.599357] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config\n'}
+[8.600711] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config/ackermann_mux_topics.yaml\n'}
+[8.602343] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config/ackermann_mux_locks.yaml\n'}
+[8.604606] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config/joystick.yaml\n'}
+[8.606480] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include\n'}
+[8.607617] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux\n'}
+[8.608494] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/ackermann_mux_diagnostics_status.hpp\n'}
+[8.610087] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/ackermann_mux.hpp\n'}
+[8.612239] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/ackermann_mux_diagnostics.hpp\n'}
+[8.614213] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/topic_handle.hpp\n'}
+[8.615922] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/params_helpers.hpp\n'}
+[8.617723] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/utils.hpp\n'}
+[8.620293] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ament_index/resource_index/package_run_dependencies/ackermann_mux\n'}
+[8.622386] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ament_index/resource_index/parent_prefix_path/ackermann_mux\n'}
+[8.624840] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/ament_prefix_path.sh\n'}
+[8.626546] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/ament_prefix_path.dsv\n'}
+[8.628079] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/path.sh\n'}
+[8.630041] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/path.dsv\n'}
+[8.631942] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.bash\n'}
+[8.633588] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.sh\n'}
+[8.635666] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.zsh\n'}
+[8.637463] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.dsv\n'}
+[8.639014] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.dsv\n'}
+[8.641288] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ament_index/resource_index/packages/ackermann_mux\n'}
+[8.643583] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[8.645282] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[8.647552] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ackermann_muxConfig.cmake\n'}
+[8.649068] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ackermann_muxConfig-version.cmake\n'}
+[8.651082] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.xml\n'}
+[8.654306] (ackermann_mux) CommandEnded: {'returncode': 0}
+[8.655020] (-) TimerEvent: {}
+[8.676866] (ackermann_mux) JobEnded: {'identifier': 'ackermann_mux', 'rc': 0}
+[8.679294] (f1tenth_stack) JobStarted: {'identifier': 'f1tenth_stack'}
+[8.755718] (-) TimerEvent: {}
+[8.856755] (-) TimerEvent: {}
+[8.959697] (-) TimerEvent: {}
+[9.010355] (f1tenth_stack) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../../build/f1tenth_stack', 'build', '--build-base', '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build', 'install', '--record', '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/install.log', '--install-scripts', '$base/lib/f1tenth_stack', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/f1tenth_stack', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'a14322274ff3'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/bin/helpers/browser.sh'), ('HOME', '/home/vscode'), ('OLDPWD', '/workspaces/roboracer-purdue/roboracer_ws'), ('TERM_PROGRAM_VERSION', '1.127.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-6acf3c74-8e66-4d2c-bcc9-ad13f9d82627.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/vscode/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/vscode/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-arm64/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock","/tmp/.X11-unix/X1"]'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/vscode/.vscode-server/data/User/workspaceStorage/234a783bde8bc5e393f42b96263ddacb/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-0ac8bf21f2.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-525e44ea-0d6f-4c0a-8a97-1f3c1f86ae0a.sock'), ('AMENT_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'dialog'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X1'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack'), ('COPILOT_DEBUG_NONCE', 'df2c519210349266c15945055af61d19'), ('PYTHONPATH', '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux')]), 'shell': False}
+[9.060752] (-) TimerEvent: {}
+[9.123508] (f1tenth_stack) StderrLine: {'line': b"/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[9.124114] (f1tenth_stack) StderrLine: {'line': b'  warnings.warn(\n'}
+[9.131592] (f1tenth_stack) StdoutLine: {'line': b'running egg_info\n'}
+[9.132666] (f1tenth_stack) StdoutLine: {'line': b'creating ../../../build/f1tenth_stack/f1tenth_stack.egg-info\n'}
+[9.133558] (f1tenth_stack) StdoutLine: {'line': b'writing ../../../build/f1tenth_stack/f1tenth_stack.egg-info/PKG-INFO\n'}
+[9.134762] (f1tenth_stack) StdoutLine: {'line': b'writing dependency_links to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/dependency_links.txt\n'}
+[9.135417] (f1tenth_stack) StdoutLine: {'line': b'writing entry points to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/entry_points.txt\n'}
+[9.135922] (f1tenth_stack) StdoutLine: {'line': b'writing requirements to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/requires.txt\n'}
+[9.136406] (f1tenth_stack) StdoutLine: {'line': b'writing top-level names to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/top_level.txt\n'}
+[9.137012] (f1tenth_stack) StdoutLine: {'line': b"writing manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'\n"}
+[9.139293] (f1tenth_stack) StdoutLine: {'line': b"reading manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'\n"}
+[9.140411] (f1tenth_stack) StdoutLine: {'line': b"writing manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'\n"}
+[9.140819] (f1tenth_stack) StdoutLine: {'line': b'running build\n'}
+[9.141186] (f1tenth_stack) StdoutLine: {'line': b'running build_py\n'}
+[9.141498] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build\n'}
+[9.142158] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib\n'}
+[9.142747] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[9.143232] (f1tenth_stack) StdoutLine: {'line': b'copying f1tenth_stack/throttle_mix.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[9.143984] (f1tenth_stack) StdoutLine: {'line': b'copying f1tenth_stack/tf_publisher.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[9.144809] (f1tenth_stack) StdoutLine: {'line': b'copying f1tenth_stack/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[9.145560] (f1tenth_stack) StdoutLine: {'line': b'copying f1tenth_stack/throttle_interpolator.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[9.146335] (f1tenth_stack) StdoutLine: {'line': b'copying f1tenth_stack/speed_smoother.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[9.147302] (f1tenth_stack) StdoutLine: {'line': b'running install\n'}
+[9.148171] (f1tenth_stack) StdoutLine: {'line': b'running install_lib\n'}
+[9.148501] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[9.148967] (f1tenth_stack) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/throttle_mix.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[9.149932] (f1tenth_stack) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/tf_publisher.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[9.151630] (f1tenth_stack) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[9.152769] (f1tenth_stack) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/throttle_interpolator.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[9.154031] (f1tenth_stack) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/speed_smoother.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[9.156182] (f1tenth_stack) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/throttle_mix.py to throttle_mix.cpython-310.pyc\n'}
+[9.158629] (f1tenth_stack) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/tf_publisher.py to tf_publisher.cpython-310.pyc\n'}
+[9.159829] (f1tenth_stack) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/__init__.py to __init__.cpython-310.pyc\n'}
+[9.160849] (f1tenth_stack) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/throttle_interpolator.py to throttle_interpolator.cpython-310.pyc\n'}
+[9.161061] (-) TimerEvent: {}
+[9.162276] (f1tenth_stack) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/speed_smoother.py to speed_smoother.cpython-310.pyc\n'}
+[9.167104] (f1tenth_stack) StdoutLine: {'line': b'running install_data\n'}
+[9.167600] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index\n'}
+[9.168171] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index/resource_index\n'}
+[9.168738] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index/resource_index/packages\n'}
+[9.169094] (f1tenth_stack) StdoutLine: {'line': b'copying resource/f1tenth_stack -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index/resource_index/packages\n'}
+[9.169548] (f1tenth_stack) StdoutLine: {'line': b'copying package.xml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack\n'}
+[9.170434] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/launch\n'}
+[9.170885] (f1tenth_stack) StdoutLine: {'line': b'copying launch/bringup_launch.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/launch\n'}
+[9.171726] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[9.172253] (f1tenth_stack) StdoutLine: {'line': b'copying config/f1tenth_online_async.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[9.174758] (f1tenth_stack) StdoutLine: {'line': b'copying config/throttle_mix.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[9.176136] (f1tenth_stack) StdoutLine: {'line': b'copying config/sensors.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[9.177143] (f1tenth_stack) StdoutLine: {'line': b'copying config/speed_smoother.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[9.178002] (f1tenth_stack) StdoutLine: {'line': b'copying config/joy_teleop.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[9.179113] (f1tenth_stack) StdoutLine: {'line': b'copying config/vesc.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[9.180750] (f1tenth_stack) StdoutLine: {'line': b'copying config/mux.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[9.183370] (f1tenth_stack) StdoutLine: {'line': b'running install_egg_info\n'}
+[9.183859] (f1tenth_stack) StdoutLine: {'line': b'Copying ../../../build/f1tenth_stack/f1tenth_stack.egg-info to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack-0.0.1-py3.10.egg-info\n'}
+[9.192403] (f1tenth_stack) StdoutLine: {'line': b'running install_scripts\n'}
+[9.207596] (f1tenth_stack) StdoutLine: {'line': b'Installing speed_smoother script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/f1tenth_stack\n'}
+[9.208774] (f1tenth_stack) StdoutLine: {'line': b'Installing tf_publisher script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/f1tenth_stack\n'}
+[9.209760] (f1tenth_stack) StdoutLine: {'line': b'Installing throttle_interpolator script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/f1tenth_stack\n'}
+[9.210300] (f1tenth_stack) StdoutLine: {'line': b'Installing throttle_mix script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/f1tenth_stack\n'}
+[9.211457] (f1tenth_stack) StdoutLine: {'line': b"writing list of installed files to '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/install.log'\n"}
+[9.228478] (f1tenth_stack) CommandEnded: {'returncode': 0}
+[9.241396] (f1tenth_stack) JobEnded: {'identifier': 'f1tenth_stack', 'rc': 0}
+[9.242995] (-) EventReactorShutdown: {}
