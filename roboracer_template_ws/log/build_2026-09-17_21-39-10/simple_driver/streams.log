@@ -1,0 +1,24 @@
+[0.348s] Invoking command in '/home/patchychan/roboracer_template_ws/src/simple_driver': PYTHONPATH=/home/patchychan/roboracer_template_ws/build/simple_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchychan/roboracer_template_ws/install/simple_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/simple_driver build --build-base /home/patchychan/roboracer_template_ws/build/simple_driver/build install --record /home/patchychan/roboracer_template_ws/build/simple_driver/install.log --install-scripts $base/lib/simple_driver --single-version-externally-managed install_data
+[0.475s] running egg_info
+[0.475s] writing ../../build/simple_driver/simple_driver.egg-info/PKG-INFO
+[0.476s] writing dependency_links to ../../build/simple_driver/simple_driver.egg-info/dependency_links.txt
+[0.476s] writing entry points to ../../build/simple_driver/simple_driver.egg-info/entry_points.txt
+[0.476s] writing requirements to ../../build/simple_driver/simple_driver.egg-info/requires.txt
+[0.476s] writing top-level names to ../../build/simple_driver/simple_driver.egg-info/top_level.txt
+[0.477s] reading manifest file '../../build/simple_driver/simple_driver.egg-info/SOURCES.txt'
+[0.477s] writing manifest file '../../build/simple_driver/simple_driver.egg-info/SOURCES.txt'
+[0.477s] running build
+[0.478s] running build_py
+[0.478s] copying simple_driver/template.py -> /home/patchychan/roboracer_template_ws/build/simple_driver/build/lib/simple_driver
+[0.478s] running install
+[0.478s] running install_lib
+[0.478s] copying /home/patchychan/roboracer_template_ws/build/simple_driver/build/lib/simple_driver/template.py -> /home/patchychan/roboracer_template_ws/install/simple_driver/lib/python3.10/site-packages/simple_driver
+[0.479s] byte-compiling /home/patchychan/roboracer_template_ws/install/simple_driver/lib/python3.10/site-packages/simple_driver/template.py to template.cpython-310.pyc
+[0.480s] running install_data
+[0.480s] running install_egg_info
+[0.481s] removing '/home/patchychan/roboracer_template_ws/install/simple_driver/lib/python3.10/site-packages/simple_driver-0.0.0-py3.10.egg-info' (and everything under it)
+[0.481s] Copying ../../build/simple_driver/simple_driver.egg-info to /home/patchychan/roboracer_template_ws/install/simple_driver/lib/python3.10/site-packages/simple_driver-0.0.0-py3.10.egg-info
+[0.481s] running install_scripts
+[0.494s] Installing simple_driver script to /home/patchychan/roboracer_template_ws/install/simple_driver/lib/simple_driver
+[0.494s] writing list of installed files to '/home/patchychan/roboracer_template_ws/build/simple_driver/install.log'
+[0.509s] Invoked command in '/home/patchychan/roboracer_template_ws/src/simple_driver' returned '0': PYTHONPATH=/home/patchychan/roboracer_template_ws/build/simple_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchychan/roboracer_template_ws/install/simple_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/simple_driver build --build-base /home/patchychan/roboracer_template_ws/build/simple_driver/build install --record /home/patchychan/roboracer_template_ws/build/simple_driver/install.log --install-scripts $base/lib/simple_driver --single-version-externally-managed install_data
