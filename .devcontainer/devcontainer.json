@@ -16,14 +16,22 @@
       ]
     }
   },
+
+  // Every terminal draws on the in-container virtual display (OpenGL-capable)
+  "containerEnv": {
+    "DISPLAY": ":99",
+    "LIBGL_ALWAYS_SOFTWARE": "1",
+    "QT_QPA_PLATFORM": "xcb"
+  },
+
   "postCreateCommand": "bash .devcontainer/post-create.sh",
-  "postStartCommand": "bash /usr/local/bin/start-vnc.sh",
+  "postStartCommand": "bash .devcontainer/start-vnc.sh",
+
   "forwardPorts": [6080],
   "portsAttributes": {
     "6080": {
       "label": "VNC Web Client",
-      "onAutoForward": "openPreview"
+      "onAutoForward": "notify"
     }
   }
-  // removed workspaceMount and runArgs
 }

@@ -30,6 +30,7 @@ RUN apt-get update && apt-get install -y \
     ros-humble-rviz2 \
     ros-humble-nav2-msgs \
     && rm -rf /var/lib/apt/lists/*
+    xvfb x11vnc novnc websockify fluxbox mesa-utils libgl1-mesa-dri
 
 # Init rosdep
 RUN rosdep init && rosdep update
