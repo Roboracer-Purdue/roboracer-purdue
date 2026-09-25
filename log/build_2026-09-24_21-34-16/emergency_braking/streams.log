@@ -1,0 +1,31 @@
+[0.596s] Invoking command in '/home/patchychan/driver_template/lab2_template_ws/src/emergency_braking': PYTHONPATH=/home/patchychan/driver_template/build/emergency_braking/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchychan/driver_template/install/emergency_braking/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/emergency_braking build --build-base /home/patchychan/driver_template/build/emergency_braking/build install --record /home/patchychan/driver_template/build/emergency_braking/install.log --install-scripts $base/lib/emergency_braking --single-version-externally-managed install_data
+[0.715s] running egg_info
+[0.715s] creating ../../../build/emergency_braking/emergency_braking.egg-info
+[0.715s] writing ../../../build/emergency_braking/emergency_braking.egg-info/PKG-INFO
+[0.715s] writing dependency_links to ../../../build/emergency_braking/emergency_braking.egg-info/dependency_links.txt
+[0.715s] writing entry points to ../../../build/emergency_braking/emergency_braking.egg-info/entry_points.txt
+[0.715s] writing requirements to ../../../build/emergency_braking/emergency_braking.egg-info/requires.txt
+[0.716s] writing top-level names to ../../../build/emergency_braking/emergency_braking.egg-info/top_level.txt
+[0.716s] writing manifest file '../../../build/emergency_braking/emergency_braking.egg-info/SOURCES.txt'
+[0.717s] reading manifest file '../../../build/emergency_braking/emergency_braking.egg-info/SOURCES.txt'
+[0.717s] writing manifest file '../../../build/emergency_braking/emergency_braking.egg-info/SOURCES.txt'
+[0.718s] running build
+[0.718s] running build_py
+[0.718s] creating /home/patchychan/driver_template/build/emergency_braking/build
+[0.718s] creating /home/patchychan/driver_template/build/emergency_braking/build/lib
+[0.718s] creating /home/patchychan/driver_template/build/emergency_braking/build/lib/emergency_braking
+[0.718s] copying emergency_braking/eb_template.py -> /home/patchychan/driver_template/build/emergency_braking/build/lib/emergency_braking
+[0.718s] copying emergency_braking/__init__.py -> /home/patchychan/driver_template/build/emergency_braking/build/lib/emergency_braking
+[0.719s] running install
+[0.719s] running install_lib
+[0.719s] creating /home/patchychan/driver_template/install/emergency_braking/lib/python3.10/site-packages/emergency_braking
+[0.719s] copying /home/patchychan/driver_template/build/emergency_braking/build/lib/emergency_braking/eb_template.py -> /home/patchychan/driver_template/install/emergency_braking/lib/python3.10/site-packages/emergency_braking
+[0.719s] copying /home/patchychan/driver_template/build/emergency_braking/build/lib/emergency_braking/__init__.py -> /home/patchychan/driver_template/install/emergency_braking/lib/python3.10/site-packages/emergency_braking
+[0.719s] byte-compiling /home/patchychan/driver_template/install/emergency_braking/lib/python3.10/site-packages/emergency_braking/eb_template.py to eb_template.cpython-310.pyc
+[0.720s] byte-compiling /home/patchychan/driver_template/install/emergency_braking/lib/python3.10/site-packages/emergency_braking/__init__.py to __init__.cpython-310.pyc
+[0.721s] running install_data
+[0.721s] creating /home/patchychan/driver_template/install/emergency_braking/share/ament_index
+[0.721s] creating /home/patchychan/driver_template/install/emergency_braking/share/ament_index/resource_index
+[0.721s] creating /home/patchychan/driver_template/install/emergency_braking/share/ament_index/resource_index/packages
+[0.721s] error: can't copy 'resource/emergency_braking': doesn't exist or not a regular file
+[0.731s] Invoked command in '/home/patchychan/driver_template/lab2_template_ws/src/emergency_braking' returned '1': PYTHONPATH=/home/patchychan/driver_template/build/emergency_braking/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchychan/driver_template/install/emergency_braking/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/emergency_braking build --build-base /home/patchychan/driver_template/build/emergency_braking/build install --record /home/patchychan/driver_template/build/emergency_braking/install.log --install-scripts $base/lib/emergency_braking --single-version-externally-managed install_data

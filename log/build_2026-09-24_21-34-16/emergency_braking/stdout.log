@@ -1,0 +1,28 @@
+running egg_info
+creating ../../../build/emergency_braking/emergency_braking.egg-info
+writing ../../../build/emergency_braking/emergency_braking.egg-info/PKG-INFO
+writing dependency_links to ../../../build/emergency_braking/emergency_braking.egg-info/dependency_links.txt
+writing entry points to ../../../build/emergency_braking/emergency_braking.egg-info/entry_points.txt
+writing requirements to ../../../build/emergency_braking/emergency_braking.egg-info/requires.txt
+writing top-level names to ../../../build/emergency_braking/emergency_braking.egg-info/top_level.txt
+writing manifest file '../../../build/emergency_braking/emergency_braking.egg-info/SOURCES.txt'
+reading manifest file '../../../build/emergency_braking/emergency_braking.egg-info/SOURCES.txt'
+writing manifest file '../../../build/emergency_braking/emergency_braking.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/patchychan/driver_template/build/emergency_braking/build
+creating /home/patchychan/driver_template/build/emergency_braking/build/lib
+creating /home/patchychan/driver_template/build/emergency_braking/build/lib/emergency_braking
+copying emergency_braking/eb_template.py -> /home/patchychan/driver_template/build/emergency_braking/build/lib/emergency_braking
+copying emergency_braking/__init__.py -> /home/patchychan/driver_template/build/emergency_braking/build/lib/emergency_braking
+running install
+running install_lib
+creating /home/patchychan/driver_template/install/emergency_braking/lib/python3.10/site-packages/emergency_braking
+copying /home/patchychan/driver_template/build/emergency_braking/build/lib/emergency_braking/eb_template.py -> /home/patchychan/driver_template/install/emergency_braking/lib/python3.10/site-packages/emergency_braking
+copying /home/patchychan/driver_template/build/emergency_braking/build/lib/emergency_braking/__init__.py -> /home/patchychan/driver_template/install/emergency_braking/lib/python3.10/site-packages/emergency_braking
+byte-compiling /home/patchychan/driver_template/install/emergency_braking/lib/python3.10/site-packages/emergency_braking/eb_template.py to eb_template.cpython-310.pyc
+byte-compiling /home/patchychan/driver_template/install/emergency_braking/lib/python3.10/site-packages/emergency_braking/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/patchychan/driver_template/install/emergency_braking/share/ament_index
+creating /home/patchychan/driver_template/install/emergency_braking/share/ament_index/resource_index
+creating /home/patchychan/driver_template/install/emergency_braking/share/ament_index/resource_index/packages

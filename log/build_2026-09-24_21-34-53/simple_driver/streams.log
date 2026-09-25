@@ -1,0 +1,20 @@
+[0.454s] Invoking command in '/home/patchychan/driver_template/roboracer_template_ws/src/simple_driver': PYTHONPATH=/home/patchychan/driver_template/build/simple_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/patchychan/driver_template/install/simple_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/simple_driver build --build-base /home/patchychan/driver_template/build/simple_driver/build install --record /home/patchychan/driver_template/build/simple_driver/install.log --install-scripts $base/lib/simple_driver --single-version-externally-managed install_data
+[0.573s] running egg_info
+[0.573s] writing ../../../build/simple_driver/simple_driver.egg-info/PKG-INFO
+[0.573s] writing dependency_links to ../../../build/simple_driver/simple_driver.egg-info/dependency_links.txt
+[0.573s] writing entry points to ../../../build/simple_driver/simple_driver.egg-info/entry_points.txt
+[0.573s] writing requirements to ../../../build/simple_driver/simple_driver.egg-info/requires.txt
+[0.573s] writing top-level names to ../../../build/simple_driver/simple_driver.egg-info/top_level.txt
+[0.574s] reading manifest file '../../../build/simple_driver/simple_driver.egg-info/SOURCES.txt'
+[0.575s] writing manifest file '../../../build/simple_driver/simple_driver.egg-info/SOURCES.txt'
+[0.575s] running build
+[0.575s] running build_py
+[0.575s] running install
+[0.575s] running install_lib
+[0.576s] running install_data
+[0.576s] running install_egg_info
+[0.576s] removing '/home/patchychan/driver_template/install/simple_driver/lib/python3.10/site-packages/simple_driver-0.0.0-py3.10.egg-info' (and everything under it)
+[0.577s] Copying ../../../build/simple_driver/simple_driver.egg-info to /home/patchychan/driver_template/install/simple_driver/lib/python3.10/site-packages/simple_driver-0.0.0-py3.10.egg-info
+[0.577s] running install_scripts
+[0.588s] Installing simple_driver script to /home/patchychan/driver_template/install/simple_driver/lib/simple_driver
+[0.588s] writing list of installed files to '/home/patchychan/driver_template/build/simple_driver/install.log'
