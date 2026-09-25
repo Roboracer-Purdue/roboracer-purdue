@@ -14,15 +14,15 @@ running build_py
 creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build
 creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib
 creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros
-copying f1tenth_gym_ros/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros
 copying f1tenth_gym_ros/gym_bridge.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros
+copying f1tenth_gym_ros/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros
 running install
 running install_lib
 creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros
-copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros
 copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/gym_bridge.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros
-byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros/__init__.py to __init__.cpython-310.pyc
+copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros
 byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros/gym_bridge.py to gym_bridge.cpython-310.pyc
+byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros/__init__.py to __init__.cpython-310.pyc
 running install_data
 creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/ament_index
 creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/ament_index/resource_index
@@ -31,8 +31,8 @@ copying resource/f1tenth_gym_ros -> /workspaces/roboracer-purdue/roboracer_ws/in
 copying package.xml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros
 creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
 copying launch/gym_bridge_launch.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
-copying launch/opp_racecar.xacro -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
 copying launch/ego_racecar.xacro -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+copying launch/opp_racecar.xacro -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
 copying launch/gym_bridge.rviz -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
 creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/config
 copying config/sim.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/config

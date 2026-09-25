@@ -1,0 +1,100 @@
+[0.228s] Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/opt/ros/humble /usr/bin/cmake /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux -DCMAKE_INSTALL_PREFIX=/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux
+[0.685s] -- The C compiler identification is GNU 11.4.0
+[1.031s] -- The CXX compiler identification is GNU 11.4.0
+[1.099s] -- Detecting C compiler ABI info
+[1.750s] -- Detecting C compiler ABI info - done
+[1.776s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.776s] -- Detecting C compile features
+[1.778s] -- Detecting C compile features - done
+[1.840s] -- Detecting CXX compiler ABI info
+[2.469s] -- Detecting CXX compiler ABI info - done
+[2.495s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.496s] -- Detecting CXX compile features
+[2.522s] -- Detecting CXX compile features - done
+[2.625s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.452s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[4.319s] -- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)
+[4.679s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[4.777s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[4.881s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[4.982s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.111s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.683s] -- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[5.726s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[6.221s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[6.358s] -- Found FastRTPS: /opt/ros/humble/include  
+[6.496s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[6.671s] -- Looking for pthread.h
+[7.122s] -- Looking for pthread.h - found
+[7.131s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[7.576s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[7.580s] -- Found Threads: TRUE  
+[7.858s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/humble/share/ackermann_msgs/cmake)
+[7.913s] -- Found diagnostic_updater: 4.0.7 (/opt/ros/humble/share/diagnostic_updater/cmake)
+[8.076s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[9.161s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[9.294s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[9.355s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[9.355s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[9.356s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[9.357s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[9.457s] -- Found PythonExtra: .so  
+[9.872s] -- Added test 'xmllint' to check XML markup files
+[9.910s] -- Added test 'copyright' to check source files copyright and LICENSE
+[11.145s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[11.146s] -- Configured cppcheck include dirs: /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/include
+[11.146s] -- Configured cppcheck exclude dirs and/or files: 
+[12.209s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[12.210s] -- Configured cpplint exclude dirs and/or files: 
+[12.408s] -- Added test 'flake8' to check Python code syntax and style conventions
+[12.739s] -- Added test 'lint_cmake' to check CMake code style
+[12.921s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[14.059s] -- Added test 'uncrustify' to check C / C++ code style
+[14.060s] -- Configured uncrustify additional arguments: 
+[14.298s] -- Configuring done
+[14.664s] -- Generating done
+[14.861s] -- Build files have been written to: /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux
+[14.867s] Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/opt/ros/humble /usr/bin/cmake /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux -DCMAKE_INSTALL_PREFIX=/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux
+[14.876s] Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/opt/ros/humble /usr/bin/cmake --build /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux -- -j8 -l8
+[15.051s] [ 50%] [32mBuilding CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o[0m
+[15.053s] [ 75%] [32mBuilding CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o[0m
+[15.055s] [ 75%] [32mBuilding CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o[0m
+[27.591s] [100%] [32m[1mLinking CXX executable ackermann_mux[0m
+[33.950s] [100%] Built target ackermann_mux
+[33.983s] Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/opt/ros/humble /usr/bin/cmake --build /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux -- -j8 -l8
+[34.012s] Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/opt/ros/humble /usr/bin/cmake --install /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux
+[34.021s] -- Install configuration: ""
+[34.037s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/lib/ackermann_mux/ackermann_mux
+[34.427s] -- Set runtime path of "/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/lib/ackermann_mux/ackermann_mux" to ""
+[34.436s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/launch
+[34.465s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/launch/ackermann_mux_launch.py
+[34.526s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config
+[34.555s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config/ackermann_mux_locks.yaml
+[34.623s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config/ackermann_mux_topics.yaml
+[34.700s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config/joystick.yaml
+[34.760s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include
+[34.778s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux
+[34.803s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/ackermann_mux.hpp
+[34.872s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/ackermann_mux_diagnostics.hpp
+[34.941s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/ackermann_mux_diagnostics_status.hpp
+[35.007s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/params_helpers.hpp
+[35.072s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/topic_handle.hpp
+[35.135s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/utils.hpp
+[35.236s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ament_index/resource_index/package_run_dependencies/ackermann_mux
+[35.341s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ament_index/resource_index/parent_prefix_path/ackermann_mux
+[35.420s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/ament_prefix_path.sh
+[35.473s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/ament_prefix_path.dsv
+[35.537s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/path.sh
+[35.591s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/path.dsv
+[35.647s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.bash
+[35.706s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.sh
+[35.759s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.zsh
+[35.813s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.dsv
+[35.865s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.dsv
+[35.940s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ament_index/resource_index/packages/ackermann_mux
+[36.014s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ament_cmake_export_include_directories-extras.cmake
+[36.066s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ament_cmake_export_dependencies-extras.cmake
+[36.129s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ackermann_muxConfig.cmake
+[36.180s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ackermann_muxConfig-version.cmake
+[36.237s] -- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.xml
+[36.276s] Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/opt/ros/humble /usr/bin/cmake --install /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux

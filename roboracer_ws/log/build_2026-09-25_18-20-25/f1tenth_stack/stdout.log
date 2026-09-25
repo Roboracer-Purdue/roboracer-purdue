@@ -13,24 +13,24 @@ running build_py
 creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build
 creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib
 creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
-copying f1tenth_stack/throttle_mix.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
-copying f1tenth_stack/tf_publisher.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
-copying f1tenth_stack/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
-copying f1tenth_stack/throttle_interpolator.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
 copying f1tenth_stack/speed_smoother.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+copying f1tenth_stack/tf_publisher.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+copying f1tenth_stack/throttle_interpolator.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+copying f1tenth_stack/throttle_mix.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+copying f1tenth_stack/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
 running install
 running install_lib
 creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
-copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/throttle_mix.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
-copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/tf_publisher.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
-copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
-copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/throttle_interpolator.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
 copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/speed_smoother.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
-byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/throttle_mix.py to throttle_mix.cpython-310.pyc
-byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/tf_publisher.py to tf_publisher.cpython-310.pyc
-byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/__init__.py to __init__.cpython-310.pyc
-byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/throttle_interpolator.py to throttle_interpolator.cpython-310.pyc
+copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/tf_publisher.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
+copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/throttle_interpolator.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
+copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/throttle_mix.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
+copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
 byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/speed_smoother.py to speed_smoother.cpython-310.pyc
+byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/tf_publisher.py to tf_publisher.cpython-310.pyc
+byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/throttle_interpolator.py to throttle_interpolator.cpython-310.pyc
+byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/throttle_mix.py to throttle_mix.cpython-310.pyc
+byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/__init__.py to __init__.cpython-310.pyc
 running install_data
 creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index
 creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index/resource_index
@@ -41,12 +41,12 @@ creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f
 copying launch/bringup_launch.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/launch
 creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
 copying config/f1tenth_online_async.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
-copying config/throttle_mix.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
+copying config/joy_teleop.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
+copying config/mux.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
 copying config/sensors.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
 copying config/speed_smoother.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
-copying config/joy_teleop.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
+copying config/throttle_mix.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
 copying config/vesc.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
-copying config/mux.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
 running install_egg_info
 Copying ../../../build/f1tenth_stack/f1tenth_stack.egg-info to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack-0.0.1-py3.10.egg-info
 running install_scripts

@@ -1,5 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000204] (-) JobUnselected: {'identifier': 'ackermann_mux'}
-[0.000306] (-) JobUnselected: {'identifier': 'f110_gym'}
-[0.000405] (-) JobUnselected: {'identifier': 'f1tenth_stack'}
-[0.000481] (-) EventReactorShutdown: {}

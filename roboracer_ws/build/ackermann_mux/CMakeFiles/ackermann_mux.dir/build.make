@@ -192,7 +192,7 @@ ackermann_mux: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
 ackermann_mux: /opt/ros/humble/lib/libdiagnostic_msgs__rosidl_generator_py.so
 ackermann_mux: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
 ackermann_mux: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
-ackermann_mux: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+ackermann_mux: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 ackermann_mux: /opt/ros/humble/lib/libdiagnostic_msgs__rosidl_typesupport_c.so
 ackermann_mux: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
 ackermann_mux: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so

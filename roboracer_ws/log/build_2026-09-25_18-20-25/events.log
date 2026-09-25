@@ -1,0 +1,661 @@
+[0.000000] (-) TimerEvent: {}
+[0.000603] (ackermann_mux) JobQueued: {'identifier': 'ackermann_mux', 'dependencies': OrderedDict()}
+[0.000875] (f110_gym) JobQueued: {'identifier': 'f110_gym', 'dependencies': OrderedDict()}
+[0.001052] (f1tenth_gym_ros) JobQueued: {'identifier': 'f1tenth_gym_ros', 'dependencies': OrderedDict()}
+[0.001493] (f1tenth_stack) JobQueued: {'identifier': 'f1tenth_stack', 'dependencies': OrderedDict([('ackermann_mux', '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux')])}
+[0.001712] (ackermann_mux) JobStarted: {'identifier': 'ackermann_mux'}
+[0.043775] (f110_gym) JobStarted: {'identifier': 'f110_gym'}
+[0.074639] (f1tenth_gym_ros) JobStarted: {'identifier': 'f1tenth_gym_ros'}
+[0.097995] (-) TimerEvent: {}
+[0.174896] (ackermann_mux) JobProgress: {'identifier': 'ackermann_mux', 'progress': 'cmake'}
+[0.198106] (-) TimerEvent: {}
+[0.212950] (ackermann_mux) Command: {'cmd': ['/usr/bin/cmake', '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux', '-DCMAKE_INSTALL_PREFIX=/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux'], 'cwd': '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('HOSTNAME', '1ab3abed40b8'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/helpers/browser.sh'), ('HOME', '/home/vscode'), ('OLDPWD', '/workspaces/roboracer-purdue/roboracer_ws'), ('TERM_PROGRAM_VERSION', '1.139.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-d4ded701-45a7-4b4b-b77f-e3efd3adb559.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/node'), ('LC_CTYPE', 'C.UTF-8'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-09b614ea-53b1-4bd3-801f-da98ebdafffb.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '[]'), ('DISPLAY', ':99'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/vscode/.vscode-server/data/User/workspaceStorage/50e767c24aed6da0ec840414799aaf82/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-92f45c6bac.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'dialog'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux'), ('QT_QPA_PLATFORM', 'xcb'), ('PYTHONPATH', '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/opt/ros/humble')]), 'shell': False}
+[0.298228] (-) TimerEvent: {}
+[0.398960] (-) TimerEvent: {}
+[0.500003] (-) TimerEvent: {}
+[0.601755] (-) TimerEvent: {}
+[0.684827] (ackermann_mux) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.701950] (-) TimerEvent: {}
+[0.802780] (-) TimerEvent: {}
+[0.903726] (-) TimerEvent: {}
+[1.004454] (-) TimerEvent: {}
+[1.031470] (ackermann_mux) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.100233] (ackermann_mux) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.104548] (-) TimerEvent: {}
+[1.205149] (-) TimerEvent: {}
+[1.305979] (-) TimerEvent: {}
+[1.406659] (-) TimerEvent: {}
+[1.507216] (-) TimerEvent: {}
+[1.607974] (-) TimerEvent: {}
+[1.708813] (-) TimerEvent: {}
+[1.750409] (ackermann_mux) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.776374] (ackermann_mux) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.777705] (ackermann_mux) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.778629] (ackermann_mux) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.808973] (-) TimerEvent: {}
+[1.812544] (f110_gym) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/f110_gym', 'build', '--build-base', '/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/build', 'install', '--record', '/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/install.log', '--single-version-externally-managed'], 'cwd': '/workspaces/roboracer-purdue/roboracer_ws/f1tenth_gym', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('HOSTNAME', '1ab3abed40b8'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/helpers/browser.sh'), ('HOME', '/home/vscode'), ('OLDPWD', '/workspaces/roboracer-purdue/roboracer_ws'), ('TERM_PROGRAM_VERSION', '1.139.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-d4ded701-45a7-4b4b-b77f-e3efd3adb559.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/node'), ('LC_CTYPE', 'C.UTF-8'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-09b614ea-53b1-4bd3-801f-da98ebdafffb.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '[]'), ('DISPLAY', ':99'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/vscode/.vscode-server/data/User/workspaceStorage/50e767c24aed6da0ec840414799aaf82/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-92f45c6bac.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'dialog'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym'), ('QT_QPA_PLATFORM', 'xcb'), ('PYTHONPATH', '/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux')]), 'shell': False}
+[1.840285] (ackermann_mux) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.909077] (-) TimerEvent: {}
+[2.009721] (-) TimerEvent: {}
+[2.110291] (-) TimerEvent: {}
+[2.210978] (-) TimerEvent: {}
+[2.311699] (-) TimerEvent: {}
+[2.412433] (-) TimerEvent: {}
+[2.469654] (ackermann_mux) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.495954] (ackermann_mux) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.497020] (ackermann_mux) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.498068] (ackermann_mux) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.523883] (-) TimerEvent: {}
+[2.624628] (-) TimerEvent: {}
+[2.625502] (ackermann_mux) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[2.724742] (-) TimerEvent: {}
+[2.812438] (f110_gym) StdoutLine: {'line': b'running egg_info\n'}
+[2.815419] (f110_gym) StdoutLine: {'line': b'creating ../build/f110_gym/f110_gym.egg-info\n'}
+[2.818830] (f110_gym) StdoutLine: {'line': b'writing ../build/f110_gym/f110_gym.egg-info/PKG-INFO\n'}
+[2.824930] (-) TimerEvent: {}
+[2.825461] (f110_gym) StdoutLine: {'line': b'writing dependency_links to ../build/f110_gym/f110_gym.egg-info/dependency_links.txt\n'}
+[2.834429] (f110_gym) StdoutLine: {'line': b'writing requirements to ../build/f110_gym/f110_gym.egg-info/requires.txt\n'}
+[2.838306] (f110_gym) StdoutLine: {'line': b'writing top-level names to ../build/f110_gym/f110_gym.egg-info/top_level.txt\n'}
+[2.855506] (f110_gym) StdoutLine: {'line': b"writing manifest file '../build/f110_gym/f110_gym.egg-info/SOURCES.txt'\n"}
+[2.858948] (f1tenth_gym_ros) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/f1tenth_gym_ros', 'build', '--build-base', '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build', 'install', '--record', '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/install.log', '--install-scripts', '$base/lib/f1tenth_gym_ros', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_gym_ros', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('HOSTNAME', '1ab3abed40b8'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/helpers/browser.sh'), ('HOME', '/home/vscode'), ('OLDPWD', '/workspaces/roboracer-purdue/roboracer_ws'), ('TERM_PROGRAM_VERSION', '1.139.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-d4ded701-45a7-4b4b-b77f-e3efd3adb559.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/node'), ('LC_CTYPE', 'C.UTF-8'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-09b614ea-53b1-4bd3-801f-da98ebdafffb.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '[]'), ('DISPLAY', ':99'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/vscode/.vscode-server/data/User/workspaceStorage/50e767c24aed6da0ec840414799aaf82/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-92f45c6bac.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'dialog'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros'), ('QT_QPA_PLATFORM', 'xcb'), ('PYTHONPATH', '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux')]), 'shell': False}
+[2.872422] (f110_gym) StdoutLine: {'line': b"reading manifest file '../build/f110_gym/f110_gym.egg-info/SOURCES.txt'\n"}
+[2.891948] (f110_gym) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[2.904256] (f110_gym) StdoutLine: {'line': b"writing manifest file '../build/f110_gym/f110_gym.egg-info/SOURCES.txt'\n"}
+[2.908185] (f110_gym) StdoutLine: {'line': b'running build\n'}
+[2.910050] (f110_gym) StdoutLine: {'line': b'running install\n'}
+[2.911303] (f110_gym) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.921754] (f110_gym) StdoutLine: {'line': b'Copying ../build/f110_gym/f110_gym.egg-info to /workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages/f110_gym-0.2.1-py3.10.egg-info\n'}
+[2.925019] (-) TimerEvent: {}
+[3.025500] (-) TimerEvent: {}
+[3.085552] (f110_gym) StdoutLine: {'line': b'running install_scripts\n'}
+[3.125627] (-) TimerEvent: {}
+[3.153736] (f110_gym) StdoutLine: {'line': b"writing list of installed files to '/workspaces/roboracer-purdue/roboracer_ws/build/f110_gym/install.log'\n"}
+[3.172101] (f110_gym) CommandEnded: {'returncode': 0}
+[3.225786] (-) TimerEvent: {}
+[3.324156] (f110_gym) JobEnded: {'identifier': 'f110_gym', 'rc': 0}
+[3.331165] (-) TimerEvent: {}
+[3.431717] (-) TimerEvent: {}
+[3.433758] (ackermann_mux) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[3.531818] (-) TimerEvent: {}
+[3.612981] (f1tenth_gym_ros) StdoutLine: {'line': b'running egg_info\n'}
+[3.615736] (f1tenth_gym_ros) StdoutLine: {'line': b'creating ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info\n'}
+[3.618715] (f1tenth_gym_ros) StdoutLine: {'line': b'writing ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/PKG-INFO\n'}
+[3.627284] (f1tenth_gym_ros) StdoutLine: {'line': b'writing dependency_links to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/dependency_links.txt\n'}
+[3.631918] (-) TimerEvent: {}
+[3.654162] (f1tenth_gym_ros) StdoutLine: {'line': b'writing entry points to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/entry_points.txt\n'}
+[3.659400] (f1tenth_gym_ros) StdoutLine: {'line': b'writing requirements to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/requires.txt\n'}
+[3.662684] (f1tenth_gym_ros) StdoutLine: {'line': b'writing top-level names to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/top_level.txt\n'}
+[3.677873] (f1tenth_gym_ros) StdoutLine: {'line': b"writing manifest file '../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'\n"}
+[3.715552] (f1tenth_gym_ros) StdoutLine: {'line': b"reading manifest file '../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'\n"}
+[3.732036] (-) TimerEvent: {}
+[3.742382] (f1tenth_gym_ros) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[3.768314] (f1tenth_gym_ros) StdoutLine: {'line': b"writing manifest file '../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'\n"}
+[3.771306] (f1tenth_gym_ros) StdoutLine: {'line': b'running build\n'}
+[3.772173] (f1tenth_gym_ros) StdoutLine: {'line': b'running build_py\n'}
+[3.775228] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build\n'}
+[3.776694] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib\n'}
+[3.778475] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros\n'}
+[3.786457] (f1tenth_gym_ros) StdoutLine: {'line': b'copying f1tenth_gym_ros/gym_bridge.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros\n'}
+[3.807938] (f1tenth_gym_ros) StdoutLine: {'line': b'copying f1tenth_gym_ros/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros\n'}
+[3.819903] (f1tenth_gym_ros) StdoutLine: {'line': b'running install\n'}
+[3.820952] (f1tenth_gym_ros) StdoutLine: {'line': b'running install_lib\n'}
+[3.832141] (-) TimerEvent: {}
+[3.834647] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros\n'}
+[3.848464] (f1tenth_gym_ros) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/gym_bridge.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros\n'}
+[3.882071] (f1tenth_gym_ros) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros\n'}
+[3.919993] (f1tenth_gym_ros) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros/gym_bridge.py to gym_bridge.cpython-310.pyc\n'}
+[3.932248] (-) TimerEvent: {}
+[3.954939] (f1tenth_gym_ros) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros/__init__.py to __init__.cpython-310.pyc\n'}
+[3.978826] (f1tenth_gym_ros) StdoutLine: {'line': b'running install_data\n'}
+[3.981696] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/ament_index\n'}
+[3.983377] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/ament_index/resource_index\n'}
+[3.985457] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/ament_index/resource_index/packages\n'}
+[3.994797] (f1tenth_gym_ros) StdoutLine: {'line': b'copying resource/f1tenth_gym_ros -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/ament_index/resource_index/packages\n'}
+[4.013114] (f1tenth_gym_ros) StdoutLine: {'line': b'copying package.xml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros\n'}
+[4.024865] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[4.031241] (f1tenth_gym_ros) StdoutLine: {'line': b'copying launch/gym_bridge_launch.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[4.032344] (-) TimerEvent: {}
+[4.053205] (f1tenth_gym_ros) StdoutLine: {'line': b'copying launch/ego_racecar.xacro -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[4.071223] (f1tenth_gym_ros) StdoutLine: {'line': b'copying launch/opp_racecar.xacro -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[4.090287] (f1tenth_gym_ros) StdoutLine: {'line': b'copying launch/gym_bridge.rviz -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[4.107958] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/config\n'}
+[4.114567] (f1tenth_gym_ros) StdoutLine: {'line': b'copying config/sim.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/config\n'}
+[4.127488] (f1tenth_gym_ros) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.132449] (-) TimerEvent: {}
+[4.139031] (f1tenth_gym_ros) StdoutLine: {'line': b'Copying ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros-0.0.0-py3.10.egg-info\n'}
+[4.232589] (-) TimerEvent: {}
+[4.320624] (ackermann_mux) StdoutLine: {'line': b'-- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[4.332722] (-) TimerEvent: {}
+[4.356427] (f1tenth_gym_ros) StdoutLine: {'line': b'running install_scripts\n'}
+[4.429314] (f1tenth_gym_ros) StdoutLine: {'line': b'Installing gym_bridge script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/f1tenth_gym_ros\n'}
+[4.432811] (-) TimerEvent: {}
+[4.438380] (f1tenth_gym_ros) StdoutLine: {'line': b"writing list of installed files to '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/install.log'\n"}
+[4.460689] (f1tenth_gym_ros) CommandEnded: {'returncode': 0}
+[4.532923] (-) TimerEvent: {}
+[4.627772] (f1tenth_gym_ros) JobEnded: {'identifier': 'f1tenth_gym_ros', 'rc': 0}
+[4.635098] (-) TimerEvent: {}
+[4.680256] (ackermann_mux) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[4.735249] (-) TimerEvent: {}
+[4.778696] (ackermann_mux) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[4.835391] (-) TimerEvent: {}
+[4.881915] (ackermann_mux) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[4.935523] (-) TimerEvent: {}
+[4.983737] (ackermann_mux) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.035648] (-) TimerEvent: {}
+[5.112606] (ackermann_mux) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.135771] (-) TimerEvent: {}
+[5.236327] (-) TimerEvent: {}
+[5.336819] (-) TimerEvent: {}
+[5.437274] (-) TimerEvent: {}
+[5.537772] (-) TimerEvent: {}
+[5.638262] (-) TimerEvent: {}
+[5.684285] (ackermann_mux) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[5.727791] (ackermann_mux) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[5.738382] (-) TimerEvent: {}
+[5.838774] (-) TimerEvent: {}
+[5.940677] (-) TimerEvent: {}
+[6.041154] (-) TimerEvent: {}
+[6.141906] (-) TimerEvent: {}
+[6.221616] (ackermann_mux) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[6.242068] (-) TimerEvent: {}
+[6.342663] (-) TimerEvent: {}
+[6.358556] (ackermann_mux) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[6.442792] (-) TimerEvent: {}
+[6.496932] (ackermann_mux) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[6.542944] (-) TimerEvent: {}
+[6.643676] (-) TimerEvent: {}
+[6.671833] (ackermann_mux) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[6.743806] (-) TimerEvent: {}
+[6.844335] (-) TimerEvent: {}
+[6.944851] (-) TimerEvent: {}
+[7.045325] (-) TimerEvent: {}
+[7.123029] (ackermann_mux) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[7.132275] (ackermann_mux) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[7.145441] (-) TimerEvent: {}
+[7.245898] (-) TimerEvent: {}
+[7.346432] (-) TimerEvent: {}
+[7.446916] (-) TimerEvent: {}
+[7.547359] (-) TimerEvent: {}
+[7.577101] (ackermann_mux) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[7.581537] (ackermann_mux) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[7.647484] (-) TimerEvent: {}
+[7.747964] (-) TimerEvent: {}
+[7.848434] (-) TimerEvent: {}
+[7.859102] (ackermann_mux) StdoutLine: {'line': b'-- Found ackermann_msgs: 2.0.2 (/opt/ros/humble/share/ackermann_msgs/cmake)\n'}
+[7.914405] (ackermann_mux) StdoutLine: {'line': b'-- Found diagnostic_updater: 4.0.7 (/opt/ros/humble/share/diagnostic_updater/cmake)\n'}
+[7.948560] (-) TimerEvent: {}
+[8.049051] (-) TimerEvent: {}
+[8.077450] (ackermann_mux) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[8.149174] (-) TimerEvent: {}
+[8.249650] (-) TimerEvent: {}
+[8.350210] (-) TimerEvent: {}
+[8.450735] (-) TimerEvent: {}
+[8.551258] (-) TimerEvent: {}
+[8.651804] (-) TimerEvent: {}
+[8.752342] (-) TimerEvent: {}
+[8.852819] (-) TimerEvent: {}
+[8.953324] (-) TimerEvent: {}
+[9.053840] (-) TimerEvent: {}
+[9.154328] (-) TimerEvent: {}
+[9.162412] (ackermann_mux) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[9.254444] (-) TimerEvent: {}
+[9.295373] (ackermann_mux) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[9.354574] (-) TimerEvent: {}
+[9.356098] (ackermann_mux) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[9.356756] (ackermann_mux) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[9.357312] (ackermann_mux) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[9.357931] (ackermann_mux) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[9.454678] (-) TimerEvent: {}
+[9.457999] (ackermann_mux) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[9.554835] (-) TimerEvent: {}
+[9.655363] (-) TimerEvent: {}
+[9.755891] (-) TimerEvent: {}
+[9.856402] (-) TimerEvent: {}
+[9.873282] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[9.911063] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[9.956542] (-) TimerEvent: {}
+[10.057098] (-) TimerEvent: {}
+[10.157777] (-) TimerEvent: {}
+[10.258458] (-) TimerEvent: {}
+[10.359183] (-) TimerEvent: {}
+[10.459741] (-) TimerEvent: {}
+[10.560284] (-) TimerEvent: {}
+[10.660855] (-) TimerEvent: {}
+[10.761356] (-) TimerEvent: {}
+[10.861839] (-) TimerEvent: {}
+[10.962315] (-) TimerEvent: {}
+[11.062751] (-) TimerEvent: {}
+[11.146268] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[11.147065] (ackermann_mux) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/ackermann_mux/include\n'}
+[11.147778] (ackermann_mux) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[11.162869] (-) TimerEvent: {}
+[11.263313] (-) TimerEvent: {}
+[11.363848] (-) TimerEvent: {}
+[11.464359] (-) TimerEvent: {}
+[11.564819] (-) TimerEvent: {}
+[11.665308] (-) TimerEvent: {}
+[11.765961] (-) TimerEvent: {}
+[11.866546] (-) TimerEvent: {}
+[11.967054] (-) TimerEvent: {}
+[12.067866] (-) TimerEvent: {}
+[12.168524] (-) TimerEvent: {}
+[12.210871] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[12.211546] (ackermann_mux) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[12.268663] (-) TimerEvent: {}
+[12.369275] (-) TimerEvent: {}
+[12.409243] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[12.469394] (-) TimerEvent: {}
+[12.569875] (-) TimerEvent: {}
+[12.670383] (-) TimerEvent: {}
+[12.740191] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[12.770518] (-) TimerEvent: {}
+[12.871031] (-) TimerEvent: {}
+[12.922450] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[12.971155] (-) TimerEvent: {}
+[13.071678] (-) TimerEvent: {}
+[13.172128] (-) TimerEvent: {}
+[13.272596] (-) TimerEvent: {}
+[13.373089] (-) TimerEvent: {}
+[13.473512] (-) TimerEvent: {}
+[13.574066] (-) TimerEvent: {}
+[13.674625] (-) TimerEvent: {}
+[13.775370] (-) TimerEvent: {}
+[13.875904] (-) TimerEvent: {}
+[13.976339] (-) TimerEvent: {}
+[14.060414] (ackermann_mux) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[14.061248] (ackermann_mux) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[14.076452] (-) TimerEvent: {}
+[14.176959] (-) TimerEvent: {}
+[14.277491] (-) TimerEvent: {}
+[14.299081] (ackermann_mux) StdoutLine: {'line': b'-- Configuring done\n'}
+[14.377621] (-) TimerEvent: {}
+[14.478245] (-) TimerEvent: {}
+[14.578911] (-) TimerEvent: {}
+[14.665259] (ackermann_mux) StdoutLine: {'line': b'-- Generating done\n'}
+[14.679030] (-) TimerEvent: {}
+[14.779541] (-) TimerEvent: {}
+[14.862161] (ackermann_mux) StdoutLine: {'line': b'-- Build files have been written to: /workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux\n'}
+[14.867853] (ackermann_mux) CommandEnded: {'returncode': 0}
+[14.871650] (ackermann_mux) JobProgress: {'identifier': 'ackermann_mux', 'progress': 'build'}
+[14.876764] (ackermann_mux) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux', '--', '-j8', '-l8'], 'cwd': '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('HOSTNAME', '1ab3abed40b8'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/helpers/browser.sh'), ('HOME', '/home/vscode'), ('OLDPWD', '/workspaces/roboracer-purdue/roboracer_ws'), ('TERM_PROGRAM_VERSION', '1.139.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-d4ded701-45a7-4b4b-b77f-e3efd3adb559.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/node'), ('LC_CTYPE', 'C.UTF-8'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-09b614ea-53b1-4bd3-801f-da98ebdafffb.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '[]'), ('DISPLAY', ':99'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/vscode/.vscode-server/data/User/workspaceStorage/50e767c24aed6da0ec840414799aaf82/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-92f45c6bac.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'dialog'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux'), ('QT_QPA_PLATFORM', 'xcb'), ('PYTHONPATH', '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/opt/ros/humble')]), 'shell': False}
+[14.879610] (-) TimerEvent: {}
+[14.980049] (-) TimerEvent: {}
+[15.051892] (ackermann_mux) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux.cpp.o\x1b[0m\n'}
+[15.054366] (ackermann_mux) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux_node.cpp.o\x1b[0m\n'}
+[15.055760] (ackermann_mux) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/ackermann_mux.dir/src/ackermann_mux_diagnostics.cpp.o\x1b[0m\n'}
+[15.080186] (-) TimerEvent: {}
+[15.180846] (-) TimerEvent: {}
+[15.281290] (-) TimerEvent: {}
+[15.381839] (-) TimerEvent: {}
+[15.482399] (-) TimerEvent: {}
+[15.582892] (-) TimerEvent: {}
+[15.683526] (-) TimerEvent: {}
+[15.784256] (-) TimerEvent: {}
+[15.885065] (-) TimerEvent: {}
+[15.985720] (-) TimerEvent: {}
+[16.086354] (-) TimerEvent: {}
+[16.186938] (-) TimerEvent: {}
+[16.287443] (-) TimerEvent: {}
+[16.387985] (-) TimerEvent: {}
+[16.488626] (-) TimerEvent: {}
+[16.589287] (-) TimerEvent: {}
+[16.689899] (-) TimerEvent: {}
+[16.790502] (-) TimerEvent: {}
+[16.891095] (-) TimerEvent: {}
+[16.991899] (-) TimerEvent: {}
+[17.092513] (-) TimerEvent: {}
+[17.193130] (-) TimerEvent: {}
+[17.293830] (-) TimerEvent: {}
+[17.394737] (-) TimerEvent: {}
+[17.495665] (-) TimerEvent: {}
+[17.596390] (-) TimerEvent: {}
+[17.697396] (-) TimerEvent: {}
+[17.798210] (-) TimerEvent: {}
+[17.898956] (-) TimerEvent: {}
+[17.999607] (-) TimerEvent: {}
+[18.100464] (-) TimerEvent: {}
+[18.201442] (-) TimerEvent: {}
+[18.302186] (-) TimerEvent: {}
+[18.402845] (-) TimerEvent: {}
+[18.503446] (-) TimerEvent: {}
+[18.604033] (-) TimerEvent: {}
+[18.704598] (-) TimerEvent: {}
+[18.805186] (-) TimerEvent: {}
+[18.905879] (-) TimerEvent: {}
+[19.006575] (-) TimerEvent: {}
+[19.107073] (-) TimerEvent: {}
+[19.207666] (-) TimerEvent: {}
+[19.308506] (-) TimerEvent: {}
+[19.411744] (-) TimerEvent: {}
+[19.512346] (-) TimerEvent: {}
+[19.613009] (-) TimerEvent: {}
+[19.713665] (-) TimerEvent: {}
+[19.814270] (-) TimerEvent: {}
+[19.914951] (-) TimerEvent: {}
+[20.015732] (-) TimerEvent: {}
+[20.116304] (-) TimerEvent: {}
+[20.217116] (-) TimerEvent: {}
+[20.317967] (-) TimerEvent: {}
+[20.418608] (-) TimerEvent: {}
+[20.519024] (-) TimerEvent: {}
+[20.619578] (-) TimerEvent: {}
+[20.720091] (-) TimerEvent: {}
+[20.820581] (-) TimerEvent: {}
+[20.921055] (-) TimerEvent: {}
+[21.021594] (-) TimerEvent: {}
+[21.122113] (-) TimerEvent: {}
+[21.222597] (-) TimerEvent: {}
+[21.323120] (-) TimerEvent: {}
+[21.423639] (-) TimerEvent: {}
+[21.524106] (-) TimerEvent: {}
+[21.624588] (-) TimerEvent: {}
+[21.725175] (-) TimerEvent: {}
+[21.826101] (-) TimerEvent: {}
+[21.926608] (-) TimerEvent: {}
+[22.027128] (-) TimerEvent: {}
+[22.127659] (-) TimerEvent: {}
+[22.228196] (-) TimerEvent: {}
+[22.328664] (-) TimerEvent: {}
+[22.429141] (-) TimerEvent: {}
+[22.529665] (-) TimerEvent: {}
+[22.630300] (-) TimerEvent: {}
+[22.730877] (-) TimerEvent: {}
+[22.831520] (-) TimerEvent: {}
+[22.932003] (-) TimerEvent: {}
+[23.032588] (-) TimerEvent: {}
+[23.133177] (-) TimerEvent: {}
+[23.233828] (-) TimerEvent: {}
+[23.334424] (-) TimerEvent: {}
+[23.434957] (-) TimerEvent: {}
+[23.535516] (-) TimerEvent: {}
+[23.636093] (-) TimerEvent: {}
+[23.736642] (-) TimerEvent: {}
+[23.837271] (-) TimerEvent: {}
+[23.938161] (-) TimerEvent: {}
+[24.038957] (-) TimerEvent: {}
+[24.139690] (-) TimerEvent: {}
+[24.240131] (-) TimerEvent: {}
+[24.340546] (-) TimerEvent: {}
+[24.440973] (-) TimerEvent: {}
+[24.541642] (-) TimerEvent: {}
+[24.642805] (-) TimerEvent: {}
+[24.743287] (-) TimerEvent: {}
+[24.843816] (-) TimerEvent: {}
+[24.944446] (-) TimerEvent: {}
+[25.044974] (-) TimerEvent: {}
+[25.145536] (-) TimerEvent: {}
+[25.245999] (-) TimerEvent: {}
+[25.346466] (-) TimerEvent: {}
+[25.447056] (-) TimerEvent: {}
+[25.547567] (-) TimerEvent: {}
+[25.648036] (-) TimerEvent: {}
+[25.748726] (-) TimerEvent: {}
+[25.849256] (-) TimerEvent: {}
+[25.950675] (-) TimerEvent: {}
+[26.051138] (-) TimerEvent: {}
+[26.151879] (-) TimerEvent: {}
+[26.252577] (-) TimerEvent: {}
+[26.353025] (-) TimerEvent: {}
+[26.453522] (-) TimerEvent: {}
+[26.553966] (-) TimerEvent: {}
+[26.654626] (-) TimerEvent: {}
+[26.757765] (-) TimerEvent: {}
+[26.858250] (-) TimerEvent: {}
+[26.958760] (-) TimerEvent: {}
+[27.059302] (-) TimerEvent: {}
+[27.159843] (-) TimerEvent: {}
+[27.260480] (-) TimerEvent: {}
+[27.360928] (-) TimerEvent: {}
+[27.461429] (-) TimerEvent: {}
+[27.561957] (-) TimerEvent: {}
+[27.591896] (ackermann_mux) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable ackermann_mux\x1b[0m\n'}
+[27.662081] (-) TimerEvent: {}
+[27.762569] (-) TimerEvent: {}
+[27.862985] (-) TimerEvent: {}
+[28.012883] (-) TimerEvent: {}
+[28.113450] (-) TimerEvent: {}
+[28.214095] (-) TimerEvent: {}
+[28.314662] (-) TimerEvent: {}
+[28.415173] (-) TimerEvent: {}
+[28.515899] (-) TimerEvent: {}
+[28.616401] (-) TimerEvent: {}
+[28.716902] (-) TimerEvent: {}
+[28.817590] (-) TimerEvent: {}
+[28.918171] (-) TimerEvent: {}
+[29.018678] (-) TimerEvent: {}
+[29.119148] (-) TimerEvent: {}
+[29.219699] (-) TimerEvent: {}
+[29.320434] (-) TimerEvent: {}
+[29.421023] (-) TimerEvent: {}
+[29.521529] (-) TimerEvent: {}
+[29.622073] (-) TimerEvent: {}
+[29.722687] (-) TimerEvent: {}
+[29.823210] (-) TimerEvent: {}
+[29.923729] (-) TimerEvent: {}
+[30.024197] (-) TimerEvent: {}
+[30.124624] (-) TimerEvent: {}
+[30.225094] (-) TimerEvent: {}
+[30.325691] (-) TimerEvent: {}
+[30.426345] (-) TimerEvent: {}
+[30.526880] (-) TimerEvent: {}
+[30.627346] (-) TimerEvent: {}
+[30.727920] (-) TimerEvent: {}
+[30.828368] (-) TimerEvent: {}
+[30.928933] (-) TimerEvent: {}
+[31.029494] (-) TimerEvent: {}
+[31.129933] (-) TimerEvent: {}
+[31.230422] (-) TimerEvent: {}
+[31.330869] (-) TimerEvent: {}
+[31.431366] (-) TimerEvent: {}
+[31.534138] (-) TimerEvent: {}
+[31.634727] (-) TimerEvent: {}
+[31.735249] (-) TimerEvent: {}
+[31.835777] (-) TimerEvent: {}
+[31.936265] (-) TimerEvent: {}
+[32.036693] (-) TimerEvent: {}
+[32.137120] (-) TimerEvent: {}
+[32.237687] (-) TimerEvent: {}
+[32.338177] (-) TimerEvent: {}
+[32.438640] (-) TimerEvent: {}
+[32.539128] (-) TimerEvent: {}
+[32.639578] (-) TimerEvent: {}
+[32.740096] (-) TimerEvent: {}
+[32.840609] (-) TimerEvent: {}
+[32.941256] (-) TimerEvent: {}
+[33.042802] (-) TimerEvent: {}
+[33.144080] (-) TimerEvent: {}
+[33.244563] (-) TimerEvent: {}
+[33.345045] (-) TimerEvent: {}
+[33.445532] (-) TimerEvent: {}
+[33.545992] (-) TimerEvent: {}
+[33.646415] (-) TimerEvent: {}
+[33.746842] (-) TimerEvent: {}
+[33.847287] (-) TimerEvent: {}
+[33.947859] (-) TimerEvent: {}
+[33.951118] (ackermann_mux) StdoutLine: {'line': b'[100%] Built target ackermann_mux\n'}
+[33.984704] (ackermann_mux) CommandEnded: {'returncode': 0}
+[34.001921] (ackermann_mux) JobProgress: {'identifier': 'ackermann_mux', 'progress': 'install'}
+[34.012966] (ackermann_mux) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux'], 'cwd': '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('HOSTNAME', '1ab3abed40b8'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/helpers/browser.sh'), ('HOME', '/home/vscode'), ('OLDPWD', '/workspaces/roboracer-purdue/roboracer_ws'), ('TERM_PROGRAM_VERSION', '1.139.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-d4ded701-45a7-4b4b-b77f-e3efd3adb559.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/node'), ('LC_CTYPE', 'C.UTF-8'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-09b614ea-53b1-4bd3-801f-da98ebdafffb.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '[]'), ('DISPLAY', ':99'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/vscode/.vscode-server/data/User/workspaceStorage/50e767c24aed6da0ec840414799aaf82/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-92f45c6bac.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'dialog'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/roboracer-purdue/roboracer_ws/build/ackermann_mux'), ('QT_QPA_PLATFORM', 'xcb'), ('PYTHONPATH', '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/opt/ros/humble')]), 'shell': False}
+[34.022510] (ackermann_mux) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[34.037889] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/lib/ackermann_mux/ackermann_mux\n'}
+[34.047975] (-) TimerEvent: {}
+[34.148451] (-) TimerEvent: {}
+[34.248979] (-) TimerEvent: {}
+[34.349431] (-) TimerEvent: {}
+[34.427586] (ackermann_mux) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/lib/ackermann_mux/ackermann_mux" to ""\n'}
+[34.437008] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/launch\n'}
+[34.449519] (-) TimerEvent: {}
+[34.465762] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/launch/ackermann_mux_launch.py\n'}
+[34.527083] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config\n'}
+[34.549665] (-) TimerEvent: {}
+[34.556551] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config/ackermann_mux_locks.yaml\n'}
+[34.624371] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config/ackermann_mux_topics.yaml\n'}
+[34.649814] (-) TimerEvent: {}
+[34.700349] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/config/joystick.yaml\n'}
+[34.749944] (-) TimerEvent: {}
+[34.761132] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include\n'}
+[34.779418] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux\n'}
+[34.804737] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/ackermann_mux.hpp\n'}
+[34.850067] (-) TimerEvent: {}
+[34.873515] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/ackermann_mux_diagnostics.hpp\n'}
+[34.942484] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/ackermann_mux_diagnostics_status.hpp\n'}
+[34.950157] (-) TimerEvent: {}
+[35.008242] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/params_helpers.hpp\n'}
+[35.050298] (-) TimerEvent: {}
+[35.073289] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/topic_handle.hpp\n'}
+[35.136026] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/include/ackermann_mux/utils.hpp\n'}
+[35.150474] (-) TimerEvent: {}
+[35.237520] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ament_index/resource_index/package_run_dependencies/ackermann_mux\n'}
+[35.250585] (-) TimerEvent: {}
+[35.342532] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ament_index/resource_index/parent_prefix_path/ackermann_mux\n'}
+[35.350699] (-) TimerEvent: {}
+[35.420831] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/ament_prefix_path.sh\n'}
+[35.450905] (-) TimerEvent: {}
+[35.474582] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/ament_prefix_path.dsv\n'}
+[35.537972] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/path.sh\n'}
+[35.551004] (-) TimerEvent: {}
+[35.591675] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/environment/path.dsv\n'}
+[35.648299] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.bash\n'}
+[35.651088] (-) TimerEvent: {}
+[35.706548] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.sh\n'}
+[35.751230] (-) TimerEvent: {}
+[35.759761] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.zsh\n'}
+[35.813823] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/local_setup.dsv\n'}
+[35.851384] (-) TimerEvent: {}
+[35.866343] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.dsv\n'}
+[35.941301] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ament_index/resource_index/packages/ackermann_mux\n'}
+[35.951576] (-) TimerEvent: {}
+[36.015352] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[36.051677] (-) TimerEvent: {}
+[36.067200] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[36.129915] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ackermann_muxConfig.cmake\n'}
+[36.151899] (-) TimerEvent: {}
+[36.181749] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/cmake/ackermann_muxConfig-version.cmake\n'}
+[36.237695] (ackermann_mux) StdoutLine: {'line': b'-- Installing: /workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux/share/ackermann_mux/package.xml\n'}
+[36.252005] (-) TimerEvent: {}
+[36.276931] (ackermann_mux) CommandEnded: {'returncode': 0}
+[36.352143] (-) TimerEvent: {}
+[36.452582] (-) TimerEvent: {}
+[36.553090] (-) TimerEvent: {}
+[36.653538] (-) TimerEvent: {}
+[36.691409] (ackermann_mux) JobEnded: {'identifier': 'ackermann_mux', 'rc': 0}
+[36.697850] (f1tenth_stack) JobStarted: {'identifier': 'f1tenth_stack'}
+[36.753636] (-) TimerEvent: {}
+[36.854032] (-) TimerEvent: {}
+[36.954618] (-) TimerEvent: {}
+[37.058269] (-) TimerEvent: {}
+[37.158918] (-) TimerEvent: {}
+[37.259445] (-) TimerEvent: {}
+[37.359984] (-) TimerEvent: {}
+[37.460472] (-) TimerEvent: {}
+[37.560985] (-) TimerEvent: {}
+[37.661502] (-) TimerEvent: {}
+[37.761936] (-) TimerEvent: {}
+[37.862393] (-) TimerEvent: {}
+[37.962830] (-) TimerEvent: {}
+[38.063320] (-) TimerEvent: {}
+[38.163789] (-) TimerEvent: {}
+[38.264327] (-) TimerEvent: {}
+[38.364996] (-) TimerEvent: {}
+[38.465662] (-) TimerEvent: {}
+[38.566139] (-) TimerEvent: {}
+[38.666623] (-) TimerEvent: {}
+[38.767091] (-) TimerEvent: {}
+[38.867592] (-) TimerEvent: {}
+[38.968418] (-) TimerEvent: {}
+[39.068889] (-) TimerEvent: {}
+[39.169396] (-) TimerEvent: {}
+[39.269974] (-) TimerEvent: {}
+[39.370465] (-) TimerEvent: {}
+[39.433757] (f1tenth_stack) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../../build/f1tenth_stack', 'build', '--build-base', '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build', 'install', '--record', '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/install.log', '--install-scripts', '$base/lib/f1tenth_stack', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/f1tenth_stack', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('HOSTNAME', '1ab3abed40b8'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/helpers/browser.sh'), ('HOME', '/home/vscode'), ('OLDPWD', '/workspaces/roboracer-purdue/roboracer_ws'), ('TERM_PROGRAM_VERSION', '1.139.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-d4ded701-45a7-4b4b-b77f-e3efd3adb559.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/node'), ('LC_CTYPE', 'C.UTF-8'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-09b614ea-53b1-4bd3-801f-da98ebdafffb.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/vscode/vscode-server/bin/linux-x64/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '[]'), ('DISPLAY', ':99'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/vscode/.vscode-server/data/User/workspaceStorage/50e767c24aed6da0ec840414799aaf82/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-92f45c6bac.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'dialog'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack'), ('QT_QPA_PLATFORM', 'xcb'), ('PYTHONPATH', '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux')]), 'shell': False}
+[39.470569] (-) TimerEvent: {}
+[39.571080] (-) TimerEvent: {}
+[39.671674] (-) TimerEvent: {}
+[39.772224] (-) TimerEvent: {}
+[39.872659] (-) TimerEvent: {}
+[39.973170] (-) TimerEvent: {}
+[40.073692] (-) TimerEvent: {}
+[40.174224] (-) TimerEvent: {}
+[40.274706] (-) TimerEvent: {}
+[40.375193] (-) TimerEvent: {}
+[40.477031] (-) TimerEvent: {}
+[40.577969] (-) TimerEvent: {}
+[40.661196] (f1tenth_stack) StderrLine: {'line': b"/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[40.662217] (f1tenth_stack) StderrLine: {'line': b'  warnings.warn(\n'}
+[40.678077] (-) TimerEvent: {}
+[40.683922] (f1tenth_stack) StdoutLine: {'line': b'running egg_info\n'}
+[40.688884] (f1tenth_stack) StdoutLine: {'line': b'creating ../../../build/f1tenth_stack/f1tenth_stack.egg-info\n'}
+[40.693376] (f1tenth_stack) StdoutLine: {'line': b'writing ../../../build/f1tenth_stack/f1tenth_stack.egg-info/PKG-INFO\n'}
+[40.704238] (f1tenth_stack) StdoutLine: {'line': b'writing dependency_links to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/dependency_links.txt\n'}
+[40.718422] (f1tenth_stack) StdoutLine: {'line': b'writing entry points to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/entry_points.txt\n'}
+[40.723228] (f1tenth_stack) StdoutLine: {'line': b'writing requirements to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/requires.txt\n'}
+[40.726637] (f1tenth_stack) StdoutLine: {'line': b'writing top-level names to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/top_level.txt\n'}
+[40.752646] (f1tenth_stack) StdoutLine: {'line': b"writing manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'\n"}
+[40.778205] (-) TimerEvent: {}
+[40.801092] (f1tenth_stack) StdoutLine: {'line': b"reading manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'\n"}
+[40.856026] (f1tenth_stack) StdoutLine: {'line': b"writing manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'\n"}
+[40.860158] (f1tenth_stack) StdoutLine: {'line': b'running build\n'}
+[40.861162] (f1tenth_stack) StdoutLine: {'line': b'running build_py\n'}
+[40.865252] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build\n'}
+[40.867160] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib\n'}
+[40.869594] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[40.877343] (f1tenth_stack) StdoutLine: {'line': b'copying f1tenth_stack/speed_smoother.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[40.878277] (-) TimerEvent: {}
+[40.900960] (f1tenth_stack) StdoutLine: {'line': b'copying f1tenth_stack/tf_publisher.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[40.930322] (f1tenth_stack) StdoutLine: {'line': b'copying f1tenth_stack/throttle_interpolator.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[40.954117] (f1tenth_stack) StdoutLine: {'line': b'copying f1tenth_stack/throttle_mix.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[40.978489] (f1tenth_stack) StdoutLine: {'line': b'copying f1tenth_stack/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[40.979482] (-) TimerEvent: {}
+[40.996438] (f1tenth_stack) StdoutLine: {'line': b'running install\n'}
+[40.997860] (f1tenth_stack) StdoutLine: {'line': b'running install_lib\n'}
+[41.019285] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[41.032856] (f1tenth_stack) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/speed_smoother.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[41.065023] (f1tenth_stack) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/tf_publisher.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[41.079602] (-) TimerEvent: {}
+[41.107461] (f1tenth_stack) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/throttle_interpolator.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[41.138047] (f1tenth_stack) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/throttle_mix.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[41.172975] (f1tenth_stack) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[41.179722] (-) TimerEvent: {}
+[41.211049] (f1tenth_stack) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/speed_smoother.py to speed_smoother.cpython-310.pyc\n'}
+[41.242538] (f1tenth_stack) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/tf_publisher.py to tf_publisher.cpython-310.pyc\n'}
+[41.279329] (f1tenth_stack) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/throttle_interpolator.py to throttle_interpolator.cpython-310.pyc\n'}
+[41.280143] (-) TimerEvent: {}
+[41.319963] (f1tenth_stack) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/throttle_mix.py to throttle_mix.cpython-310.pyc\n'}
+[41.352453] (f1tenth_stack) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/__init__.py to __init__.cpython-310.pyc\n'}
+[41.380299] (-) TimerEvent: {}
+[41.381862] (f1tenth_stack) StdoutLine: {'line': b'running install_data\n'}
+[41.387894] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index\n'}
+[41.390631] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index/resource_index\n'}
+[41.394221] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index/resource_index/packages\n'}
+[41.404691] (f1tenth_stack) StdoutLine: {'line': b'copying resource/f1tenth_stack -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index/resource_index/packages\n'}
+[41.424634] (f1tenth_stack) StdoutLine: {'line': b'copying package.xml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack\n'}
+[41.438717] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/launch\n'}
+[41.447568] (f1tenth_stack) StdoutLine: {'line': b'copying launch/bringup_launch.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/launch\n'}
+[41.464908] (f1tenth_stack) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[41.473712] (f1tenth_stack) StdoutLine: {'line': b'copying config/f1tenth_online_async.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[41.480422] (-) TimerEvent: {}
+[41.495388] (f1tenth_stack) StdoutLine: {'line': b'copying config/joy_teleop.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[41.516482] (f1tenth_stack) StdoutLine: {'line': b'copying config/mux.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[41.545340] (f1tenth_stack) StdoutLine: {'line': b'copying config/sensors.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[41.565160] (f1tenth_stack) StdoutLine: {'line': b'copying config/speed_smoother.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[41.580547] (-) TimerEvent: {}
+[41.584053] (f1tenth_stack) StdoutLine: {'line': b'copying config/throttle_mix.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[41.606494] (f1tenth_stack) StdoutLine: {'line': b'copying config/vesc.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[41.620363] (f1tenth_stack) StdoutLine: {'line': b'running install_egg_info\n'}
+[41.636182] (f1tenth_stack) StdoutLine: {'line': b'Copying ../../../build/f1tenth_stack/f1tenth_stack.egg-info to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack-0.0.1-py3.10.egg-info\n'}
+[41.680665] (-) TimerEvent: {}
+[41.781134] (-) TimerEvent: {}
+[41.869364] (f1tenth_stack) StdoutLine: {'line': b'running install_scripts\n'}
+[41.881259] (-) TimerEvent: {}
+[41.981665] (-) TimerEvent: {}
+[41.984990] (f1tenth_stack) StdoutLine: {'line': b'Installing speed_smoother script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/f1tenth_stack\n'}
+[42.000991] (f1tenth_stack) StdoutLine: {'line': b'Installing tf_publisher script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/f1tenth_stack\n'}
+[42.018404] (f1tenth_stack) StdoutLine: {'line': b'Installing throttle_interpolator script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/f1tenth_stack\n'}
+[42.045075] (f1tenth_stack) StdoutLine: {'line': b'Installing throttle_mix script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/f1tenth_stack\n'}
+[42.058077] (f1tenth_stack) StdoutLine: {'line': b"writing list of installed files to '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/install.log'\n"}
+[42.075369] (f1tenth_stack) CommandEnded: {'returncode': 0}
+[42.081764] (-) TimerEvent: {}
+[42.182200] (-) TimerEvent: {}
+[42.282629] (-) TimerEvent: {}
+[42.346949] (f1tenth_stack) JobEnded: {'identifier': 'f1tenth_stack', 'rc': 0}
+[42.355791] (-) EventReactorShutdown: {}
