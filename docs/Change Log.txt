@@ -1,0 +1,11 @@
+(Beta)
+07/15/26 V 0.1 Started Project
+
+10/01/26 V 0.2 Implemented Vector Base
+- Implemented Objects for Path, Nodes, Segments, Control Points
+- Implemented line and Bezier segments
+- Added press A to add Bezier segments
+- Implemented Saving RPP and Loading RPP
+
+10/02/26 V 0.2.1 
+- Implemented saving to CSV
