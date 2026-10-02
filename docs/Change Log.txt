@@ -9,3 +9,6 @@
 
 10/02/26 V 0.2.1 
 - Implemented saving to CSV
+
+10/02/26 V 0.2.2 
+- Implemented Undo and Redo (CTRL + Z / CTRL + Y)

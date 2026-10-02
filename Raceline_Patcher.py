@@ -20,6 +20,8 @@ from matplotlib.patches import Rectangle
 DEFAULT_REDRAW_RES = 0.05
 SELECTOR_SIZE_PX = 7
 
+MAX_UNDO = 25
+
 class RacePath:
     def __init__(self):
         self.nodes = []
@@ -47,10 +49,15 @@ class RacePath:
         return racepath
 
     def from_dict(self, data):
+        self.nodes = []
+        self.segments = []
+        Node.current_id = 0
+
         nodes_by_id = {}
         for node_id, n in data["nodes"].items():
             node_id = int(node_id)
             nodes_by_id[node_id] = Node(n["X"], n["Y"], node_id)
+            nodes_by_id[node_id].prop = n["prop"]
 
         for node_id in sorted(nodes_by_id):
             self.nodes.append(nodes_by_id[node_id])
@@ -80,6 +87,7 @@ class RacePath:
             data["nodes"][str(node.id)] = {}
             data["nodes"][str(node.id)]["X"] = node.x
             data["nodes"][str(node.id)]["Y"] = node.y
+            data["nodes"][str(node.id)]["prop"] = node.prop
 
         data["segments"] = {}
         for i, segment in enumerate(self.segments):
@@ -153,6 +161,7 @@ class Node:
         
         self.x = x
         self.y = y
+        self.prop = {}
 
     def to_tuple(self):
         return (self.x, self.y)
@@ -276,6 +285,7 @@ class RacelineEditor:
         # Initialize List of Nodes and Segments
         self.path = RacePath()
 
+
         # Setup fig for Display
         self.fig, self.ax = plt.subplots(figsize=(9, 7))
         self.ax.set_aspect(3/4, adjustable="box")
@@ -295,7 +305,8 @@ class RacelineEditor:
 
         # Editor Variables
         self.selected = []
-        self.undo_stack: list[pd.DataFrame] = []
+        self.undo_stack = []
+        self.redo_stack = []
 
         # Dragging 
         self.dragging = False
@@ -465,7 +476,12 @@ class RacelineEditor:
         self.canvas.draw_idle()
 
     def on_key_press(self, event):
-        if event.key == "a":
+        if event.key == "ctrl+z":
+            self.racepath_undo()
+        elif event.key == "ctrl+y":
+            self.racepath_redo()
+        elif event.key == "a":
+            self.push_racepath_undo_stack()
             if event.inaxes != self.ax:
                 return
             
@@ -489,7 +505,7 @@ class RacelineEditor:
             # Button == 1 - LMB down
             # key = "space" - space down
             # Initiate panning - save mouse positions
-
+            self.push_racepath_undo_stack()
             self.panning = True
             self.pan_last_x = event.x
             self.pan_last_y = event.y
@@ -516,10 +532,10 @@ class RacelineEditor:
 
             if mouse_obj in self.selected:
                 # Initiate Dragging
+                self.push_racepath_undo_stack()
                 self.dragging = True
                 self.drag_last_x = event.x
                 self.drag_last_y = event.y
-
                 
     def on_motion(self, event):
         if event.inaxes != self.ax:
@@ -601,6 +617,47 @@ class RacelineEditor:
             self.dragging = False    
             self.drag_last_x = None
             self.drag_last_y = None
+
+    '''
+    ====================
+       TOOL UTILITIES
+    ====================
+    '''
+    def racepath_undo(self):
+        self.selected = []
+        if self.undo_stack:
+            racedict = self.undo_stack.pop()
+            self.redo_stack.append(self.path.to_dict())
+            self.path.from_dict(racedict)
+        else:
+            self.status.set(f"Nothing left to undo!")
+
+        self.redraw()
+        self.update_property_panel()
+
+    def racepath_redo(self):
+        self.selected = []
+        if self.redo_stack:
+            racedict = self.redo_stack.pop()
+            self.undo_stack.append(self.path.to_dict())
+            self.path.from_dict(racedict)
+            
+        else:
+            self.status.set(f"Nothing to redo!")
+
+        self.redraw()
+        self.update_property_panel()
+
+    def push_racepath_undo_stack(self):
+        self.redo_stack = [] # Clear redo stack
+        self.undo_stack.append(self.path.to_dict())
+
+        if len(self.undo_stack) > MAX_UNDO:
+            self.undo_stack.pop(0)
+
+    def close_loop(self):
+        # TODO Make this work properly when we can add points to loop
+        pass
 
     '''
     ======================
