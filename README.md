@@ -1,4 +1,5 @@
-# Lab 1 Template
+# Lab 2 Template
+# WORK IN PROGRESS
 This lab will introduce you to Automatic Emergency Braking (AEB), which is a node that will automatically stop the car when it is about to collide with an obstacle.
 
 ## Lab Objectives
