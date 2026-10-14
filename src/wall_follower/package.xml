@@ -1,16 +1,27 @@
+
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>wall_follower</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="00441@kvis.ac.th">patchychan</maintainer>
-  <license>TODO: License declaration</license>
+  <description>PID-based wall following controller for autonomous racing.</description>
+  <maintainer email="jsuantho@purdue.edu">patchychan</maintainer>
+  <license>MIT</license>
 
-  <depend>rclpy</depend>
-  <depend>rclcpp</depend>
-  <depend>ackermann_msgs</depend>
+  <!-- ROS 2 Python -->
+  <exec_depend>rclpy</exec_depend>
 
+  <!-- ROS 2 Messages -->
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>ackermann_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <!-- ROS 2 Launch -->
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <!-- Testing -->
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
