@@ -1,16 +1,13 @@
 # Lab 2 Template
-# WORK IN PROGRESS
-This lab will introduce you to Automatic Emergency Braking (AEB), which is a node that will automatically stop the car when it is about to collide with an obstacle.
+This lab will introduce you to Proportional–Integral–Derivative (PID) Controllers, which is a concept that allow your car to make correction smoothly based on how far it is from the desired raceline. The raceline used in this lab will be determined by following the wall, which the car stay a certain distance from the inner/outer wall. (Thus the name Wall Follow).
 
 ## Lab Objectives
-- Learn how to program your first ROS node
-- Learn basic operation of the AEB
-- Learn how to create and use ROS 2 parameters
-- Learn how to read LiDAR and odometry data and publish drive commands
-- Learn how ROS 2 nodes communicate using publisher and subscriber
+- Learn how to implement a PID controller
+- Learn basic reactive algorithm - wall follow
+- Learn how to create a launch file to launch multiple nodes at once
 
-## Steps
-### Setup your workspace
+## Lab Guide
+### Step 1 Setup your workspace
 1. Navigate to where you want to keep the lab workspace, preferably home.
 ~~~
 cd
@@ -18,241 +15,194 @@ cd
 
 2. Clone this branch from GitHub using the following command:
 ~~~
-git clone -b rp_lab1_template https://github.com/Roboracer-Purdue/roboracer-purdue rp_lab1_template 
+git clone -b rp_lab2_template https://github.com/Roboracer-Purdue/roboracer-purdue rp_lab2_template 
 ~~~
 
 3. Navigate into this lab's template
 ~~~
-cd rp_lab1_template 
+cd rp_lab2_template 
 ~~~
 4. Type the following command to open the folder in VSCode (Get it installed if you are missing this part!)
 ~~~
 code .
 ~~~
 
-### Accessing the Source Code
-1. In VS Code, open src/emergency_braking/emergency_braking/eb_template.py
-2. This file is your source code, you will make changes to the emergency braking node here.
+5. In VS Code, open `src/emergency_braking/emergency_braking/eb_template.py`
+6. Copy your lab 1 code for emergency braking here
+7. Open `src/wall_follower/wall_follower/pid_template.py`
+8. This file is your source code, you will make changes to the wall follower node here.
+### Step 2 Implementing Necessary Parameters
+In `declare_all_params()`, declare the following parameters:
 
-### Declare New Parameters
-A ROS 2 node can be run with specific parameter values, which can be used as constants/configurations in the node. This step tells you how to declare ROS 2 parameters in our template.
-1. Create a parameter named **TTC_threshold** and give it a value of about 0.2-0.5 by defining a new tuple in `declare_all_params()`function.
-2. Create a parameter named **eb_topic** and give it a value of `'/eb'` by defining a new tuple in `declare_all_params()`function.
-3. Load those parameter values into the node variables in the `load_params()` function.
+`wf_angle_a` : 45.0 <br>
+`wf_angle_b` : 90.0 <br>
+`wf_lookahead` : 1.0 <br>
+`wf_target_spacing` : 0.8 <br>
+`K_p` : 0.4 <br>
+`K_i` : 0.0 <br>
+`K_d` : 0.05 <br>
 
-### Complete the Control Loop
-The Control Loop section (`control_loop()`) of the Emergency Braking Node given to you is missing several lines of code. (Highlighted as TODO), make sure to complete those line according to the instruction given in the comments. (Ask for help if you are stuck)
+Make sure to assign them to node variables in `load_params()` as well
 
-### Build Your Code
-1. Make sure you saved your source code
-2. Build the workspace after editing your code by navigating to the workspace folder and run the build command
+### Step 3 Implementing Wall Follower
+Wall follower is a type of reactive algorithm where your car will try to maintain a certain distance from the inner (or outer) wall. For simplicity, we will follow the inner wall while driving counter-clockwise in this lab, so the car will follow the left wall. One question to consider, is how can the car use LIDAR scans to measure how far it is from the left inner wall?
 
+A simple approach is to read the LIDAR scan directly to the side (e.g., 90 degrees if the inner wall is on the left). However, this approach fails when the car is not parallel to the wall.
+
+Hence, we will use two LIDAR scans to determine the heading the car, one pointing directly to the left (90 degrees), and one pointing slightly ahead (~45 degrees). Together, they can determine the car heading and its distance from the left wall.
+
+Take a look at the following figure:
+
+![alt text](figs/figure_1.png)
+
+The car heading deviates from the parallel line by $\alpha$. The angular difference between the two scans (green lines) is $\theta$.
+
+We can express car heading $\alpha$ as
+$$
+\alpha = \arctan{\left(\frac{a\cos{\theta}-b}{a\sin{\theta}}\right)}
+$$
+
+Then we can use the heading angle $\alpha$ to determine the distance from the wall
+
+$$
+D_t = b\cos{\alpha}
+$$
+
+Theoretically, this distance can be used to measure the deviation from target distance; however, this calculation is performed while the car is constantly moving, by the time the drive command reach the motor, it might be too late to steer. 
+
+Hence, we will use predicted distance of distance $L$ ahead to calculate errors instead
+$$
+D_n = D_t + L\sin{\alpha}
+$$
+
+Then your error $e(t)$ can be computed from the difference between predicted distance and target spacing
+
+$$
+e(t) = D_n - target
+$$
+
+Implement the above concepts and calculations in step 1 of your control loop `def control_loop(self)`
+
+### Step 4 Implementing PID
+
+The following equation summarizes the PID controller that drive steering $u(t)$:
+$$
+u(t) = K_p e(t) + K_i \int_0^t{e(\tau)d\tau} \ + K_d \frac{d}{dt}(e(t))
+$$
+This equation can be overwhelming at first, so let's unpack it together
+
+#### Proportional Error $e(t)$
+This terms describe how much far the car is from the ideal raceline (which is a line parallel to the left wall with a certain distance between them).
+
+If the car is too far from the wall ($e(t) > 0$) you want to left steer into the wall.
+
+On the other hand, if the car is too close to the wall ($e(t) < 0$), you want to right steer away from the wall.
+
+#### Derivative Error $\frac{d}{dt}(e(t))$
+This terms describe how fast the car is getting away from the wall.
+
+If the car is driving into the wall too quickly, the error term is decreasing rapidly ($\frac{d}{dt}e(t) << 0$). Adding the term $K_d \frac{d}{dt}e(t)$ will mitigate the left turn by turning "less" left for $K_d > 0$
+
+Otherwise, if the car is driving away from the wall too quickly ($\frac{d}{dt}e(t) >> 0$), so adding the term will mitigate the right turn by turning "less" right.
+
+Since our control loop does not fire every "infinitely small" time interval, you can approximate the derivative discretely using the following idea
+
+$$
+\frac{e(t) - e(t-\Delta t) } {\Delta t}
+$$
+
+#### Integral Error $\int_0^t{e(\tau)d\tau}$
+This term accumulates the error $e(t)$ over time. And it tries to mitigate the overall error by affecting the steering slightly to counter the small errors accumulated from "non-ideal" turns.
+
+If $\int_0^t{e(\tau)d\tau}$ is postive, the car has been driving too far from the wall on average, so next drive command should be slightly more left and vice versa.
+
+Similar to derivative error, you can approximate the integral discretely using the following idea
+
+$$
+acc = acc \ + \ e(t)\Delta t  
+$$
+
+Note that during the first few seconds of your node execution, your car will be aligning itself with the ideal raceline, your integral accumulator should be off during these first few seconds. We recommend three seconds.
+
+#### $K_p,K_i,K_d$ are Constant Coefficients
+The K constants in the equation are the same as the K values you have set as your parameters. They essentially control how much each kind of error (Proportional, Derivative, or Integral) affects your output steering.
+
+Take notes of how each errors affect your steering, and try to find a good K combination apart from the one given!
+
+#### Code this
+Implement the above ideas and finish the control loop. Feel free to increase the `max_speed` parameter to see what happen.
+
+Similar to lab 1, the following command can be used to run the node
 ~~~
-cd rp_lab1_template 
+cd ~/rp_lab2_template
 colcon build
+source install/local_setup.bash   # Once per terminal
+
+ros2 run wall_follower wall_follower
 ~~~
 
-### Test Your Node
-1. Boot up a separate terminal, launch f1tenth_gym on it. This should be located in the testing_workspace you installed prior.
+### Step 5 Create a Launch File for Your Node
+Ideally, you would want to run your PID controller alongside the emergency braking node, so that when your algorithm fails, the car does not crash into the wall at full speed.
+
+Luckily for us, ROS2 has a feature that allows us to launch multiple nodes with one command: Launch File.
+
+#### Follow these steps to create a launch file
+
+1. Create a new folder in `src/wall_follower` named `launch` using VSCode interface or the following commands:
+~~~
+cd src/wall_follower
+mkdir launch
+~~~
+
+2. Create a new file in the `launch` folder called `pid_launch.py`
+
+3. Copy the following template into that file, feel free to edit the parameters to your liking.
+~~~
+from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    return LaunchDescription([
+        Node(
+            package='emergency_braking',
+            executable='emergency_braking',
+            name='eb_node',
+        ),
+
+        Node(
+            # Wall Follower Node
+            package='wall_follower',
+            executable='wall_follower',
+            name='pid_node',
+            parameters=[{
+                'max_speed': 2.5,
+                'K_p': 0.4,
+                'K_i': 0.0,
+                'K_d': 0.05,
+            }],
+        ),
+    ])
+~~~
+
+4. Your package do not know this launch file exist, go to `setup.py` and add this tuple to `data_files`:
+~~~
+('share/' + package_name + '/launch', ['launch/pid_launch.py']),
+~~~
+This ensures that your package can see the launch file.
+5. Boot up a separate terminal, launch f1tenth_gym on it. This should be located in the testing_workspace you installed prior.
 ~~~
 cd roboracer-purdue/roboracer_ws/
 source install/local_setup.bash
 
 ros2 launch f1tenth_gym_ros gym_bridge_launch.py
 ~~~
-2. Boot up another separate terminal, run key_drive.py
+6. Build and launch our nodes with the launch file
 ~~~
-cd roboracer-purdue/roboracer_ws/
-
-python3 scripts/key_drive.py
-~~~
-
-
-3. Back to our original terminal, source your lab 2 workspace so ROS can see your package containing the AEB node. **You only need to do this once** for each terminal session.
-~~~
-source install/local_setup.bash
-~~~
-
-4. Run `emergency_braking` node from your `emergency_braking` package with parameter value of 0.3 for **TTC_threshold**
-~~~
-ros2 run emergency_braking emergency_braking --ros-args -p TTC_threshold:=0.3
-~~~
-Or simply run without parameters, it will use the default value you put in your `declare_all_params()`function.
-~~~
-ros2 run emergency_braking emergency_braking
-~~~
-
-5. Use your key_drive terminal to drive into a wall, your emergency braking node should be firing when it is about to hit the wall
-
-6. Use '2d pos estimate' tool to teleport your car back if it got stuck.
-
-7. To test it again, stop the brake node, teleport the car, and run the node again.
-
-### Inspect ROS 2 Topics
-
-Before moving on to the next step, take a moment to inspect how your ROS 2 nodes are communicating.
-
-Open a **fourth terminal**. This terminal will be used to inspect ROS 2 topics while the simulator, `key_drive.py`, and your emergency braking node are still running.
-
-1. Source the ROS 2 workspace so this terminal can access the running ROS graph.
-
-```bash
-cd roboracer-purdue/roboracer_ws/
-source install/local_setup.bash
-```
-
-2. List the currently available topics.
-
-```bash
-ros2 topic list
-```
-
-You should see topics such as:
-
-```text
-/scan
-/drive
-/ego_racecar/odom
-```
-
-3. Inspect the `/scan` topic.
-
-```bash
-ros2 topic info /scan
-```
-
-This command shows the message type used by the topic and how many publishers and subscribers are currently connected.
-
-To view the actual LiDAR messages being published, run:
-
-```bash
-ros2 topic echo /scan
-```
-
-Press `Ctrl+C` when you are finished viewing the messages.
-
-4. Inspect the `/drive` topic.
-
-```bash
-ros2 topic info /drive
-```
-
-At this point, you may notice that `/drive` has more than one publisher. Both `key_drive.py` and the emergency braking node can publish drive commands to the same topic.
-
-You can also inspect the commands being sent to the vehicle:
-
-```bash
-ros2 topic echo /drive
-```
-
-Try pressing `w`, `s`, `a`, and `d` in the `key_drive.py` terminal and observe how the values published to `/drive` change.
-
-You have now seen how ROS 2 topics can be inspected from the command line. Keep this fourth terminal open—we will use it again later to inspect the `/eb` topic that you create.
-
-### Dealing with key_drive.py
-At this point, you may have noticed that the emergency node publishes 0 speed and 0 steering to `/drive` to stop the car. However, your car is still drifting slowly forward, eventually colliding with the wall.
-
-This is because both the brake node and the key_drive node are publishing different speeds to `/drive` simultaneously. And they are fighting to drive the car in a different way.
-
-To fix this, the emergency node will publish a message to the `/eb` topic, and the KeyDrive node will listen to that `/eb` topic.
-
-For this lab, `/eb` carries an emergency speed command. When the brake is triggered, AEB publishes `0.0`, causing key_drive to replace its current commanded speed with zero.
-
-1. In your AEB Node, under `__init__()`, create a new publisher called `eb_pub` to publish a `Float32` value to the `/eb` topic. Use the existing drive_pub as an example.
-
-2. Back to the control loop. Under the if statement, when the car is braking, publish a 0.0 to `/eb` topic using these lines.
-~~~
-    msg = Float32()
-    msg.data = 0.0
-
-    self.eb_pub.publish(msg)
-~~~
-
-3. Stop your currently running emergency braking node with `Ctrl+C`. Build your changes, source the workspace again, and restart the node.
-~~~
+cd ~/rp_lab2_template
 colcon build
-source install/local_setup.bash
-ros2 run emergency_braking emergency_braking
+source install/local_setup.bash   # Once per terminal
+
+ ros2 launch wall_follower pid_launch.py
 ~~~
 
-Return to the fourth terminal you opened earlier and check whether your new `/eb` topic exists:
-
-```bash
-ros2 topic list
-```
-
-Inspect the topic:
-
-```bash
-ros2 topic info /eb
-```
-
-How many publishers and subscribers does `/eb` currently have?
-
-Now inspect the messages being published:
-
-```bash
-ros2 topic echo /eb
-```
-
-Drive the car toward a wall. When emergency braking activates, you should see:
-
-```text
-data: 0.0
-```
-
-Press `Ctrl+C` to stop viewing the topic.
-
-At this point, your emergency braking node can **publish** an emergency command, but nothing is listening to it yet. In the next steps, you will modify `key_drive.py` to **subscribe** to `/eb`.
-
-4. Edit your key_drive.py (located in scripts/key_drive.py). 
-
-5. Put in this line to use `Float32` type of message
-~~~
-from std_msgs.msg import Float32 
-~~~
-
-6. Add a subscriber to `/eb` topic under `__init__()`, use the subscriber in eb_template.py as example. Use this callback function name for now: `eb_callback`.
-
-7. Add this callback function to **KeyDrive** node. We will make it so that when it receives a float from `/eb`, it will set current speed to that value.
-
-~~~
-def eb_callback(self, msg):
-    self.speed = msg.data
-~~~
-
-8. Add this line to main, in the while loop to make sure the node process callbacks
-~~~
-rclpy.spin_once(node, timeout_sec=0.0)
-~~~
-
-9. Run your modified `key_drive.py` and emergency braking node again.
-
-Return to your fourth terminal and run:
-
-```bash
-ros2 topic info /eb
-```
-
-Compare the result with what you saw earlier. `/eb` should now have both a **publisher** and a **subscriber**.
-
-Test the complete system by driving toward a wall again. When the AEB node detects an imminent collision:
-
-1. The AEB node publishes `0.0` to `/eb`.
-2. `key_drive.py` receives the message through its `/eb` subscriber.
-3. `eb_callback()` sets the commanded speed to `0.0`.
-4. `key_drive.py` begins publishing the zero-speed command to `/drive`.
-
-You can use:
-
-```bash
-ros2 topic echo /eb
-```
-
-or:
-
-```bash
-ros2 topic echo /drive
-```
-
-to observe the messages while testing.
+Now we can test both our Emergency Braking and PID Controller at the same time!
