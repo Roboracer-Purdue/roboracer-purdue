@@ -1,0 +1,45 @@
+[3.708s] Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_gym_ros': PYTHONPATH=/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/f1tenth_gym_ros build --build-base /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build install --record /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/install.log --install-scripts $base/lib/f1tenth_gym_ros --single-version-externally-managed install_data
+[4.923s] running egg_info
+[4.927s] creating ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info
+[4.932s] writing ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/PKG-INFO
+[4.946s] writing dependency_links to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/dependency_links.txt
+[4.955s] writing entry points to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/entry_points.txt
+[4.962s] writing requirements to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/requires.txt
+[4.968s] writing top-level names to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/top_level.txt
+[4.992s] writing manifest file '../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'
+[5.048s] reading manifest file '../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'
+[5.090s] adding license file 'LICENSE'
+[5.131s] writing manifest file '../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'
+[5.136s] running build
+[5.138s] running build_py
+[5.144s] creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build
+[5.147s] creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib
+[5.152s] creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros
+[5.170s] copying f1tenth_gym_ros/gym_bridge.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros
+[5.220s] copying f1tenth_gym_ros/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros
+[5.241s] running install
+[5.243s] running install_lib
+[5.273s] creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros
+[5.290s] copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/gym_bridge.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros
+[5.338s] copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros
+[5.387s] byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros/gym_bridge.py to gym_bridge.cpython-310.pyc
+[5.468s] byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros/__init__.py to __init__.cpython-310.pyc
+[5.535s] running install_data
+[5.544s] creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/ament_index
+[5.550s] creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/ament_index/resource_index
+[5.553s] creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/ament_index/resource_index/packages
+[5.564s] copying resource/f1tenth_gym_ros -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/ament_index/resource_index/packages
+[5.586s] copying package.xml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros
+[5.601s] creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[5.610s] copying launch/gym_bridge_launch.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[5.660s] copying launch/ego_racecar.xacro -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[5.699s] copying launch/opp_racecar.xacro -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[5.750s] copying launch/gym_bridge.rviz -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[5.791s] creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/config
+[5.799s] copying config/sim.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/config
+[5.833s] running install_egg_info
+[5.845s] Copying ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros-0.0.0-py3.10.egg-info
+[6.178s] running install_scripts
+[6.291s] Installing gym_bridge script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/f1tenth_gym_ros
+[6.309s] writing list of installed files to '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/install.log'
+[6.336s] Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_gym_ros' returned '0': PYTHONPATH=/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/f1tenth_gym_ros build --build-base /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/build install --record /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_gym_ros/install.log --install-scripts $base/lib/f1tenth_gym_ros --single-version-externally-managed install_data

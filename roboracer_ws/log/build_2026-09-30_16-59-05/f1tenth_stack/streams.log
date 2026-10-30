@@ -1,0 +1,61 @@
+[3.473s] Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/f1tenth_stack': PYTHONPATH=/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/f1tenth_stack build --build-base /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build install --record /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/install.log --install-scripts $base/lib/f1tenth_stack --single-version-externally-managed install_data
+[4.804s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[4.805s]   warnings.warn(
+[4.830s] running egg_info
+[4.836s] creating ../../../build/f1tenth_stack/f1tenth_stack.egg-info
+[4.841s] writing ../../../build/f1tenth_stack/f1tenth_stack.egg-info/PKG-INFO
+[4.851s] writing dependency_links to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/dependency_links.txt
+[4.858s] writing entry points to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/entry_points.txt
+[4.864s] writing requirements to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/requires.txt
+[4.868s] writing top-level names to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/top_level.txt
+[4.893s] writing manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'
+[4.947s] reading manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'
+[5.023s] writing manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'
+[5.029s] running build
+[5.031s] running build_py
+[5.038s] creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build
+[5.042s] creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib
+[5.044s] creating /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+[5.054s] copying f1tenth_stack/speed_smoother.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+[5.139s] copying f1tenth_stack/tf_publisher.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+[5.203s] copying f1tenth_stack/throttle_interpolator.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+[5.261s] copying f1tenth_stack/throttle_mix.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+[5.324s] copying f1tenth_stack/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+[5.350s] running install
+[5.351s] running install_lib
+[5.384s] creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
+[5.406s] copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/speed_smoother.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
+[5.462s] copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/tf_publisher.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
+[5.522s] copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/throttle_interpolator.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
+[5.583s] copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/throttle_mix.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
+[5.666s] copying /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build/lib/f1tenth_stack/__init__.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
+[5.736s] byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/speed_smoother.py to speed_smoother.cpython-310.pyc
+[5.794s] byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/tf_publisher.py to tf_publisher.cpython-310.pyc
+[5.852s] byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/throttle_interpolator.py to throttle_interpolator.cpython-310.pyc
+[5.916s] byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/throttle_mix.py to throttle_mix.cpython-310.pyc
+[5.958s] byte-compiling /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/__init__.py to __init__.cpython-310.pyc
+[6.006s] running install_data
+[6.014s] creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index
+[6.017s] creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index/resource_index
+[6.020s] creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index/resource_index/packages
+[6.037s] copying resource/f1tenth_stack -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/ament_index/resource_index/packages
+[6.069s] copying package.xml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack
+[6.094s] creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/launch
+[6.104s] copying launch/bringup_launch.py -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/launch
+[6.149s] creating /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[6.158s] copying config/f1tenth_online_async.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[6.210s] copying config/joy_teleop.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[6.255s] copying config/mux.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[6.295s] copying config/sensors.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[6.333s] copying config/speed_smoother.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[6.367s] copying config/throttle_mix.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[6.402s] copying config/vesc.yaml -> /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[6.446s] running install_egg_info
+[6.466s] Copying ../../../build/f1tenth_stack/f1tenth_stack.egg-info to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack-0.0.1-py3.10.egg-info
+[6.791s] running install_scripts
+[6.934s] Installing speed_smoother script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/f1tenth_stack
+[6.963s] Installing tf_publisher script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/f1tenth_stack
+[6.985s] Installing throttle_interpolator script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/f1tenth_stack
+[7.021s] Installing throttle_mix script to /workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/f1tenth_stack
+[7.046s] writing list of installed files to '/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/install.log'
+[7.070s] Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/src/f1tenth_system/f1tenth_stack' returned '0': PYTHONPATH=/workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/f1tenth_stack build --build-base /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/build install --record /workspaces/roboracer-purdue/roboracer_ws/build/f1tenth_stack/install.log --install-scripts $base/lib/f1tenth_stack --single-version-externally-managed install_data
