@@ -1,0 +1,17 @@
+[1.744s] Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/f1tenth_gym': PYTHONPATH=/workspaces/roboracer-purdue/build/f110_gym/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/install/f110_gym/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/f110_gym build --build-base /workspaces/roboracer-purdue/build/f110_gym/build install --record /workspaces/roboracer-purdue/build/f110_gym/install.log --single-version-externally-managed
+[2.577s] running egg_info
+[2.583s] writing ../../build/f110_gym/f110_gym.egg-info/PKG-INFO
+[2.594s] writing dependency_links to ../../build/f110_gym/f110_gym.egg-info/dependency_links.txt
+[2.610s] writing requirements to ../../build/f110_gym/f110_gym.egg-info/requires.txt
+[2.616s] writing top-level names to ../../build/f110_gym/f110_gym.egg-info/top_level.txt
+[2.651s] reading manifest file '../../build/f110_gym/f110_gym.egg-info/SOURCES.txt'
+[2.693s] adding license file 'LICENSE'
+[2.712s] writing manifest file '../../build/f110_gym/f110_gym.egg-info/SOURCES.txt'
+[2.716s] running build
+[2.719s] running install
+[2.723s] running install_egg_info
+[2.735s] removing '/workspaces/roboracer-purdue/install/f110_gym/lib/python3.10/site-packages/f110_gym-0.2.1-py3.10.egg-info' (and everything under it)
+[2.795s] Copying ../../build/f110_gym/f110_gym.egg-info to /workspaces/roboracer-purdue/install/f110_gym/lib/python3.10/site-packages/f110_gym-0.2.1-py3.10.egg-info
+[3.035s] running install_scripts
+[3.123s] writing list of installed files to '/workspaces/roboracer-purdue/build/f110_gym/install.log'
+[3.144s] Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/f1tenth_gym' returned '0': PYTHONPATH=/workspaces/roboracer-purdue/build/f110_gym/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/install/f110_gym/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/f110_gym build --build-base /workspaces/roboracer-purdue/build/f110_gym/build install --record /workspaces/roboracer-purdue/build/f110_gym/install.log --single-version-externally-managed

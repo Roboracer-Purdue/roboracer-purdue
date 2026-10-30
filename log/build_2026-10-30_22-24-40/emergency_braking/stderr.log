@@ -1,0 +1,2 @@
+/workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking/eb_template.py:74: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+  ("eb_topic", "/eb")

@@ -1,0 +1,3 @@
+source;share/f110_gym/hook/pythonpath.ps1
+source;share/f110_gym/hook/pythonpath.dsv
+source;share/f110_gym/hook/pythonpath.sh

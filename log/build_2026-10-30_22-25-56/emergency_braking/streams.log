@@ -1,0 +1,24 @@
+[1.855s] Invoking command in '/workspaces/roboracer-purdue/src/emergency_braking': PYTHONPATH=/workspaces/roboracer-purdue/build/emergency_braking/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/emergency_braking build --build-base /workspaces/roboracer-purdue/build/emergency_braking/build install --record /workspaces/roboracer-purdue/build/emergency_braking/install.log --install-scripts $base/lib/emergency_braking --single-version-externally-managed install_data
+[2.690s] running egg_info
+[2.696s] writing ../../build/emergency_braking/emergency_braking.egg-info/PKG-INFO
+[2.702s] writing dependency_links to ../../build/emergency_braking/emergency_braking.egg-info/dependency_links.txt
+[2.715s] writing entry points to ../../build/emergency_braking/emergency_braking.egg-info/entry_points.txt
+[2.721s] writing requirements to ../../build/emergency_braking/emergency_braking.egg-info/requires.txt
+[2.725s] writing top-level names to ../../build/emergency_braking/emergency_braking.egg-info/top_level.txt
+[2.787s] reading manifest file '../../build/emergency_braking/emergency_braking.egg-info/SOURCES.txt'
+[2.882s] writing manifest file '../../build/emergency_braking/emergency_braking.egg-info/SOURCES.txt'
+[2.889s] running build
+[2.893s] running build_py
+[2.915s] copying emergency_braking/eb_template.py -> /workspaces/roboracer-purdue/build/emergency_braking/build/lib/emergency_braking
+[2.956s] running install
+[2.958s] running install_lib
+[3.003s] copying /workspaces/roboracer-purdue/build/emergency_braking/build/lib/emergency_braking/eb_template.py -> /workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking
+[3.081s] byte-compiling /workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking/eb_template.py to eb_template.cpython-310.pyc
+[3.161s] running install_data
+[3.190s] running install_egg_info
+[3.203s] removing '/workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking-0.0.0-py3.10.egg-info' (and everything under it)
+[3.276s] Copying ../../build/emergency_braking/emergency_braking.egg-info to /workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking-0.0.0-py3.10.egg-info
+[3.564s] running install_scripts
+[3.642s] Installing emergency_braking script to /workspaces/roboracer-purdue/install/emergency_braking/lib/emergency_braking
+[3.657s] writing list of installed files to '/workspaces/roboracer-purdue/build/emergency_braking/install.log'
+[3.677s] Invoked command in '/workspaces/roboracer-purdue/src/emergency_braking' returned '0': PYTHONPATH=/workspaces/roboracer-purdue/build/emergency_braking/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/emergency_braking build --build-base /workspaces/roboracer-purdue/build/emergency_braking/build install --record /workspaces/roboracer-purdue/build/emergency_braking/install.log --install-scripts $base/lib/emergency_braking --single-version-externally-managed install_data

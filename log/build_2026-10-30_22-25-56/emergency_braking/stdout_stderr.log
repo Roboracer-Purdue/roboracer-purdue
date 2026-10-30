@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/emergency_braking/emergency_braking.egg-info/PKG-INFO
+writing dependency_links to ../../build/emergency_braking/emergency_braking.egg-info/dependency_links.txt
+writing entry points to ../../build/emergency_braking/emergency_braking.egg-info/entry_points.txt
+writing requirements to ../../build/emergency_braking/emergency_braking.egg-info/requires.txt
+writing top-level names to ../../build/emergency_braking/emergency_braking.egg-info/top_level.txt
+reading manifest file '../../build/emergency_braking/emergency_braking.egg-info/SOURCES.txt'
+writing manifest file '../../build/emergency_braking/emergency_braking.egg-info/SOURCES.txt'
+running build
+running build_py
+copying emergency_braking/eb_template.py -> /workspaces/roboracer-purdue/build/emergency_braking/build/lib/emergency_braking
+running install
+running install_lib
+copying /workspaces/roboracer-purdue/build/emergency_braking/build/lib/emergency_braking/eb_template.py -> /workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking
+byte-compiling /workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking/eb_template.py to eb_template.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/emergency_braking/emergency_braking.egg-info to /workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking-0.0.0-py3.10.egg-info
+running install_scripts
+Installing emergency_braking script to /workspaces/roboracer-purdue/install/emergency_braking/lib/emergency_braking
+writing list of installed files to '/workspaces/roboracer-purdue/build/emergency_braking/install.log'

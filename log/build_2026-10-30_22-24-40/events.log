@@ -1,0 +1,110 @@
+[0.000000] (-) TimerEvent: {}
+[0.000670] (emergency_braking) JobQueued: {'identifier': 'emergency_braking', 'dependencies': OrderedDict()}
+[0.001456] (f110_gym) JobQueued: {'identifier': 'f110_gym', 'dependencies': OrderedDict()}
+[0.001992] (emergency_braking) JobStarted: {'identifier': 'emergency_braking'}
+[0.098610] (-) TimerEvent: {}
+[0.113334] (f110_gym) JobStarted: {'identifier': 'f110_gym'}
+[0.198808] (-) TimerEvent: {}
+[0.299607] (-) TimerEvent: {}
+[0.400439] (-) TimerEvent: {}
+[0.506968] (-) TimerEvent: {}
+[0.608826] (-) TimerEvent: {}
+[0.709750] (-) TimerEvent: {}
+[0.810659] (-) TimerEvent: {}
+[0.912463] (-) TimerEvent: {}
+[1.017778] (-) TimerEvent: {}
+[1.118634] (-) TimerEvent: {}
+[1.219984] (-) TimerEvent: {}
+[1.320867] (-) TimerEvent: {}
+[1.422092] (-) TimerEvent: {}
+[1.525438] (-) TimerEvent: {}
+[1.628751] (-) TimerEvent: {}
+[1.729583] (-) TimerEvent: {}
+[1.830517] (-) TimerEvent: {}
+[1.932524] (-) TimerEvent: {}
+[2.033387] (-) TimerEvent: {}
+[2.137983] (-) TimerEvent: {}
+[2.180247] (emergency_braking) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/emergency_braking', 'build', '--build-base', '/workspaces/roboracer-purdue/build/emergency_braking/build', 'install', '--record', '/workspaces/roboracer-purdue/build/emergency_braking/install.log', '--install-scripts', '$base/lib/emergency_braking', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspaces/roboracer-purdue/src/emergency_braking', 'env': OrderedDict([('HOSTNAME', '1ab3abed40b8'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/2c33b50b16c472efe58357d1d2a8a5414bc23fbf/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/2c33b50b16c472efe58357d1d2a8a5414bc23fbf/bin/helpers/browser.sh'), ('HOME', '/home/vscode'), ('OLDPWD', '/workspaces/roboracer-purdue/roboracer_ws'), ('TERM_PROGRAM_VERSION', '1.144.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-eb0a5f20-589c-4cbf-be10-d809d1d33e9d.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/2c33b50b16c472efe58357d1d2a8a5414bc23fbf/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/2c33b50b16c472efe58357d1d2a8a5414bc23fbf/node'), ('LC_CTYPE', 'C.UTF-8'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/vscode/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-ff7f7ad4-fc0d-49ab-9bed-b79727bcc684.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/vscode/vscode-server/bin/linux-x64/2c33b50b16c472efe58357d1d2a8a5414bc23fbf/bin/remote-cli:/home/vscode/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/vscode/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts'), ('REMOTE_CONTAINERS_SOCKETS', '["/home/vscode/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':99'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/vscode/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-2fcec018e23b7bd8.txt'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/vscode/.vscode-server/data/User/workspaceStorage/50e767c24aed6da0ec840414799aaf82/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-92f45c6bac.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'dialog'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/roboracer-purdue/build/emergency_braking'), ('QT_QPA_PLATFORM', 'xcb'), ('PYTHONPATH', '/workspaces/roboracer-purdue/build/emergency_braking/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux')]), 'shell': False}
+[2.203801] (f110_gym) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/f110_gym', 'build', '--build-base', '/workspaces/roboracer-purdue/build/f110_gym/build', 'install', '--record', '/workspaces/roboracer-purdue/build/f110_gym/install.log', '--single-version-externally-managed'], 'cwd': '/workspaces/roboracer-purdue/roboracer_ws/f1tenth_gym', 'env': OrderedDict([('HOSTNAME', '1ab3abed40b8'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/2c33b50b16c472efe58357d1d2a8a5414bc23fbf/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/2c33b50b16c472efe58357d1d2a8a5414bc23fbf/bin/helpers/browser.sh'), ('HOME', '/home/vscode'), ('OLDPWD', '/workspaces/roboracer-purdue/roboracer_ws'), ('TERM_PROGRAM_VERSION', '1.144.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-eb0a5f20-589c-4cbf-be10-d809d1d33e9d.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/2c33b50b16c472efe58357d1d2a8a5414bc23fbf/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/2c33b50b16c472efe58357d1d2a8a5414bc23fbf/node'), ('LC_CTYPE', 'C.UTF-8'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/vscode/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-ff7f7ad4-fc0d-49ab-9bed-b79727bcc684.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/vscode/vscode-server/bin/linux-x64/2c33b50b16c472efe58357d1d2a8a5414bc23fbf/bin/remote-cli:/home/vscode/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/vscode/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts'), ('REMOTE_CONTAINERS_SOCKETS', '["/home/vscode/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':99'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/vscode/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-2fcec018e23b7bd8.txt'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/vscode/.vscode-server/data/User/workspaceStorage/50e767c24aed6da0ec840414799aaf82/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-92f45c6bac.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros:/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'dialog'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/roboracer-purdue/build/f110_gym'), ('QT_QPA_PLATFORM', 'xcb'), ('PYTHONPATH', '/workspaces/roboracer-purdue/build/f110_gym/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/install/f110_gym/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/workspaces/roboracer-purdue/roboracer_ws/install/f110_gym/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux')]), 'shell': False}
+[2.238091] (-) TimerEvent: {}
+[2.339087] (-) TimerEvent: {}
+[2.440598] (-) TimerEvent: {}
+[2.541604] (-) TimerEvent: {}
+[2.642778] (-) TimerEvent: {}
+[2.745297] (-) TimerEvent: {}
+[2.846313] (-) TimerEvent: {}
+[2.947219] (-) TimerEvent: {}
+[2.988781] (emergency_braking) StdoutLine: {'line': b'running egg_info\n'}
+[2.993954] (f110_gym) StdoutLine: {'line': b'running egg_info\n'}
+[3.003301] (f110_gym) StdoutLine: {'line': b'creating ../../build/f110_gym/f110_gym.egg-info\n'}
+[3.005788] (emergency_braking) StdoutLine: {'line': b'creating ../../build/emergency_braking/emergency_braking.egg-info\n'}
+[3.009206] (emergency_braking) StdoutLine: {'line': b'writing ../../build/emergency_braking/emergency_braking.egg-info/PKG-INFO\n'}
+[3.011964] (f110_gym) StdoutLine: {'line': b'writing ../../build/f110_gym/f110_gym.egg-info/PKG-INFO\n'}
+[3.015188] (f110_gym) StdoutLine: {'line': b'writing dependency_links to ../../build/f110_gym/f110_gym.egg-info/dependency_links.txt\n'}
+[3.017575] (emergency_braking) StdoutLine: {'line': b'writing dependency_links to ../../build/emergency_braking/emergency_braking.egg-info/dependency_links.txt\n'}
+[3.019833] (f110_gym) StdoutLine: {'line': b'writing requirements to ../../build/f110_gym/f110_gym.egg-info/requires.txt\n'}
+[3.022965] (emergency_braking) StdoutLine: {'line': b'writing entry points to ../../build/emergency_braking/emergency_braking.egg-info/entry_points.txt\n'}
+[3.035345] (f110_gym) StdoutLine: {'line': b'writing top-level names to ../../build/f110_gym/f110_gym.egg-info/top_level.txt\n'}
+[3.041165] (emergency_braking) StdoutLine: {'line': b'writing requirements to ../../build/emergency_braking/emergency_braking.egg-info/requires.txt\n'}
+[3.044506] (emergency_braking) StdoutLine: {'line': b'writing top-level names to ../../build/emergency_braking/emergency_braking.egg-info/top_level.txt\n'}
+[3.047833] (-) TimerEvent: {}
+[3.067948] (f110_gym) StdoutLine: {'line': b"writing manifest file '../../build/f110_gym/f110_gym.egg-info/SOURCES.txt'\n"}
+[3.072038] (emergency_braking) StdoutLine: {'line': b"writing manifest file '../../build/emergency_braking/emergency_braking.egg-info/SOURCES.txt'\n"}
+[3.086466] (f110_gym) StdoutLine: {'line': b"reading manifest file '../../build/f110_gym/f110_gym.egg-info/SOURCES.txt'\n"}
+[3.107456] (emergency_braking) StdoutLine: {'line': b"reading manifest file '../../build/emergency_braking/emergency_braking.egg-info/SOURCES.txt'\n"}
+[3.114267] (f110_gym) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[3.130575] (f110_gym) StdoutLine: {'line': b"writing manifest file '../../build/f110_gym/f110_gym.egg-info/SOURCES.txt'\n"}
+[3.134185] (f110_gym) StdoutLine: {'line': b'running build\n'}
+[3.138214] (f110_gym) StdoutLine: {'line': b'running install\n'}
+[3.143187] (f110_gym) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.147927] (-) TimerEvent: {}
+[3.161887] (f110_gym) StdoutLine: {'line': b'Copying ../../build/f110_gym/f110_gym.egg-info to /workspaces/roboracer-purdue/install/f110_gym/lib/python3.10/site-packages/f110_gym-0.2.1-py3.10.egg-info\n'}
+[3.180972] (emergency_braking) StdoutLine: {'line': b"writing manifest file '../../build/emergency_braking/emergency_braking.egg-info/SOURCES.txt'\n"}
+[3.184641] (emergency_braking) StdoutLine: {'line': b'running build\n'}
+[3.193298] (emergency_braking) StdoutLine: {'line': b'running build_py\n'}
+[3.198282] (emergency_braking) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/build/emergency_braking/build\n'}
+[3.201479] (emergency_braking) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/build/emergency_braking/build/lib\n'}
+[3.203394] (emergency_braking) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/build/emergency_braking/build/lib/emergency_braking\n'}
+[3.212788] (emergency_braking) StdoutLine: {'line': b'copying emergency_braking/eb_template.py -> /workspaces/roboracer-purdue/build/emergency_braking/build/lib/emergency_braking\n'}
+[3.237459] (emergency_braking) StdoutLine: {'line': b'copying emergency_braking/__init__.py -> /workspaces/roboracer-purdue/build/emergency_braking/build/lib/emergency_braking\n'}
+[3.248055] (-) TimerEvent: {}
+[3.257554] (emergency_braking) StdoutLine: {'line': b'running install\n'}
+[3.264467] (emergency_braking) StdoutLine: {'line': b'running install_lib\n'}
+[3.348292] (-) TimerEvent: {}
+[3.359572] (emergency_braking) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking\n'}
+[3.386694] (emergency_braking) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/build/emergency_braking/build/lib/emergency_braking/eb_template.py -> /workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking\n'}
+[3.432209] (emergency_braking) StdoutLine: {'line': b'copying /workspaces/roboracer-purdue/build/emergency_braking/build/lib/emergency_braking/__init__.py -> /workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking\n'}
+[3.448408] (-) TimerEvent: {}
+[3.482760] (f110_gym) StdoutLine: {'line': b'running install_scripts\n'}
+[3.487195] (emergency_braking) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking/eb_template.py to eb_template.cpython-310.pyc\n'}
+[3.508832] (emergency_braking) StderrLine: {'line': b"/workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking/eb_template.py:74: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?\n"}
+[3.516739] (emergency_braking) StderrLine: {'line': b'  ("eb_topic", "/eb")\n'}
+[3.548565] (-) TimerEvent: {}
+[3.582080] (emergency_braking) StdoutLine: {'line': b'byte-compiling /workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking/__init__.py to __init__.cpython-310.pyc\n'}
+[3.592242] (f110_gym) StdoutLine: {'line': b"writing list of installed files to '/workspaces/roboracer-purdue/build/f110_gym/install.log'\n"}
+[3.618488] (f110_gym) CommandEnded: {'returncode': 0}
+[3.641554] (emergency_braking) StdoutLine: {'line': b'running install_data\n'}
+[3.646646] (emergency_braking) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/install/emergency_braking/share/ament_index\n'}
+[3.650109] (-) TimerEvent: {}
+[3.650749] (emergency_braking) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/install/emergency_braking/share/ament_index/resource_index\n'}
+[3.656339] (emergency_braking) StdoutLine: {'line': b'creating /workspaces/roboracer-purdue/install/emergency_braking/share/ament_index/resource_index/packages\n'}
+[3.678610] (emergency_braking) StdoutLine: {'line': b'copying resource/emergency_braking -> /workspaces/roboracer-purdue/install/emergency_braking/share/ament_index/resource_index/packages\n'}
+[3.707916] (emergency_braking) StdoutLine: {'line': b'copying package.xml -> /workspaces/roboracer-purdue/install/emergency_braking/share/emergency_braking\n'}
+[3.721447] (emergency_braking) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.740172] (emergency_braking) StdoutLine: {'line': b'Copying ../../build/emergency_braking/emergency_braking.egg-info to /workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages/emergency_braking-0.0.0-py3.10.egg-info\n'}
+[3.750203] (-) TimerEvent: {}
+[3.850972] (-) TimerEvent: {}
+[3.874834] (f110_gym) JobEnded: {'identifier': 'f110_gym', 'rc': 0}
+[3.951115] (-) TimerEvent: {}
+[4.052831] (-) TimerEvent: {}
+[4.094589] (emergency_braking) StdoutLine: {'line': b'running install_scripts\n'}
+[4.152994] (-) TimerEvent: {}
+[4.176862] (emergency_braking) StdoutLine: {'line': b'Installing emergency_braking script to /workspaces/roboracer-purdue/install/emergency_braking/lib/emergency_braking\n'}
+[4.197684] (emergency_braking) StdoutLine: {'line': b"writing list of installed files to '/workspaces/roboracer-purdue/build/emergency_braking/install.log'\n"}
+[4.223812] (emergency_braking) CommandEnded: {'returncode': 0}
+[4.253114] (-) TimerEvent: {}
+[4.353864] (-) TimerEvent: {}
+[4.454650] (-) TimerEvent: {}
+[4.543457] (emergency_braking) JobEnded: {'identifier': 'emergency_braking', 'rc': 0}
+[4.555541] (-) TimerEvent: {}
+[4.556384] (-) EventReactorShutdown: {}

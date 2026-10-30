@@ -1,0 +1,3 @@
+[console_scripts]
+emergency_braking = emergency_braking.eb_template:main
+

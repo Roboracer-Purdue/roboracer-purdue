@@ -1,0 +1,473 @@
+[0.197s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.197s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x76fb3277a9e0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x76fb32957fd0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x76fb32957fd0>>)
+[0.386s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.387s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.388s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.388s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.389s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.396s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspaces/roboracer-purdue'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.402s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extension 'ignore'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extension 'ignore_ament_install'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extensions ['colcon_pkg']
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extension 'colcon_pkg'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extensions ['colcon_meta']
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extension 'colcon_meta'
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extensions ['ros']
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extension 'ros'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extensions ['cmake', 'python']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extension 'cmake'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extension 'python'
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extensions ['python_setup_py']
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws) by extension 'python_setup_py'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extension 'ignore'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extension 'ignore_ament_install'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extensions ['colcon_pkg']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extension 'colcon_pkg'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extensions ['colcon_meta']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extension 'colcon_meta'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extensions ['ros']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extension 'ros'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extensions ['cmake', 'python']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extension 'cmake'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extension 'python'
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extensions ['python_setup_py']
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(lab1_ws/src) by extension 'python_setup_py'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extension 'ignore'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extension 'ignore_ament_install'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extensions ['colcon_pkg']
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extension 'colcon_pkg'
+[0.524s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extensions ['colcon_meta']
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extension 'colcon_meta'
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extensions ['ros']
+[0.527s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extension 'ros'
+[0.529s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extensions ['cmake', 'python']
+[0.530s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extension 'cmake'
+[0.531s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extension 'python'
+[0.532s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extensions ['python_setup_py']
+[0.532s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws) by extension 'python_setup_py'
+[0.536s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extensions ['ignore', 'ignore_ament_install']
+[0.537s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extension 'ignore'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extension 'ignore_ament_install'
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extensions ['colcon_pkg']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extension 'colcon_pkg'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extensions ['colcon_meta']
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extension 'colcon_meta'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extensions ['ros']
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extension 'ros'
+[0.561s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extensions ['cmake', 'python']
+[0.562s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extension 'cmake'
+[0.564s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extension 'python'
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extensions ['python_setup_py']
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build) by extension 'python_setup_py'
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extensions ['ignore', 'ignore_ament_install']
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extension 'ignore'
+[0.576s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extension 'ignore_ament_install'
+[0.578s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extensions ['colcon_pkg']
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extension 'colcon_pkg'
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extensions ['colcon_meta']
+[0.581s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extension 'colcon_meta'
+[0.588s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extensions ['ros']
+[0.589s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extension 'ros'
+[0.594s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extensions ['cmake', 'python']
+[0.595s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extension 'cmake'
+[0.596s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extension 'python'
+[0.597s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extensions ['python_setup_py']
+[0.598s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux) by extension 'python_setup_py'
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extensions ['ignore', 'ignore_ament_install']
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extension 'ignore'
+[0.607s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extension 'ignore_ament_install'
+[0.611s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extensions ['colcon_pkg']
+[0.611s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extension 'colcon_pkg'
+[0.613s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extensions ['colcon_meta']
+[0.614s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extension 'colcon_meta'
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extensions ['ros']
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extension 'ros'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extensions ['cmake', 'python']
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extension 'cmake'
+[0.632s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extension 'python'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extensions ['python_setup_py']
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles) by extension 'python_setup_py'
+[0.644s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extensions ['ignore', 'ignore_ament_install']
+[0.645s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extension 'ignore'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extension 'ignore_ament_install'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extensions ['colcon_pkg']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extension 'colcon_pkg'
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extensions ['colcon_meta']
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extension 'colcon_meta'
+[0.667s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extensions ['ros']
+[0.668s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extension 'ros'
+[0.676s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extensions ['cmake', 'python']
+[0.677s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extension 'cmake'
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extension 'python'
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extensions ['python_setup_py']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1) by extension 'python_setup_py'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extensions ['ignore', 'ignore_ament_install']
+[0.705s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extension 'ignore'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extension 'ignore_ament_install'
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extensions ['colcon_pkg']
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extension 'colcon_pkg'
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extensions ['colcon_meta']
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extension 'colcon_meta'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extensions ['ros']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extension 'ros'
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extensions ['cmake', 'python']
+[0.738s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extension 'cmake'
+[0.742s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extension 'python'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extensions ['python_setup_py']
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC) by extension 'python_setup_py'
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extensions ['ignore', 'ignore_ament_install']
+[0.768s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extension 'ignore'
+[0.771s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extension 'ignore_ament_install'
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extensions ['colcon_pkg']
+[0.783s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extension 'colcon_pkg'
+[0.786s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extensions ['colcon_meta']
+[0.786s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extension 'colcon_meta'
+[0.796s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extensions ['ros']
+[0.796s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extension 'ros'
+[0.812s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extensions ['cmake', 'python']
+[0.813s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extension 'cmake'
+[0.816s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extension 'python'
+[0.818s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extensions ['python_setup_py']
+[0.819s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdC/tmp) by extension 'python_setup_py'
+[0.829s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extensions ['ignore', 'ignore_ament_install']
+[0.830s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extension 'ignore'
+[0.832s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extension 'ignore_ament_install'
+[0.836s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extensions ['colcon_pkg']
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extension 'colcon_pkg'
+[0.846s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extensions ['colcon_meta']
+[0.846s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extension 'colcon_meta'
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extensions ['ros']
+[0.853s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extension 'ros'
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extensions ['cmake', 'python']
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extension 'cmake'
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extension 'python'
+[0.867s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extensions ['python_setup_py']
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX) by extension 'python_setup_py'
+[0.889s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extensions ['ignore', 'ignore_ament_install']
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extension 'ignore'
+[0.893s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extension 'ignore_ament_install'
+[0.898s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extensions ['colcon_pkg']
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extension 'colcon_pkg'
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extensions ['colcon_meta']
+[0.907s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extension 'colcon_meta'
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extensions ['ros']
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extension 'ros'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extensions ['cmake', 'python']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extension 'cmake'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extension 'python'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extensions ['python_setup_py']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/3.22.1/CompilerIdCXX/tmp) by extension 'python_setup_py'
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extensions ['ignore', 'ignore_ament_install']
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extension 'ignore'
+[0.953s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extension 'ignore_ament_install'
+[0.957s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extensions ['colcon_pkg']
+[0.958s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extension 'colcon_pkg'
+[0.960s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extensions ['colcon_meta']
+[0.960s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extension 'colcon_meta'
+[0.964s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extensions ['ros']
+[0.965s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extension 'ros'
+[0.978s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extensions ['cmake', 'python']
+[0.979s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extension 'cmake'
+[0.982s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extension 'python'
+[0.985s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extensions ['python_setup_py']
+[0.985s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/CMakeFiles/CMakeTmp) by extension 'python_setup_py'
+[0.992s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extensions ['ignore', 'ignore_ament_install']
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extension 'ignore'
+[0.995s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extension 'ignore_ament_install'
+[0.997s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extensions ['colcon_pkg']
+[0.998s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extension 'colcon_pkg'
+[1.001s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extensions ['colcon_meta']
+[1.002s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extension 'colcon_meta'
+[1.007s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extensions ['ros']
+[1.008s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extension 'ros'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extensions ['cmake', 'python']
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extension 'cmake'
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extension 'python'
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extensions ['python_setup_py']
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_copyright) by extension 'python_setup_py'
+[1.024s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extensions ['ignore', 'ignore_ament_install']
+[1.025s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extension 'ignore'
+[1.026s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extension 'ignore_ament_install'
+[1.035s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extensions ['colcon_pkg']
+[1.035s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extension 'colcon_pkg'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extensions ['colcon_meta']
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extension 'colcon_meta'
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extensions ['ros']
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extension 'ros'
+[1.047s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extensions ['cmake', 'python']
+[1.048s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extension 'cmake'
+[1.050s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extension 'python'
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extensions ['python_setup_py']
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cppcheck) by extension 'python_setup_py'
+[1.058s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extensions ['ignore', 'ignore_ament_install']
+[1.059s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extension 'ignore'
+[1.061s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extension 'ignore_ament_install'
+[1.069s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extensions ['colcon_pkg']
+[1.069s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extension 'colcon_pkg'
+[1.071s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extensions ['colcon_meta']
+[1.071s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extension 'colcon_meta'
+[1.074s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extensions ['ros']
+[1.075s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extension 'ros'
+[1.081s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extensions ['cmake', 'python']
+[1.081s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extension 'cmake'
+[1.083s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extension 'python'
+[1.085s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extensions ['python_setup_py']
+[1.085s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_cpplint) by extension 'python_setup_py'
+[1.091s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extensions ['ignore', 'ignore_ament_install']
+[1.092s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extension 'ignore'
+[1.094s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extension 'ignore_ament_install'
+[1.101s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extensions ['colcon_pkg']
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extension 'colcon_pkg'
+[1.104s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extensions ['colcon_meta']
+[1.104s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extension 'colcon_meta'
+[1.107s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extensions ['ros']
+[1.109s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extension 'ros'
+[1.115s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extensions ['cmake', 'python']
+[1.115s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extension 'cmake'
+[1.117s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extension 'python'
+[1.119s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extensions ['python_setup_py']
+[1.119s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_flake8) by extension 'python_setup_py'
+[1.130s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extensions ['ignore', 'ignore_ament_install']
+[1.133s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extension 'ignore'
+[1.134s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extension 'ignore_ament_install'
+[1.138s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extensions ['colcon_pkg']
+[1.139s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extension 'colcon_pkg'
+[1.140s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extensions ['colcon_meta']
+[1.144s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extension 'colcon_meta'
+[1.147s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extensions ['ros']
+[1.148s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extension 'ros'
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extensions ['cmake', 'python']
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extension 'cmake'
+[1.157s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extension 'python'
+[1.163s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extensions ['python_setup_py']
+[1.164s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_lint_cmake) by extension 'python_setup_py'
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extensions ['ignore', 'ignore_ament_install']
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extension 'ignore'
+[1.172s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extension 'ignore_ament_install'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extensions ['colcon_pkg']
+[1.176s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extension 'colcon_pkg'
+[1.178s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extensions ['colcon_meta']
+[1.178s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extension 'colcon_meta'
+[1.181s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extensions ['ros']
+[1.182s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extension 'ros'
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extensions ['cmake', 'python']
+[1.196s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extension 'cmake'
+[1.197s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extension 'python'
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extensions ['python_setup_py']
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_pep257) by extension 'python_setup_py'
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extensions ['ignore', 'ignore_ament_install']
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extension 'ignore'
+[1.210s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extension 'ignore_ament_install'
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extensions ['colcon_pkg']
+[1.214s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extension 'colcon_pkg'
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extensions ['colcon_meta']
+[1.216s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extension 'colcon_meta'
+[1.219s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extensions ['ros']
+[1.219s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extension 'ros'
+[1.230s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extensions ['cmake', 'python']
+[1.231s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extension 'cmake'
+[1.233s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extension 'python'
+[1.235s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extensions ['python_setup_py']
+[1.236s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_uncrustify) by extension 'python_setup_py'
+[1.242s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extensions ['ignore', 'ignore_ament_install']
+[1.243s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extension 'ignore'
+[1.244s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extension 'ignore_ament_install'
+[1.249s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extensions ['colcon_pkg']
+[1.249s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extension 'colcon_pkg'
+[1.251s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extensions ['colcon_meta']
+[1.252s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extension 'colcon_meta'
+[1.260s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extensions ['ros']
+[1.261s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extension 'ros'
+[1.268s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extensions ['cmake', 'python']
+[1.268s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extension 'cmake'
+[1.271s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extension 'python'
+[1.272s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extensions ['python_setup_py']
+[1.273s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/build/ackermann_mux/ament_xmllint) by extension 'python_setup_py'
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extensions ['ignore', 'ignore_ament_install']
+[1.278s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extension 'ignore'
+[1.279s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extension 'ignore_ament_install'
+[1.280s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extensions ['colcon_pkg']
+[1.281s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extension 'colcon_pkg'
+[1.282s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extensions ['colcon_meta']
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extension 'colcon_meta'
+[1.284s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extensions ['ros']
+[1.284s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extension 'ros'
+[1.294s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extensions ['cmake', 'python']
+[1.294s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extension 'cmake'
+[1.295s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extension 'python'
+[1.297s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extensions ['python_setup_py']
+[1.298s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_gym) by extension 'python_setup_py'
+[1.529s] DEBUG:colcon.colcon_core.package_identification:Package 'roboracer_ws/f1tenth_gym' with type 'python' and name 'f110_gym'
+[1.532s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extensions ['ignore', 'ignore_ament_install']
+[1.533s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extension 'ignore'
+[1.534s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extension 'ignore_ament_install'
+[1.536s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extensions ['colcon_pkg']
+[1.536s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extension 'colcon_pkg'
+[1.537s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extensions ['colcon_meta']
+[1.538s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extension 'colcon_meta'
+[1.539s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extensions ['ros']
+[1.540s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extension 'ros'
+[1.548s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extensions ['cmake', 'python']
+[1.548s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extension 'cmake'
+[1.549s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extension 'python'
+[1.550s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extensions ['python_setup_py']
+[1.551s] Level 1:colcon.colcon_core.package_identification:_identify(roboracer_ws/f1tenth_lab1_template) by extension 'python_setup_py'
+[1.554s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.555s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.556s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.558s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.559s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.560s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.561s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.561s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.562s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.565s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.565s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.567s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.568s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.568s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.572s] Level 1:colcon.colcon_core.package_identification:_identify(src/emergency_braking) by extensions ['ignore', 'ignore_ament_install']
+[1.572s] Level 1:colcon.colcon_core.package_identification:_identify(src/emergency_braking) by extension 'ignore'
+[1.579s] Level 1:colcon.colcon_core.package_identification:_identify(src/emergency_braking) by extension 'ignore_ament_install'
+[1.581s] Level 1:colcon.colcon_core.package_identification:_identify(src/emergency_braking) by extensions ['colcon_pkg']
+[1.581s] Level 1:colcon.colcon_core.package_identification:_identify(src/emergency_braking) by extension 'colcon_pkg'
+[1.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/emergency_braking) by extensions ['colcon_meta']
+[1.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/emergency_braking) by extension 'colcon_meta'
+[1.585s] Level 1:colcon.colcon_core.package_identification:_identify(src/emergency_braking) by extensions ['ros']
+[1.586s] Level 1:colcon.colcon_core.package_identification:_identify(src/emergency_braking) by extension 'ros'
+[1.600s] DEBUG:colcon.colcon_core.package_identification:Package 'src/emergency_braking' with type 'ros.ament_python' and name 'emergency_braking'
+[1.600s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.602s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.602s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.603s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.603s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.634s] Level 5:colcon.colcon_core.verb:set package 'emergency_braking' build argument 'cmake_args' from command line to 'None'
+[1.634s] Level 5:colcon.colcon_core.verb:set package 'emergency_braking' build argument 'cmake_target' from command line to 'None'
+[1.635s] Level 5:colcon.colcon_core.verb:set package 'emergency_braking' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.636s] Level 5:colcon.colcon_core.verb:set package 'emergency_braking' build argument 'cmake_clean_cache' from command line to 'False'
+[1.636s] Level 5:colcon.colcon_core.verb:set package 'emergency_braking' build argument 'cmake_clean_first' from command line to 'False'
+[1.637s] Level 5:colcon.colcon_core.verb:set package 'emergency_braking' build argument 'cmake_force_configure' from command line to 'False'
+[1.637s] Level 5:colcon.colcon_core.verb:set package 'emergency_braking' build argument 'ament_cmake_args' from command line to 'None'
+[1.641s] Level 5:colcon.colcon_core.verb:set package 'emergency_braking' build argument 'catkin_cmake_args' from command line to 'None'
+[1.642s] Level 5:colcon.colcon_core.verb:set package 'emergency_braking' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.643s] DEBUG:colcon.colcon_core.verb:Building package 'emergency_braking' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/roboracer-purdue/build/emergency_braking', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/roboracer-purdue/install/emergency_braking', 'merge_install': False, 'path': '/workspaces/roboracer-purdue/src/emergency_braking', 'symlink_install': False, 'test_result_base': None}
+[1.644s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'cmake_args' from command line to 'None'
+[1.644s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'cmake_target' from command line to 'None'
+[1.645s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.645s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'cmake_clean_cache' from command line to 'False'
+[1.646s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'cmake_clean_first' from command line to 'False'
+[1.647s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'cmake_force_configure' from command line to 'False'
+[1.647s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'ament_cmake_args' from command line to 'None'
+[1.648s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'catkin_cmake_args' from command line to 'None'
+[1.648s] Level 5:colcon.colcon_core.verb:set package 'f110_gym' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.649s] DEBUG:colcon.colcon_core.verb:Building package 'f110_gym' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/roboracer-purdue/build/f110_gym', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/roboracer-purdue/install/f110_gym', 'merge_install': False, 'path': '/workspaces/roboracer-purdue/roboracer_ws/f1tenth_gym', 'symlink_install': False, 'test_result_base': None}
+[1.649s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.651s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.651s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/workspaces/roboracer-purdue/src/emergency_braking' with build type 'ament_python'
+[1.652s] Level 1:colcon.colcon_core.shell:create_environment_hook('emergency_braking', 'ament_prefix_path')
+[1.656s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.657s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/install/emergency_braking/share/emergency_braking/hook/ament_prefix_path.ps1'
+[1.679s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/roboracer-purdue/install/emergency_braking/share/emergency_braking/hook/ament_prefix_path.dsv'
+[1.693s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/install/emergency_braking/share/emergency_braking/hook/ament_prefix_path.sh'
+[1.713s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.714s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.715s] WARNING:colcon.colcon_core.prefix_path.colcon:The path '/workspaces/roboracer-purdue/roboracer_ws/install' in the environment variable COLCON_PREFIX_PATH doesn't exist
+[1.716s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_stack' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.717s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/roboracer-purdue/roboracer_ws/install/f1tenth_gym_ros' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.717s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.718s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/workspaces/roboracer-purdue/roboracer_ws/install/ackermann_mux' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[1.731s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspaces/roboracer-purdue/roboracer_ws/f1tenth_gym'
+[1.732s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.733s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.045s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspaces/roboracer-purdue/src/emergency_braking'
+[2.046s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.046s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.443s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: check, bdist_wheel, register, compile_catalog, setopt, build_clib, upload, bdist, install_data, dist_info, upload_docs, test, update_catalog, install_scripts, build, clean, build_ext, install_lib, install_headers, rotate, extract_messages, build_py, egg_info, alias, bdist_egg, saveopts, easy_install, sdist, build_scripts, bdist_dumb, symlink_data, develop, init_catalog, install, bdist_rpm, install_egg_info
+[3.468s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: check, bdist_wheel, register, compile_catalog, setopt, build_clib, upload, bdist, install_data, dist_info, upload_docs, test, update_catalog, install_scripts, build, clean, build_ext, install_lib, install_headers, rotate, extract_messages, build_py, egg_info, alias, bdist_egg, saveopts, easy_install, sdist, build_scripts, bdist_dumb, symlink_data, develop, init_catalog, install, bdist_rpm, install_egg_info
+[3.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/roboracer-purdue/roboracer_ws/f1tenth_gym': PYTHONPATH=/workspaces/roboracer-purdue/build/f110_gym/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/install/f110_gym/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/f110_gym build --build-base /workspaces/roboracer-purdue/build/f110_gym/build install --record /workspaces/roboracer-purdue/build/f110_gym/install.log --single-version-externally-managed
+[3.512s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/roboracer-purdue/src/emergency_braking': PYTHONPATH=/workspaces/roboracer-purdue/build/emergency_braking/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/emergency_braking build --build-base /workspaces/roboracer-purdue/build/emergency_braking/build install --record /workspaces/roboracer-purdue/build/emergency_braking/install.log --install-scripts $base/lib/emergency_braking --single-version-externally-managed install_data
+[4.878s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/roboracer-purdue/roboracer_ws/f1tenth_gym' returned '0': PYTHONPATH=/workspaces/roboracer-purdue/build/f110_gym/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/install/f110_gym/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/f110_gym build --build-base /workspaces/roboracer-purdue/build/f110_gym/build install --record /workspaces/roboracer-purdue/build/f110_gym/install.log --single-version-externally-managed
+[4.879s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/f110_gym' for CMake module files
+[4.926s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/f110_gym' for CMake config files
+[4.987s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/f110_gym/lib'
+[4.992s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/f110_gym/bin'
+[4.993s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/f110_gym/lib/pkgconfig/f110_gym.pc'
+[4.995s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/f110_gym/lib/python3.10/site-packages'
+[4.998s] Level 1:colcon.colcon_core.shell:create_environment_hook('f110_gym', 'pythonpath')
+[5.003s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/install/f110_gym/share/f110_gym/hook/pythonpath.ps1'
+[5.020s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/roboracer-purdue/install/f110_gym/share/f110_gym/hook/pythonpath.dsv'
+[5.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/install/f110_gym/share/f110_gym/hook/pythonpath.sh'
+[5.051s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/f110_gym/bin'
+[5.052s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(f110_gym)
+[5.053s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/install/f110_gym/share/f110_gym/package.ps1'
+[5.069s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/roboracer-purdue/install/f110_gym/share/f110_gym/package.dsv'
+[5.078s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/install/f110_gym/share/f110_gym/package.sh'
+[5.089s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/install/f110_gym/share/f110_gym/package.bash'
+[5.107s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/install/f110_gym/share/f110_gym/package.zsh'
+[5.118s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/roboracer-purdue/install/f110_gym/share/colcon-core/packages/f110_gym)
+[5.331s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/emergency_braking' for CMake module files
+[5.334s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/roboracer-purdue/src/emergency_braking' returned '0': PYTHONPATH=/workspaces/roboracer-purdue/build/emergency_braking/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/emergency_braking build --build-base /workspaces/roboracer-purdue/build/emergency_braking/build install --record /workspaces/roboracer-purdue/build/emergency_braking/install.log --install-scripts $base/lib/emergency_braking --single-version-externally-managed install_data
+[5.389s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/emergency_braking' for CMake config files
+[5.487s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/emergency_braking/lib'
+[5.492s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/emergency_braking/bin'
+[5.493s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/emergency_braking/lib/pkgconfig/emergency_braking.pc'
+[5.495s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/emergency_braking/lib/python3.10/site-packages'
+[5.498s] Level 1:colcon.colcon_core.shell:create_environment_hook('emergency_braking', 'pythonpath')
+[5.499s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/install/emergency_braking/share/emergency_braking/hook/pythonpath.ps1'
+[5.519s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/roboracer-purdue/install/emergency_braking/share/emergency_braking/hook/pythonpath.dsv'
+[5.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/roboracer-purdue/install/emergency_braking/share/emergency_braking/hook/pythonpath.sh'
+[5.552s] Level 1:colcon.colcon_core.environment:checking '/workspaces/roboracer-purdue/install/emergency_braking/bin'
+[5.554s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(emergency_braking)
+[5.555s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/install/emergency_braking/share/emergency_braking/package.ps1'
+[5.566s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/roboracer-purdue/install/emergency_braking/share/emergency_braking/package.dsv'
+[5.581s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/install/emergency_braking/share/emergency_braking/package.sh'
+[5.593s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/install/emergency_braking/share/emergency_braking/package.bash'
+[5.606s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/roboracer-purdue/install/emergency_braking/share/emergency_braking/package.zsh'
+[5.625s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/roboracer-purdue/install/emergency_braking/share/colcon-core/packages/emergency_braking)
+[5.634s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.635s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.636s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.637s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.656s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[5.657s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.658s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.658s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.661s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[5.662s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.663s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/roboracer-purdue/install/local_setup.ps1'
+[5.673s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/roboracer-purdue/install/_local_setup_util_ps1.py'
+[5.682s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/roboracer-purdue/install/setup.ps1'
+[5.689s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/roboracer-purdue/install/local_setup.sh'
+[5.696s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/roboracer-purdue/install/_local_setup_util_sh.py'
+[5.708s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/roboracer-purdue/install/setup.sh'
+[5.718s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/roboracer-purdue/install/local_setup.bash'
+[5.725s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/roboracer-purdue/install/setup.bash'
+[5.739s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/roboracer-purdue/install/local_setup.zsh'
+[5.746s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/roboracer-purdue/install/setup.zsh'

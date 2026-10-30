@@ -71,8 +71,9 @@ class EmergencyBraking(Node):
             ("odom_topic", "/ego_racecar/odom"),
             ("drive_topic", "/drive"),
             # TODO Declare parameter for /eb topic
-
+            ("eb_topic", "/eb"),
             # TODO Declare parameter for TTC_threshold
+            ("TTC_threshold", .5),
             ("control_rate_hz", 50.0),
         ]
 
@@ -86,8 +87,9 @@ class EmergencyBraking(Node):
         self.odom_topic = gp("odom_topic").value
         self.drive_topic = gp("drive_topic").value
         # TODO Pull parameter value for /eb topic
-
+        self.eb_topic = gp("eb_topic").value
         # TODO Pull parameter value for TTC_threshold
+        self.TTC_threshold = gp("TTC_threshold").value
         self.control_rate_hz = float(gp("control_rate_hz").value)
 
     def scan_callback(self, msg):
@@ -126,16 +128,24 @@ class EmergencyBraking(Node):
         for x in range(-90,91):
             rx = self.get_scan_at_angle(x)  # Retrieve LIDAR Scan at angle x
             v_x = self.current_speed        # Retrieve v_x from vehicle's current speed
+            math.radians(x)
             
             # TODO Compute TTC Values
             # rx might be 'inf' or 'nan', make sure to handle these
             # Make sure you don't accidentally divide by a projected velocity of 0
             # Keep only valid TTC values that are greater than 0
+            cosv_x = v_x * math.cos(x)
+            if  cosv_x > 0 and (not math.isinf(rx) or not math.isnan(rx)):
+                ttc = rx / (cosv_x)
+                TTC.append(ttc)
 
         # 2.  Check if TTC is below a threshold
 
         # TODO Check TTC Values
         # Use the TTC_threshold parameter instead of a literal constant
+        if (min(TTC) < self.TTC_threshold):
+            self.is_braking = True
+
 
         # 3.  Issue a brake command to drive topic
         if self.is_braking:
