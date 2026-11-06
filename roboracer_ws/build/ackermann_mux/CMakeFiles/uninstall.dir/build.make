@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux
+CMAKE_SOURCE_DIR = /home/zbywg/roboracer-template/roboracer_ws/src/f1tenth_system/ackermann_mux
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/orin/Desktop/roboracer_ws/build/ackermann_mux
+CMAKE_BINARY_DIR = /home/zbywg/roboracer-template/roboracer_ws/build/ackermann_mux
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/orin/Desktop/roboracer_ws/build/ackermann_mux && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux /home/orin/Desktop/roboracer_ws/src/f1tenth_system/ackermann_mux /home/orin/Desktop/roboracer_ws/build/ackermann_mux /home/orin/Desktop/roboracer_ws/build/ackermann_mux /home/orin/Desktop/roboracer_ws/build/ackermann_mux/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zbywg/roboracer-template/roboracer_ws/build/ackermann_mux && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zbywg/roboracer-template/roboracer_ws/src/f1tenth_system/ackermann_mux /home/zbywg/roboracer-template/roboracer_ws/src/f1tenth_system/ackermann_mux /home/zbywg/roboracer-template/roboracer_ws/build/ackermann_mux /home/zbywg/roboracer-template/roboracer_ws/build/ackermann_mux /home/zbywg/roboracer-template/roboracer_ws/build/ackermann_mux/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

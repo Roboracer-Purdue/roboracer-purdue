@@ -1,3 +1,0 @@
-source;share/my_cpp_py_pkg/environment/ament_prefix_path.sh
-source;share/my_cpp_py_pkg/environment/path.sh
-source;share/my_cpp_py_pkg/environment/pythonpath.sh
