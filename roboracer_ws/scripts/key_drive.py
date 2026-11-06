@@ -2,6 +2,7 @@
 import rclpy
 from rclpy.node import Node
 from ackermann_msgs.msg import AckermannDriveStamped
+from std_msgs.msg import Float32
 import sys, termios, tty, select
 
 HELP = """
@@ -15,12 +16,16 @@ class KeyDrive(Node):
         self.pub = self.create_publisher(AckermannDriveStamped, '/drive', 10)
         self.speed = 0.0
         self.steer = 0.0
+        self.eb_sub = self.create_subscription(Float32, '/eb', self.eb_callback, 10)
 
     def send(self):
         msg = AckermannDriveStamped()
         msg.drive.speed = self.speed
         msg.drive.steering_angle = self.steer
         self.pub.publish(msg)
+
+    def eb_callback(self, msg):
+        self.speed = msg.data
 
 def get_key(settings):
     tty.setraw(sys.stdin.fileno())
@@ -45,6 +50,7 @@ def main():
             elif k == 'q': break
             node.steer = max(-0.4, min(0.4, node.steer))   # clamp to real steering range
             node.speed = max(-2.0, min(7.0, node.speed))
+            rclpy.spin_once(node, timeout_sec=0.0)
             node.send()                                     # republishes at ~10 Hz
             print(f'\rspeed={node.speed:+.2f}  steer={node.steer:+.2f}   ', end='')
     finally:

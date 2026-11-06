@@ -46,7 +46,7 @@ class EmergencyBraking(Node):
             10,
         )
 
-        # TODO Create a publisher for /eb topic
+        self.eb_pub = self.create_publisher(Float32, self.eb_topic, 10)
 
         # Create a timer that call control loop repeatedly
         self.timer = self.create_timer(
@@ -70,9 +70,8 @@ class EmergencyBraking(Node):
             ("scan_topic", "/scan"),
             ("odom_topic", "/ego_racecar/odom"),
             ("drive_topic", "/drive"),
-            # TODO Declare parameter for /eb topic
-
-            # TODO Declare parameter for TTC_threshold
+            ("eb_topic", "/eb"),
+            ("TTC_threshold", 0.3),
             ("control_rate_hz", 50.0),
         ]
 
@@ -85,9 +84,8 @@ class EmergencyBraking(Node):
         self.scan_topic = gp("scan_topic").value
         self.odom_topic = gp("odom_topic").value
         self.drive_topic = gp("drive_topic").value
-        # TODO Pull parameter value for /eb topic
-
-        # TODO Pull parameter value for TTC_threshold
+        self.eb_topic = gp("eb_topic").value
+        self.TTC_threshold = float(gp("TTC_threshold").value)
         self.control_rate_hz = float(gp("control_rate_hz").value)
 
     def scan_callback(self, msg):
@@ -127,14 +125,25 @@ class EmergencyBraking(Node):
             rx = self.get_scan_at_angle(x)  # Retrieve LIDAR Scan at angle x
             v_x = self.current_speed        # Retrieve v_x from vehicle's current speed
             
-            # TODO Compute TTC Values
+            if math.isinf(rx) or math.isnan(rx):
+                continue
+
+            closing_speed = v_x * math.cos(math.radians(x))
+
+            if closing_speed <= 0:
+                continue
+
+            ttc = rx / closing_speed
+            if ttc > 0:
+                TTC.append(ttc)
             # rx might be 'inf' or 'nan', make sure to handle these
             # Make sure you don't accidentally divide by a projected velocity of 0
             # Keep only valid TTC values that are greater than 0
 
         # 2.  Check if TTC is below a threshold
 
-        # TODO Check TTC Values
+        if TTC and min(TTC) < self.TTC_threshold:
+            self.is_braking = True
         # Use the TTC_threshold parameter instead of a literal constant
 
         # 3.  Issue a brake command to drive topic
@@ -142,6 +151,10 @@ class EmergencyBraking(Node):
             self.publish_drive(0, 0)  # Publish drive command of zero speed and zero steering
 
             self.log_throttled(1.5, f"EMERGENCY BRAKING.")   # Log Emergency Braking every 1.5 seconds
+                        
+            msg = Float32()
+            msg.data = 0.0
+            self.eb_pub.publish(msg)
 
     def publish_drive(self, speed, steering):
         msg = AckermannDriveStamped()
