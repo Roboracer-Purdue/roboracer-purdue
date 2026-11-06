@@ -148,13 +148,14 @@ class EmergencyBraking(Node):
 
         # 3.  Issue a brake command to drive topic
         if self.is_braking:
-            self.publish_drive(0, 0)  # Publish drive command of zero speed and zero steering
+            #self.publish_drive(0, 0)  # Publish drive command of zero speed and zero steering
 
             self.log_throttled(1.5, f"EMERGENCY BRAKING.")   # Log Emergency Braking every 1.5 seconds
                         
             msg = Float32()
             msg.data = 0.0
             self.eb_pub.publish(msg)
+            self.is_braking = False
 
     def publish_drive(self, speed, steering):
         msg = AckermannDriveStamped()
