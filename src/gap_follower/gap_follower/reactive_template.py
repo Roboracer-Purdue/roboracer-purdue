@@ -9,9 +9,9 @@ from nav_msgs.msg import Odometry
 from ackermann_msgs.msg import AckermannDriveStamped
 from std_msgs.msg import Float32 
 
-class WallFollower(Node):
+class GapFollower(Node):
     def __init__(self):
-        super().__init__("wall_follower")
+        super().__init__("gap_follower")
 
         self.declare_all_params()
         self.load_params()
@@ -62,7 +62,7 @@ class WallFollower(Node):
         )
 
         self.get_logger().info("===================================================")
-        self.get_logger().info("WALL FOLLOWER NODE STARTED")
+        self.get_logger().info("GAP FOLLOWER NODE STARTED")
         self.get_logger().info(f"Publishing drive commands to: {self.drive_topic}")
         self.get_logger().info("===================================================")
 
@@ -276,7 +276,7 @@ class WallFollower(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = WallFollower()
+    node = GapFollower()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:

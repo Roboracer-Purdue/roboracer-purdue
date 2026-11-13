@@ -1,4 +1,5 @@
-# Lab 2 Template
+# WORK IN PROGRESS
+# Lab 3 Template
 This lab will introduce you to Proportional–Integral–Derivative (PID) Controllers, which is a concept that allow your car to make correction smoothly based on how far it is from the desired raceline. The raceline used in this lab will be determined by following the wall, which the car stay a certain distance from the inner/outer wall. (Thus the name Wall Follow).
 
 ## Lab Objectives

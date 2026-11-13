@@ -2,9 +2,9 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>wall_follower</name>
+  <name>gap_follower</name>
   <version>0.0.0</version>
-  <description>PID-based wall following controller for autonomous racing.</description>
+  <description>Reactive gap following controller for autonomous racing.</description>
   <maintainer email="jsuantho@purdue.edu">patchychan</maintainer>
   <license>MIT</license>
 
