@@ -59,28 +59,20 @@ The car heading deviates from the parallel line by $\alpha$. The angular differe
 
 We can express car heading $\alpha$ as
 
-$
-\alpha = \arctan{\left(\frac{a\cos{\theta}-b}{a\sin{\theta}}\right)}
-$
+$$\alpha = \arctan{\left(\frac{a\cos{\theta}-b}{a\sin{\theta}}\right)}$$
 
 Then we can use the heading angle $\alpha$ to determine the distance from the wall
 
-$
-D_t = b\cos{\alpha}
-$
+$$D_t = b\cos{\alpha}$$
 
 Theoretically, this distance can be used to measure the deviation from target distance; however, this calculation is performed while the car is constantly moving, by the time the drive command reach the motor, it might be too late to steer. 
 
 Hence, we will use predicted distance of distance $L$ ahead to calculate errors instead
-$
-D_n = D_t + L\sin{\alpha}
-$
+$$D_n = D_t + L\sin{\alpha}$$
 
 Then your error $e(t)$ can be computed from the difference between predicted distance and target spacing
 
-$
-e(t) = D_n - target
-$
+$$e(t) = D_n - target$$
 
 Implement the above concepts and calculations in step 1 of your control loop `def control_loop(self)`
 
@@ -88,9 +80,7 @@ Implement the above concepts and calculations in step 1 of your control loop `de
 
 The following equation summarizes the PID controller that drive steering $u(t)$:
 
-$
-u(t) = K_p e(t) + K_i \int_0^t{e(\tau)d\tau} \ + K_d \frac{d}{dt}(e(t))
-$
+$$u(t) = K_p e(t) + K_i \int_0^t{e(\tau)d\tau} \ + K_d \frac{d}{dt}(e(t))$$
 
 This equation can be overwhelming at first, so let's unpack it together
 
@@ -110,9 +100,7 @@ Otherwise, if the car is driving away from the wall too quickly ($\frac{d}{dt}e(
 
 Since our control loop does not fire every "infinitely small" time interval, you can approximate the derivative discretely using the following idea
 
-$
-\frac{e(t) - e(t-\Delta t) } {\Delta t}
-$
+$$\frac{e(t) - e(t-\Delta t) } {\Delta t}$$
 
 #### Integral Error $\int_0^t{e(\tau)d\tau}$
 This term accumulates the error $e(t)$ over time. And it tries to mitigate the overall error by affecting the steering slightly to counter the small errors accumulated from "non-ideal" turns.
@@ -121,9 +109,7 @@ If $\int_0^t{e(\tau)d\tau}$ is postive, the car has been driving too far from th
 
 Similar to derivative error, you can approximate the integral discretely using the following idea
 
-$$
-acc = acc \ + \ e(t)\Delta t  
-$$
+$$acc = acc \ + \ e(t)\Delta t  $$
 
 Note that during the first few seconds of your node execution, your car will be aligning itself with the ideal raceline, your integral accumulator should be off during these first few seconds. We recommend three seconds.
 
