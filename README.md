@@ -12,11 +12,11 @@ script, and you're driving a simulated car and building autonomy on top of it.
 **Step 1 — Create your own branch (on GitHub, before cloning).**
 This repo's `main` is the template only, and `testing_new_ws` is the shared
 starting point everyone builds from. Create your own branch off of
-`testing_new_ws` (not `main`) before you clone — e.g. via the GitHub UI's
+`testing_new_workspace` (not `main`) before you clone — e.g. via the GitHub UI's
 branch dropdown, or from another machine:
 ```bash
 git fetch origin
-git checkout testing_new_ws
+git checkout testing_new_workspace
 git checkout -b <your-branch-name>       # e.g. Meghaj_Kabra_ws
 git push -u origin <your-branch-name>
 ```
